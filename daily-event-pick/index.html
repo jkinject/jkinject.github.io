@@ -329,7 +329,7 @@
     var btnOut = document.getElementById('outBtn');
     var rest = rows.length - shown.length;
     btnMore.hidden = rest <= 0;
-    if (rest > 0) btnMore.textContent = '더 보기 (' + rest + ')';
+    btnMore.textContent = rest > 0 ? '더 보기 (' + rest + ')' : '';
 
     // 지난 이벤트(마감) 토글 — '전체' 탭에서만
     var outRows = ALL.filter(isOut).sort(function (a, b) { return b.n - a.n; });
