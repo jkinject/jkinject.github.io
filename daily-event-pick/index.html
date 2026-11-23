@@ -50,7 +50,8 @@
   /* filter bar */
   .bar{position:sticky; top:0; z-index:10; margin-top:18px; background:#fff; border-bottom:1px solid #eceef1}
   .bar .wrap{display:flex; align-items:center; justify-content:space-between; gap:10px; height:44px}
-  .tabs{display:flex; gap:16px; min-width:0}
+  .tabs{display:flex; gap:16px; min-width:0; overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none}
+  .tabs::-webkit-scrollbar{display:none}
   .tabs button{
     position:relative; height:44px; padding:0; border:0; background:none; cursor:pointer;
     font-size:13.5px; font-weight:500; color:#787d83; letter-spacing:0; white-space:nowrap;
@@ -99,6 +100,10 @@
   .acts a:hover{background:#f4f5f7}
   .row.out{opacity:.42}
   .row.out .act{color:#93989e}
+  .list.closed .row.out{opacity:1}
+  .list.closed .row.out .t{color:#4a4f55}
+  .list.closed .row.out .dd{color:#b0362a}
+  .list.closed .row.out .act{color:#b0362a}
 
   .more{display:flex; flex-wrap:wrap; gap:16px; padding:12px 0 0}
   .more[hidden]{display:none}
@@ -121,6 +126,7 @@
     .wrap{padding:0 16px}
     .tabs{gap:13px}
     .tabs .n{display:none}
+    .sort{padding-left:8px}
     .row{gap:9px; padding:10px 0}
     .dd{flex:0 0 34px; font-size:11px; letter-spacing:-0.02em}
     .t{white-space:normal; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; line-height:1.34}
@@ -155,9 +161,10 @@
 <div class="bar">
   <div class="wrap">
     <nav class="tabs" id="tabs" role="tablist" aria-label="목록 필터">
-      <button role="tab" data-f="all" aria-selected="true">전체 <span class="n" id="nAll"></span></button>
+      <button role="tab" data-f="open" aria-selected="true">진행중 <span class="n" id="nOpen"></span></button>
       <button role="tab" data-f="soon" aria-selected="false">마감임박 <span class="n" id="nSoon"></span></button>
       <button role="tab" data-f="new" aria-selected="false">오늘 추가 <span class="n" id="nNew"></span></button>
+      <button role="tab" data-f="closed" aria-selected="false">마감 30일 <span class="n" id="nClosed"></span></button>
     </nav>
     <button class="sort" id="sortBtn" type="button">마감임박순 ↕</button>
   </div>
@@ -169,7 +176,6 @@
   </div>
   <div class="more" id="more" hidden>
     <button type="button" id="moreBtn" hidden></button>
-    <button type="button" id="outBtn" hidden></button>
   </div>
   <footer class="foot">
     <p id="note">경품·마감은 기관 공지 기준이며 변동될 수 있습니다. 응모는 각 기관 페이지에서 진행됩니다.</p>
@@ -184,6 +190,7 @@
   var WD = ['일','월','화','수','목','금','토'];
   var DATA_URL = './data/events.json';
   var SOON_DAYS = 3;            // D-3 이하를 '마감임박'으로 봄
+  var CLOSED_DAYS = 30;         // 마감 후 30일까지만 노출
   var LIMIT = 600;              // 목록 최대 표시 수 (안전장치)
 
   function pad(n){ return (n < 10 ? '0' : '') + n; }
@@ -219,7 +226,7 @@
   }
 
   var PAGE = 60;                // 처음에 보여줄 행 수 (더 보기로 60씩 추가)
-  var STATE = { filter: 'all', sort: 'deadline', showOut: false, limit: PAGE };
+  var STATE = { filter: 'open', sort: 'deadline', limit: PAGE };
   var ALL = [];
 
   // days[] 를 한 줄 목록으로 펼치고, 같은 이벤트는 최근 등록분만 남긴다
@@ -250,15 +257,19 @@
   }
 
   function isOut(r){ return r.n != null && r.n < 0; }
+  function recentlyClosed(r){ return r.n != null && r.n < 0 && -r.n <= CLOSED_DAYS; }
   function visible(){
     var rows = ALL.filter(function (r) {
       if (STATE.filter === 'soon') return r.n != null && r.n >= 0 && r.n <= SOON_DAYS;
       if (STATE.filter === 'new') return r.added === TODAY && !isOut(r);
+      if (STATE.filter === 'closed') return recentlyClosed(r);
       return !isOut(r);
     });
     rows.sort(STATE.sort === 'new'
       ? function (a, b) { return (a.added < b.added ? 1 : a.added > b.added ? -1 : 0) || ((a.n == null ? 9e9 : a.n) - (b.n == null ? 9e9 : b.n)); }
-      : function (a, b) { return (a.n == null ? 9e9 : a.n) - (b.n == null ? 9e9 : b.n); });
+      : (STATE.filter === 'closed'
+        ? function (a, b) { return (b.n == null ? -9e9 : b.n) - (a.n == null ? -9e9 : a.n); }
+        : function (a, b) { return (a.n == null ? 9e9 : a.n) - (b.n == null ? 9e9 : b.n); }));
     return rows;
   }
 
@@ -307,53 +318,47 @@
     var shown = rows.slice(0, STATE.limit);
 
     // 카운트
-    var active = 0, soon = 0, fresh = 0;
+    var active = 0, soon = 0, fresh = 0, closed = 0;
     ALL.forEach(function (r) {
       if (!isOut(r)) {
         active++;
         if (r.n != null && r.n <= SOON_DAYS) soon++;
         if (r.added === TODAY) fresh++;
+      } else if (recentlyClosed(r)) {
+        closed++;
       }
     });
-    document.getElementById('nAll').textContent = active;
+    document.getElementById('nOpen').textContent = active;
     document.getElementById('nSoon').textContent = soon;
     document.getElementById('nNew').textContent = fresh;
+    document.getElementById('nClosed').textContent = closed;
 
+    list.className = 'list' + (STATE.filter === 'closed' ? ' closed' : '');
     list.innerHTML = shown.length
       ? shown.map(rowHTML).join('')
-      : '<p class="empty">해당하는 이벤트가 없습니다.</p>';
+      : '<p class="empty">' + (STATE.filter === 'closed'
+          ? '최근 30일 안에 마감된 이벤트가 없습니다.'
+          : '해당하는 이벤트가 없습니다.') + '</p>';
 
     // 더 보기 — 남은 행이 있을 때만
     var more = document.getElementById('more');
     var btnMore = document.getElementById('moreBtn');
-    var btnOut = document.getElementById('outBtn');
     var rest = rows.length - shown.length;
     btnMore.hidden = rest <= 0;
     btnMore.textContent = rest > 0 ? '더 보기 (' + rest + ')' : '';
-
-    // 지난 이벤트(마감) 토글 — '전체' 탭에서만
-    var outRows = ALL.filter(isOut).sort(function (a, b) { return b.n - a.n; });
-    btnOut.hidden = !(STATE.filter === 'all' && outRows.length && rest <= 0);
-    if (!btnOut.hidden) {
-      btnOut.textContent = STATE.showOut ? '지난 이벤트 접기' : '지난 이벤트 ' + outRows.length + '건 보기';
-    }
-    if (STATE.showOut) {
-      list.insertAdjacentHTML('beforeend', outRows.slice(0, LIMIT).map(rowHTML).join(''));
-    }
-    more.hidden = btnMore.hidden && btnOut.hidden;
+    more.hidden = btnMore.hidden;
 
     Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
       b.setAttribute('aria-selected', String(b.getAttribute('data-f') === STATE.filter));
     });
     document.getElementById('sortBtn').textContent =
-      (STATE.sort === 'new' ? '최신순' : '마감임박순') + ' ↕';
+      (STATE.sort === 'new' ? '최신순' : (STATE.filter === 'closed' ? '최근 마감순' : '마감임박순')) + ' ↕';
   }
 
   function bind(){
     Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
       b.addEventListener('click', function () {
         STATE.filter = b.getAttribute('data-f');
-        STATE.showOut = false;
         STATE.limit = PAGE;
         render();
         window.scrollTo({ top: document.querySelector('.bar').offsetTop, behavior: 'smooth' });
@@ -365,10 +370,6 @@
     });
     document.getElementById('moreBtn').addEventListener('click', function () {
       STATE.limit += PAGE;
-      render();
-    });
-    document.getElementById('outBtn').addEventListener('click', function () {
-      STATE.showOut = !STATE.showOut;
       render();
     });
   }

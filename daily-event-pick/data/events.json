@@ -5,15 +5,894 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-24T02:25:00+09:00"
+    "updated_at": "2026-11-24T02:55:00+09:00"
   },
   "days": [
     {
+      "date": "2026-11-16",
+      "label": "11월 16일",
+      "headline": "11월 16일 추가된 경품",
+      "sub": "1건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-3ccedcbc15",
+          "org": "국립중앙도서관",
+          "title": "2026 SNS 이용자 만족도 조사 이벤트",
+          "prize": "모바일 커피 교환권",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-30",
+          "url": "https://forms.gle/KbVbTTJW4xHNscLT7"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "label": "11월 17일",
+      "headline": "11월 17일 추가된 경품",
+      "sub": "2건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-2f12665fb2",
+          "org": "부산시설공단",
+          "title": "2026년 공공데이터 대국민 설문조사",
+          "prize": "교촌 허니콤보+콜라 기프티콘",
+          "winners": "20명 추첨",
+          "deadline": "2026-11-24",
+          "url": "https://form.naver.com/response/Bvym7XatZpO"
+        },
+        {
+          "id": "ev-0a1cb5e544",
+          "org": "국토안전관리원",
+          "title": "2026 가치체계 공유도 2차 조사 설문 이벤트",
+          "prize": "모바일 커피쿠폰 5,000원",
+          "winners": "200명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://forms.gle/Jvus2eXGsQDtikaU6"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "label": "11월 18일",
+      "headline": "11월 18일 추가된 경품",
+      "sub": "2건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-e27f11d21c",
+          "org": "국민연금공단",
+          "title": "EVENT 2 헷갈리는 제도 상식 OX 퀴즈",
+          "prize": "해피콘 5,000원(100명)+EVENT1·2 동시참여 5명 네이버페이 5만 원",
+          "winners": "",
+          "deadline": "2026-11-25",
+          "url": "https://form.naver.com/response/BfOCD9YMYht"
+        },
+        {
+          "id": "ev-d4dc90ffd8",
+          "org": "국가아동권리보장원·보건복지부",
+          "title": "긍정양육 자가진단 두 번째 이야기",
+          "prize": "키즈 테마파크 이용권(10명)·CJ 기프트카드 5만 원(30명)·메가커피 1만 원(200명)+전원 베베쿡 배도라지 1BOX",
+          "winners": "",
+          "deadline": "2026-11-30",
+          "url": "https://form.naver.com/response/99ENspGmUzu"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "label": "11월 19일",
+      "headline": "11월 19일 추가된 경품",
+      "sub": "1건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-d44b3825e2",
+          "org": "한국장학재단",
+          "title": "26년 정책정보 인지·활용도 및 홍보 만족도 조사",
+          "prize": "배달의민족 1만원권",
+          "winners": "40명 추첨",
+          "deadline": "2026-11-19",
+          "url": "https://form.naver.com/response/3zNNfbbmbNj"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "label": "11월 20일",
+      "headline": "11월 20일 추가된 경품",
+      "sub": "4건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-1e785d079c",
+          "org": "행정안전부",
+          "title": "2026년 공공 마이데이터 대국민 만족도 조사(16문항)",
+          "prize": "모바일상품권 1만원 상당",
+          "winners": "300명 추첨",
+          "deadline": "2026-11-20",
+          "url": "https://forms.gle/nrbtWYPsfkAVjamN7"
+        },
+        {
+          "id": "ev-81e379e148",
+          "org": "부산광역시(비짓부산)",
+          "title": "2026 비짓부산 홈페이지 사용자 만족도 조사(26문항)",
+          "prize": "투썸플레이스 아메리카노",
+          "winners": "50명 추첨",
+          "deadline": "2026-11-23",
+          "url": "https://form.naver.com/response/JwZxPGkM7sY"
+        },
+        {
+          "id": "ev-bc4faab8e5",
+          "org": "부천시(생생부천)",
+          "title": "시정소식지 「복사골부천」 독자 설문 이벤트",
+          "prize": "커피쿠폰 5,000원",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-30",
+          "url": "https://form.naver.com/response/AoMxY2hwW3X"
+        },
+        {
+          "id": "ev-c9b9e18bc0",
+          "org": "부산광역시(시민열린마루)",
+          "title": "시민열린마루 홈페이지 이용 불편사항 및 개선 건의 이벤트",
+          "prize": "동백전 정책지원금 2만원",
+          "winners": "20명 추첨",
+          "deadline": "2026-12-04",
+          "url": "https://forms.gle/d4qEg4VeLMq3tfbU6"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "label": "11월 21일",
+      "headline": "11월 21일 추가된 경품",
+      "sub": "28건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-c8044824ed",
+          "org": "한국해양교통안전공단",
+          "title": "2026 해양안전 콘텐츠 공모전 국민심사(5개 분야)",
+          "prize": "GS25 편의점 상품권 5,000원권(전체 300명)",
+          "winners": "",
+          "deadline": "2026-11-21",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=7d3b966c55ef4921bc5bf65de22bb381",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-d89485bfb8",
+          "org": "공주시",
+          "title": "온누리공주 하반기 초성 퀴즈 이벤트",
+          "prize": "공차 밀크티",
+          "winners": "400명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://cyber.gongju.go.kr/prog/event/onnuri/sub04_01/list.do"
+        },
+        {
+          "id": "ev-e0a45eae0d",
+          "org": "서울주택도시개발공사",
+          "title": "웹진 '서울을 Sh랑해' 56호 독자 퀴즈",
+          "prize": "커피 모바일 쿠폰",
+          "winners": "20명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://webzine.i-sh.co.kr/997"
+        },
+        {
+          "id": "ev-e6fa0ca153",
+          "org": "헬스조선",
+          "title": "[헬스조선 공감닥터] 우리 아이를 위한 RSV 사연 모집 이벤트",
+          "prize": "올리브영 모바일상품권 3만원(3명)·교촌치킨 허니콤보 세트(5명)·스타벅스 아메리카노 커플세트",
+          "winners": "",
+          "deadline": "2026-11-23",
+          "url": "https://forms.gle/JrbSJfc4R15BAt84A"
+        },
+        {
+          "id": "ev-1c9e1d64c9",
+          "org": "한국도로공사",
+          "title": "대국민 AI 활용 아이디어 공모 국민심사",
+          "prize": "10,000원 상당 커피 기프티콘",
+          "winners": "20명 추첨",
+          "deadline": "2026-11-23",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=0929e75b318740e4abf7f4853e4add27",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-063cb73724",
+          "org": "한국도자재단",
+          "title": "2026년 한국도자재단 홈페이지 설문 이벤트",
+          "prize": "아메리카노 기프티콘",
+          "winners": "200명 추첨",
+          "deadline": "2026-11-24",
+          "url": "https://www.kocef.org/html/?menuid=kcf070203"
+        },
+        {
+          "id": "ev-6196235d87",
+          "org": "KSPO(국민체육진흥공단)",
+          "title": "KSPO 신규사업 발굴 아이디어 공모 국민심사",
+          "prize": "5,000원 상당 음료 기프티콘",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-24",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=ad8b2fec1f24433f85203953e7700d65",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-c481ad5b12",
+          "org": "국가데이터처",
+          "title": "2026 SGIS 퀴즈 이벤트",
+          "prize": "모바일상품권 1만원",
+          "winners": "120명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://sgis.mods.go.kr/jsp/event/2026Q3/quiz.jsp"
+        },
+        {
+          "id": "ev-f2e0847282",
+          "org": "광주교통공사",
+          "title": "2026년 베스트 시책 선정 시민 설문",
+          "prize": "음료교환권 5천원",
+          "winners": "20명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://www.grtc.co.kr/subway/poll/poll112"
+        },
+        {
+          "id": "ev-4fda89fbe1",
+          "org": "한국산업안전보건공단",
+          "title": "'일상을 바꾸는 작은 혁신' 실천 우수사례 국민심사",
+          "prize": "모바일 쿠폰",
+          "winners": "20명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=e46d7290ea294f02a8df16133acf4324",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-a579a75edf",
+          "org": "한국환경공단",
+          "title": "제8회 국민이 체감하는 혁신! 우수사례 경진대회 \"공감찾기 콘서트\" 국민심사",
+          "prize": "네이버페이 5,000원 교환권",
+          "winners": "20명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=b32bda2872e640fbb738d3af908794ec",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-f76b91963b",
+          "org": "한국해양교통안전공단",
+          "title": "해양교통안전정보시스템(MTIS) 이용 만족도 조사",
+          "prize": "편의점 쿠폰 추첨",
+          "winners": "",
+          "deadline": "2026-11-27",
+          "url": "https://mtis.komsa.or.kr/support/notice/detailboard?bbsSn=5220&page=1"
+        },
+        {
+          "id": "ev-a3958a039c",
+          "org": "국가데이터처",
+          "title": "KOSIS 11월 통계찾기 퀴즈 이벤트",
+          "prize": "모바일상품권 1만원",
+          "winners": "150명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://kosis.kr/survey/survey47.do"
+        },
+        {
+          "id": "ev-fdf0f67f0f",
+          "org": "국립축산과학원",
+          "title": "축사로 낱말퍼즐(빈칸채우기) 퀴즈 이벤트",
+          "prize": "투썸 뉴욕치즈 피스·아메리카노 세트",
+          "winners": "100명",
+          "deadline": "2026-11-27",
+          "url": "https://chuksaro.nias.go.kr/event20261102dtl.jsp"
+        },
+        {
+          "id": "ev-25cb90bf62",
+          "org": "국립원예특작과학원",
+          "title": "국립원예특작과학원 홈페이지 사용편의성 설문조사",
+          "prize": "소정의 사은품 추첨",
+          "winners": "",
+          "deadline": "2026-11-27",
+          "url": "http://survey.rda.go.kr/AAACh0"
+        },
+        {
+          "id": "ev-28f1aefd4a",
+          "org": "밀양시",
+          "title": "2026 밀양시 대표누리집 퀴즈 이벤트",
+          "prize": "얼음골 사과 5kg 외",
+          "winners": "115명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://www.miryang.go.kr/web/qiz/EgovMirEvent.do?evtcd=20261110"
+        },
+        {
+          "id": "ev-fb73d162f4",
+          "org": "광주교통공사",
+          "title": "지하철 문화예술 서비스 이용 만족도 설문조사",
+          "prize": "음료교환권 5천원",
+          "winners": "50명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://www.grtc.co.kr/subway/poll/poll108"
+        },
+        {
+          "id": "ev-d180d8320f",
+          "org": "광주 북구",
+          "title": "북구 대표 홈페이지 만족도 조사",
+          "prize": "간편결제 포인트 교환권 5천원",
+          "winners": "180명 추첨",
+          "deadline": "2026-11-29",
+          "url": "https://bukgu.gwangju.kr/survey.es?mid=a10202040100&act=view&srv_seq=246"
+        },
+        {
+          "id": "ev-2524c4da7a",
+          "org": "구로문화재단",
+          "title": "G컬처레터 이벤트 · 구로 문화예술의 밤 주제 맞히기",
+          "prize": "향초 (행사 초대 함께) 정답자 중 추첨",
+          "winners": "",
+          "deadline": "2026-11-30",
+          "url": "https://the-form.io/s/laRg"
+        },
+        {
+          "id": "ev-57a018fb0f",
+          "org": "행정안전부",
+          "title": "2026년 지방규제합리화 우수사례 경진대회 국민심사(민생·지역산업)",
+          "prize": "노트북1·태블릿PC1·CJ기프트카드 1만원(50명)·커피쿠폰(400명) 총",
+          "winners": "",
+          "deadline": "2026-11-30",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=ca79b2f1456340ec9894847c50747a0d",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-740d839baf",
+          "org": "농림식품기술기획평가원",
+          "title": "2026 농식품 기술상용화 우수성과 국민투표",
+          "prize": "커피 쿠폰",
+          "winners": "200명 추첨",
+          "deadline": "2026-11-30",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=f8772134e8a44ee194218261dfae53c2",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-cced043c9e",
+          "org": "행정안전부(참여혁신국)",
+          "title": "모두의 광장 개편 기념 이벤트",
+          "prize": "온누리상품권 5만원(4명)·치킨 쿠폰 2만원(20명)·커피 쿠폰 5천원(280명) 총",
+          "winners": "",
+          "deadline": "2026-12-02",
+          "url": "https://modu.go.kr/front/qustnrNew/qustnrNewFrontView.do?menu_id=421&qustnr_id=643fda170e704cc697601a0d0bac3e93"
+        },
+        {
+          "id": "ev-db0e0d98b3",
+          "org": "서울특별시",
+          "title": "시민감사옴부즈만위원회 인지도 설문조사",
+          "prize": "소정의 경품 추첨",
+          "winners": "",
+          "deadline": "2026-12-04",
+          "url": "https://mvoting.seoul.go.kr/99293"
+        },
+        {
+          "id": "ev-d0bccbe2d0",
+          "org": "광주 북구",
+          "title": "2027년 북구보건소 건강증진사업 요구도 설문조사",
+          "prize": "메가커피 2,000원 모바일 쿠폰",
+          "winners": "1,000명 추첨",
+          "deadline": "2026-12-13",
+          "url": "https://bukgu.gwangju.kr/board.es?mid=a60401000000&bid=0060&act=view&list_no=2762"
+        },
+        {
+          "id": "ev-a5657fe0dc",
+          "org": "경기도",
+          "title": "뉴스레터 '나의 경기도 핫' 숨은 글자 찾기 (매주)",
+          "prize": "간편결제 포인트 5천원",
+          "winners": "200명 추첨",
+          "deadline": "2026-12-21",
+          "url": "https://www.gg.go.kr/myggd_hot/user/event26.do/"
+        },
+        {
+          "id": "ev-d353be0ceb",
+          "org": "한국소비자원",
+          "title": "글로벌 어린이 삼킴사고 예방 캠페인",
+          "prize": "소정의 경품",
+          "winners": "200명 추첨",
+          "deadline": "2026-12-25",
+          "url": "https://form.naver.com/response/DhDSloSZadL"
+        },
+        {
+          "id": "ev-74f9a216df",
+          "org": "파주시",
+          "title": "출판도시 AI 문화콘텐츠 도시 조성 설문",
+          "prize": "커피 쿠폰 선착순",
+          "winners": "650명",
+          "deadline": "2026-12-31",
+          "url": "https://forms.gle/dHzG9Rn2CEpEG6dP7"
+        },
+        {
+          "id": "ev-79bb3de602",
+          "org": "인천광역시",
+          "title": "인천 생활권계획 수립 시민 설문",
+          "prize": "기프티콘 5천원 응답자 중 추첨",
+          "winners": "",
+          "deadline": "2027-07-31",
+          "url": "https://www.incheon.go.kr/cool/COOL070002/view?qestnarNo=1298",
+          "tip": "인천시 로그인 필요"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "label": "11월 22일",
+      "headline": "11월 22일 추가된 경품",
+      "sub": "32건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-fe64e54a8c",
+          "org": "국립여성사전시관",
+          "title": "2026년 국립여성사전시관 누리집 이용객 만족도 설문조사",
+          "prize": "1만원권 기프티콘",
+          "winners": "50명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://form.naver.com/response/F2bdd7Tb5NB"
+        },
+        {
+          "id": "ev-74982e3c03",
+          "org": "한국건강가정진흥원",
+          "title": "2026년 <다양한가족 인식개선 캠페인> 효과성 조사",
+          "prize": "다이소 모바일 금액권",
+          "winners": "300명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://form.naver.com/response/HBjAyfdL1yL"
+        },
+        {
+          "id": "ev-953a821c75",
+          "org": "문화체육관광부 국립스포츠박물관",
+          "title": "2026 국립스포츠박물관 인지도 조사",
+          "prize": "배달의민족 상품권 1만원",
+          "winners": "50명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://form.naver.com/response/ATJqC2mMTRU"
+        },
+        {
+          "id": "ev-ea63942afb",
+          "org": "서울시 용산구 정신건강복지센터",
+          "title": "음주폐해 예방의 달 온라인 캠페인 OX 퀴즈",
+          "prize": "편의점 모바일상품권",
+          "winners": "200명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://form.naver.com/response/Hy2ChNv1tmY"
+        },
+        {
+          "id": "ev-cf03309baa",
+          "org": "공공누리(한국문화정보원)",
+          "title": "공공누리 누리집으로 가자! QUIZ EVENT",
+          "prize": "이디야커피 아이스",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://form.naver.com/response/H99F46manU0"
+        },
+        {
+          "id": "ev-cf6b07c988",
+          "org": "한국자산관리공사",
+          "title": "2026 캠코 성과공유회 우수사례(Best Practice) 대국민 투표",
+          "prize": "커피 기프티콘",
+          "winners": "300명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://form.naver.com/response/E6Xx2J8d12B"
+        },
+        {
+          "id": "ev-8a84dcbf6e",
+          "org": "한국부동산원",
+          "title": "2026년 한국부동산원 우수사례(BP 혁신페스타) 국민투표",
+          "prize": "커피 기프티콘",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=414f78058d0e4c6ab38650812a48415e",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-46e3dde98c",
+          "org": "KSPO(국민체육진흥공단)",
+          "title": "2026년 KSPO 협업 우수사례 공모전 국민심사",
+          "prize": "모바일 음료상품권 5,000원",
+          "winners": "60명 추첨",
+          "deadline": "2026-11-22",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=0df3a1422b89480f9c63a955d04b5018",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-bee86e44c5",
+          "org": "한국장애인고용공단",
+          "title": "2026년 표준사업장 생산품 홍보사이트 이용자 만족도 조사",
+          "prize": "네이버페이 5만원(2명)·5천원(100명)·3천원(30명) 총",
+          "winners": "",
+          "deadline": "2026-11-23",
+          "url": "https://form.naver.com/response/4Hk2qW6GMAG"
+        },
+        {
+          "id": "ev-f33b57c679",
+          "org": "한국건설기술연구원",
+          "title": "2026 KICTzine 독자 만족도 조사(14문항+의견)",
+          "prize": "스타벅스 라떼 기프티콘",
+          "winners": "200명 추첨",
+          "deadline": "2026-11-23",
+          "url": "https://forms.gle/qaQzoYfRRHxcqvbV7"
+        },
+        {
+          "id": "ev-f63463d230",
+          "org": "한국수산자원공단",
+          "title": "어구·부표 보증금제 '골라골라' 퀴즈",
+          "prize": "기프티콘",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-23",
+          "url": "https://form.naver.com/response/1isXoaryuh"
+        },
+        {
+          "id": "ev-882d825c17",
+          "org": "전남광주통합특별시교육청",
+          "title": "2026 전남광주교육현장탐방 영상 만족도 조사",
+          "prize": "배달의민족 1만원",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-23",
+          "url": "https://form.naver.com/response/60PXC8MvCCR"
+        },
+        {
+          "id": "ev-c3b2c8e1b3",
+          "org": "국민건강보험공단",
+          "title": "우리동네 간호·간병통합서비스 제대로 알기 OX 퀴즈",
+          "prize": "모바일 문화상품권 1만원",
+          "winners": "",
+          "deadline": "2026-11-24",
+          "url": "https://www.nhis.or.kr/nhis/etc/20261104_banner_pop01.do"
+        },
+        {
+          "id": "ev-ece754e00e",
+          "org": "전남광주통합특별시교육청",
+          "title": "2026 전남광주교육뉴스 만족도 설문조사",
+          "prize": "배달 쿠폰 2만원",
+          "winners": "50명 추첨",
+          "deadline": "2026-11-24",
+          "url": "https://form.naver.com/response/H2gC1mQuUvK"
+        },
+        {
+          "id": "ev-bb72d68382",
+          "org": "한국원자력안전기술원",
+          "title": "2026 SNS 만족도 조사 이벤트(7단계 33문항)",
+          "prize": "치킨 세트·배달 1만원 외",
+          "winners": "135명 추첨",
+          "deadline": "2026-11-24",
+          "url": "https://form.naver.com/response/ID2HfGrlx0M"
+        },
+        {
+          "id": "ev-c6092281f1",
+          "org": "한강유역환경청",
+          "title": "2026 물이용부담금 인식 설문조사",
+          "prize": "음료 기프티콘",
+          "winners": "150명",
+          "deadline": "2026-11-25",
+          "url": "https://forms.gle/CEUKXsrRXNAYZtRW8"
+        },
+        {
+          "id": "ev-cb540a1b45",
+          "org": "경상남도(양산시)",
+          "title": "2026년 하반기 양산시 혁신·적극행정 우수사례 대국민 투표",
+          "prize": "기프티콘 1만원",
+          "winners": "200명 추첨",
+          "deadline": "2026-11-26",
+          "url": "https://form.naver.com/response/6TpDyY90Yqf"
+        },
+        {
+          "id": "ev-f56bdb4ca9",
+          "org": "대구광역시 대덕구",
+          "title": "2026년 대덕구 10대 뉴스 투표 이벤트",
+          "prize": "치킨 모바일 교환권",
+          "winners": "80명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://form.naver.com/response/Cr4JxOzkF12"
+        },
+        {
+          "id": "ev-ceda88db70",
+          "org": "부천시(생생부천)",
+          "title": "생생부천 시민참여 11월 이벤트 — 스마트 안전 퀴즈",
+          "prize": "커피 쿠폰",
+          "winners": "50명 추첨",
+          "deadline": "2026-11-29",
+          "url": "https://form.naver.com/response/J0nJDiS3qua"
+        },
+        {
+          "id": "ev-3a0948d804",
+          "org": "속초시",
+          "title": "2026 속초시 10대뉴스 투표",
+          "prize": "편의점 기프티콘 3만원",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-29",
+          "url": "https://form.naver.com/response/BSPAnQOEuII"
+        },
+        {
+          "id": "ev-a04c882ba2",
+          "org": "김해시",
+          "title": "매월 10일 일회용품 없는 날 실천 O·X 퀴즈",
+          "prize": "소정 경품",
+          "winners": "",
+          "deadline": "2026-11-30",
+          "url": "https://form.naver.com/response/9BOcUBnJ0Qk"
+        },
+        {
+          "id": "ev-acf58a7c46",
+          "org": "국립해양측위정보원",
+          "title": "기관 인지도 및 홍보 관련 의견조사",
+          "prize": "모바일 상품권 1만원",
+          "winners": "10명 추첨",
+          "deadline": "2026-11-30",
+          "url": "https://form.naver.com/response/L7xCl1Bu6DS"
+        },
+        {
+          "id": "ev-3ffe408db1",
+          "org": "한국콘텐츠진흥원",
+          "title": "2026 한국콘텐츠진흥원 공공데이터 수요조사",
+          "prize": "배달의민족 상품권 1만원",
+          "winners": "200명 추첨",
+          "deadline": "2026-12-01",
+          "url": "https://form.naver.com/response/9P7CNgQ1QWl"
+        },
+        {
+          "id": "ev-dcff15312d",
+          "org": "식품의약품안전처",
+          "title": "튼튼먹거리 매장 설문 참여 온라인 이벤트",
+          "prize": "편의점 모바일 쿠폰 5,000원",
+          "winners": "600명 추첨",
+          "deadline": "2026-12-04",
+          "url": "https://form.naver.com/response/KcfvdpYpFID"
+        },
+        {
+          "id": "ev-baeafea7f9",
+          "org": "강릉시",
+          "title": "2026년 강릉시 대표홈페이지 이용실태 및 만족도 설문조사(20문항)",
+          "prize": "모바일 커피 금액권 1만원",
+          "winners": "30명 추첨",
+          "deadline": "2026-12-04",
+          "url": "https://www.gn.go.kr/www/addQestnarRspnsWebView.do?key=3067&qestnarGroupNo=162&qestnarNo=1025"
+        },
+        {
+          "id": "ev-91084e2e52",
+          "org": "인천 제물포구",
+          "title": "구정소식지 퀴즈 응모 (매월)",
+          "prize": "소정의 상품권",
+          "winners": "30명 추첨",
+          "deadline": "2026-12-05",
+          "url": "https://www.jemulpo.go.kr/main/community/enter/hwadojin.jsp"
+        },
+        {
+          "id": "ev-8296a90e6e",
+          "org": "부천시",
+          "title": "2026년 시정홍보 인지도 설문 조사",
+          "prize": "메가MGC커피 메가 꿀조합 세트",
+          "winners": "30명 추첨",
+          "deadline": "2026-12-06",
+          "url": "https://form.naver.com/response/5FBR9fHJY0E"
+        },
+        {
+          "id": "ev-5b930491a9",
+          "org": "고용노동부",
+          "title": "AI시대 고용노동정책, 국민이 질문한다",
+          "prize": "온누리상품권 50만원 등",
+          "winners": "",
+          "deadline": "2026-12-07",
+          "url": "https://form.naver.com/response/Iqcm5Jzk4bb"
+        },
+        {
+          "id": "ev-b50de46ddf",
+          "org": "강원문화재단",
+          "title": "2026 고객만족도 조사(외부)",
+          "prize": "커피 쿠폰",
+          "winners": "100명 추첨",
+          "deadline": "2026-12-08",
+          "url": "https://forms.gle/YoSjWPHdbXJTMw3k6"
+        },
+        {
+          "id": "ev-ece6871931",
+          "org": "경기아트센터",
+          "title": "2026년도 경기아트센터 SNS 채널 이용자 만족도 조사",
+          "prize": "치킨·아이스 아메리카노 교환권",
+          "winners": "200명 추첨",
+          "deadline": "2026-12-09",
+          "url": "https://form.naver.com/response/K03kpNT3INE"
+        },
+        {
+          "id": "ev-bfecb8a5ea",
+          "org": "한국산업기술기획평가원",
+          "title": "테크 포커스 3주년 케박사 찾기 이벤트",
+          "prize": "커피 교환권",
+          "winners": "200명 추첨",
+          "deadline": "2026-12-09",
+          "url": "https://www.techfocus.kr/event.php"
+        },
+        {
+          "id": "ev-9439352eaf",
+          "org": "인천 제물포구",
+          "title": "2026 인천데이터포털 이용 만족도 조사",
+          "prize": "1만원 쿠폰",
+          "winners": "50명",
+          "deadline": "2026-12-09",
+          "url": "https://data.incheon.go.kr/communicate/poll"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "label": "11월 23일",
+      "headline": "11월 23일 추가된 경품",
+      "sub": "15건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-5ae34e7814",
+          "org": "세종특별자치시교육청",
+          "title": "2026년 하반기 세종교육 홍보 만족도 설문조사",
+          "prize": "신세계상품권 5만원·피자·커피 등",
+          "winners": "113명",
+          "deadline": "2026-11-24",
+          "url": "https://form.naver.com/response/3xmDyb8CL5p"
+        },
+        {
+          "id": "ev-9aae289110",
+          "org": "한국환경산업기술원",
+          "title": "2026년 SNS 채널 만족도 조사",
+          "prize": "아메리카노 기프티콘",
+          "winners": "20명",
+          "deadline": "2026-11-25",
+          "url": "https://forms.gle/Kdd12Rxbr1AVRx689"
+        },
+        {
+          "id": "ev-2b8016869f",
+          "org": "국립해양조사원",
+          "title": "2026년 누리집 만족도 설문조사",
+          "prize": "햄버거 기프티콘",
+          "winners": "130명",
+          "deadline": "2026-11-26",
+          "url": "https://form.naver.com/response/87jxmoqZ8LA"
+        },
+        {
+          "id": "ev-6f6c6a2508",
+          "org": "인천광역시",
+          "title": "2026년 인천시 영상미디어 시민 만족도 조사",
+          "prize": "아메리카노 기프티콘",
+          "winners": "50명",
+          "deadline": "2026-11-26",
+          "url": "https://forms.gle/N9mDx2Q1zvUPbAEZ9"
+        },
+        {
+          "id": "ev-3a44694c0f",
+          "org": "국립농업과학원",
+          "title": "2026 대표홈페이지 사용편의성 설문조사",
+          "prize": "사은품(추첨)",
+          "winners": "",
+          "deadline": "2026-11-27",
+          "url": "https://www.naas.go.kr/03_info/Info_Read.do?tg=1&menu_code=3&mmode=11&ntceSnn=6221"
+        },
+        {
+          "id": "ev-c92311d598",
+          "org": "국립식량과학원",
+          "title": "2026 대표홈페이지 사용편의성 설문조사",
+          "prize": "사은품(추첨)",
+          "winners": "",
+          "deadline": "2026-11-27",
+          "url": "http://survey.rda.go.kr/AAACgm"
+        },
+        {
+          "id": "ev-126c063f8e",
+          "org": "김제시",
+          "title": "「김제시 스마트도시계획」 수립을 위한 시민 설문조사",
+          "prize": "소정 상품 추첨",
+          "winners": "100명",
+          "deadline": "2026-11-28",
+          "url": "https://form.naver.com/response/EbDPAte9gt4"
+        },
+        {
+          "id": "ev-e64ebbbbfd",
+          "org": "국민건강보험공단",
+          "title": "2026 「건강모아」 서비스 만족도 조사",
+          "prize": "소정 경품(미기재)",
+          "winners": "",
+          "deadline": "2026-11-29",
+          "url": "https://www.mohw.go.kr/gallery.es?mid=a10314000000&bid=0015&b_list=12&act=view&list_no=380634&nPage=1&vlist_no_npage=1&keyField=&orderby=&cg_code="
+        },
+        {
+          "id": "ev-907a7eba25",
+          "org": "서울시농수산식품공사",
+          "title": "2026년 유통정보 홈페이지 이용자 만족도 조사",
+          "prize": "서울사랑상품권 5,000원",
+          "winners": "400명",
+          "deadline": "2026-11-29",
+          "url": "https://forms.gle/q4TZ6TrNWWEijg2cA"
+        },
+        {
+          "id": "ev-8c2be7ff06",
+          "org": "경기문화재단",
+          "title": "2026 <알려줘요~GGC!!> 청취자 설문조사 이벤트",
+          "prize": "추첨 경품(미기재)",
+          "winners": "",
+          "deadline": "2026-11-29",
+          "url": "https://forms.gle/U7sAC9YzxsEp2znq6"
+        },
+        {
+          "id": "ev-82f5fb9a16",
+          "org": "한국한의약진흥원",
+          "title": "2026 NCKM(국가한의임상정보포털) 만족도 조사",
+          "prize": "디지털온누리상품권 5천원",
+          "winners": "100명",
+          "deadline": "2026-12-02",
+          "url": "https://forms.gle/zZxjg5ZKZYHrKMsW7"
+        },
+        {
+          "id": "ev-f96165267c",
+          "org": "광진구시설관리공단",
+          "title": "2026년 뉴미디어 만족도 조사",
+          "prize": "모바일 커피쿠폰 5,000원",
+          "winners": "100명",
+          "deadline": "2026-12-04",
+          "url": "https://form.naver.com/response/LdacHg2nAVq"
+        },
+        {
+          "id": "ev-7940c734d1",
+          "org": "울산광역시",
+          "title": "2026년 울산시정 베스트 5 설문조사",
+          "prize": "모바일 상품권 1만원",
+          "winners": "100명 추첨",
+          "deadline": "2026-12-04",
+          "url": "https://se-form.semakers.kr/?survey=0228cfca-2321-4cae-ac29-7af93947fec0"
+        },
+        {
+          "id": "ev-ff3f39f49a",
+          "org": "한국출판문화산업진흥원",
+          "title": "2026년 <출판N> 독자 만족도 조사",
+          "prize": "투썸플레이스 기프티콘",
+          "winners": "30명",
+          "deadline": "2026-12-06",
+          "url": "https://form.naver.com/response/A8BaJ0ZZlk4"
+        },
+        {
+          "id": "ev-e21c96bf88",
+          "org": "행정안전부",
+          "title": "착한가격업소 및 홈페이지 이용자 만족도 설문조사",
+          "prize": "1만원 상당 외",
+          "winners": "103명",
+          "deadline": "2026-12-16",
+          "url": "https://forms.gle/ZUA4nJT8RPz4Vvo28"
+        }
+      ]
+    },
+    {
       "date": "2026-11-24",
       "label": "오늘",
-      "headline": "오늘 마감 임박 경품 이벤트",
-      "sub": "5분이면 끝나는 경품 4건 · 마감 빠른 순",
+      "headline": "오늘 추가된 경품",
+      "sub": "15건 · 마감 빠른 순",
       "events": [
+        {
+          "id": "ev-3ecba54a48",
+          "org": "관세청",
+          "title": "직원이 만든 AI 홍보 콘텐츠 국민심사",
+          "prize": "네이버페이 5,000원권",
+          "winners": "60명 추첨",
+          "deadline": "2026-11-23",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=ece652fe5b7248f981439e48bbb2950e",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-d481b423bb",
+          "org": "KSPO(국민체육진흥공단)",
+          "title": "2026년 KSPO 예산성과 아이디어 공모 국민심사",
+          "prize": "모바일 상품권 5,000원 상당",
+          "winners": "150명 추첨",
+          "deadline": "2026-11-23",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=43f6f888333a476f894c71ea7fd50673",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-2e024cb491",
+          "org": "한국청소년활동진흥원",
+          "title": "청소년방과후아카데미 지역사회 참여활동 우수사례 국민투표",
+          "prize": "3만원권(10명)·5천원권",
+          "winners": "300명 추첨",
+          "deadline": "2026-11-23",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=b0442ddb81964c56921dc3f63ad1014e",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-686bed7130",
+          "org": "해양경찰청",
+          "title": "2026년 10월 해양경찰 대민서비스 국민 칭찬사례 선정",
+          "prize": "아치 캐릭터 티코스터",
+          "winners": "3명 추첨",
+          "deadline": "2026-11-24",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=85b6143781664436a1fa561b82161de0",
+          "tip": "모두의 광장 로그인 필요"
+        },
         {
           "id": "nongjeongwon-modunong-2026",
           "org": "농림수산식품교육문화정보원",
@@ -26,6 +905,35 @@
           "tag": "설문"
         },
         {
+          "id": "ev-23aa5ca7ec",
+          "org": "행정안전부(책임운영기관)",
+          "title": "2026년 책임운영기관 서비스혁신 우수사례 온라인 국민심사(혁신부문)",
+          "prize": "모바일상품권",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=b2f486ec6edb4c7689629bd20d91e407",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-46c48e2b43",
+          "org": "행정안전부(책임운영기관)",
+          "title": "2026년 책임운영기관 서비스혁신 우수사례 온라인 국민심사(협업부문)",
+          "prize": "모바일상품권",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=9b441462ab5f488987802b07dd89afc2",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-5a067c72f7",
+          "org": "잡코리아",
+          "title": "AI 시대에 선배가 신입에게 바라는 역량은? 설문 이벤트",
+          "prize": "네이버페이 5,000원",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-26",
+          "url": "https://forms.gle/nUGSsHqFR5ESxkmL9"
+        },
+        {
           "id": "fss-homepage-2026",
           "org": "금융감독원",
           "title": "2026 홈페이지 이용자 만족도 조사",
@@ -35,6 +943,45 @@
           "url": "https://kon.kric.com/project/2610028_A/INDEX.asp",
           "tip": "25문항 · 3분이면 끝 · 대상은 전 국민",
           "tag": "설문"
+        },
+        {
+          "id": "ev-61ed2e8497",
+          "org": "대전교통공사",
+          "title": "2026년 적극행정 우수사례 선발 온라인 국민투표",
+          "prize": "기프티콘",
+          "winners": "20명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=40a90bd41dc44001a848bc771bf6503b",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-0019bfe3b8",
+          "org": "한국수력원자력",
+          "title": "2026년 대국민 혁신·국정과제 아이디어 공모전 국민심사",
+          "prize": "모바일상품권 1만원",
+          "winners": "50명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=833ff973173e4d10a5286f6977319e92",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-4fed9152a7",
+          "org": "부산항만공사",
+          "title": "청소년 인권 존중 포스터 공모전 국민심사",
+          "prize": "디지털 온누리상품권 1만원",
+          "winners": "30명 추첨",
+          "deadline": "2026-11-29",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=a1f6f6e57c01422197abde255797151b",
+          "tip": "모두의 광장 로그인 필요"
+        },
+        {
+          "id": "ev-15addd1a96",
+          "org": "보조금통합포털",
+          "title": "2026년 보조금통합포털 만족도 설문조사",
+          "prize": "모바일 기프티콘 1만원권",
+          "winners": "",
+          "deadline": "2026-11-30",
+          "url": "https://form.naver.com/response/6TsIPYoa1u8"
         },
         {
           "id": "korean-ai-malpyung-2026",
