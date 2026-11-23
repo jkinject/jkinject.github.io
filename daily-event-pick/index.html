@@ -110,12 +110,6 @@
   .act.res{font-weight:400; color:#98a0a9}
   .act.res.link{font-weight:500; color:#191b1f}
   .row.nores{cursor:default}
-  .acts{flex:0 0 auto; display:flex; gap:6px}
-  .acts a{
-    font-size:12px; font-weight:500; color:#191b1f; letter-spacing:0; white-space:nowrap;
-    padding:4px 8px; border:1px solid #e4e6ea; border-radius:6px;
-  }
-  .acts a:hover{background:#f4f5f7}
   .row.out{opacity:.42}
   .row.out .act{color:#93989e}
   .list.closed .row.out{opacity:1}
@@ -142,18 +136,8 @@
   .row.is-visited .m i{color:#d3d8dd}
   .row.is-visited .m .ic{color:#a5acb4}
   .row.is-visited .act{color:#98a0a9}
-  .row.is-visited .acts a{color:#7f868d; border-color:#dfe4e8}
-  .row.is-visited .acts a:hover{background:#e9edf0}
   .row.is-visited.out{opacity:.55}
 
-  .more{display:flex; flex-wrap:wrap; gap:16px; padding:12px 0 0}
-  .more[hidden]{display:none}
-  .more button{
-    padding:4px 0; border:0; background:none; cursor:pointer;
-    font-size:12.5px; color:#787d83; letter-spacing:0;
-    text-decoration:underline; text-underline-offset:3px; text-decoration-color:#d6d9dd;
-  }
-  .more button:hover{color:#191b1f}
   .empty{padding:34px 0; font-size:13.5px; color:#93989e; text-align:center}
   .err{padding:30px 0; font-size:13.5px; color:#787d83; text-align:center; line-height:1.7}
 
@@ -180,7 +164,6 @@
     .act{font-size:12.5px; color:#a2a7ad; align-self:center}
     .act .lbl{display:none}
     .row.out .act{color:#b9bdc3}
-    .acts a{padding:4px 7px; font-size:11.5px}
   }
   @media (min-width:721px){
     .row{padding:12px 4px}
@@ -227,9 +210,6 @@
   <div class="list" id="list" aria-live="polite">
     <p class="empty">불러오는 중…</p>
   </div>
-  <div class="more" id="more" hidden>
-    <button type="button" id="moreBtn" hidden></button>
-  </div>
   <footer class="foot">
     <p id="note">경품·마감은 기관 공지 기준이며 변동될 수 있습니다. 응모는 각 기관 페이지에서 진행됩니다.</p>
     <p id="stamp"></p>
@@ -244,7 +224,6 @@
   var DATA_URL = './data/events.json';
   var SOON_DAYS = 3;            // D-3 이하를 '마감임박'으로 봄
   var CLOSED_DAYS = 30;         // 마감 후 30일까지만 노출
-  var LIMIT = 600;              // 목록 최대 표시 수 (안전장치)
 
   function pad(n){ return (n < 10 ? '0' : '') + n; }
   function esc(t){
@@ -278,8 +257,7 @@
       ' ' + pad(k.getHours()) + ':' + pad(k.getMinutes());
   }
 
-  var PAGE = 60;                // 처음에 보여줄 행 수 (더 보기로 60씩 추가)
-  var STATE = { filter: 'open', sort: 'deadline', limit: PAGE };
+  var STATE = { filter: 'open', sort: 'deadline' };
   var ALL = [];
   var FEATURED = {};            // 오늘 소개분(최신 featured_date) 키 모음
 
@@ -468,10 +446,6 @@
     if (r.n === 0) return 'D-DAY';
     return 'D-' + r.n;
   }
-  function shortLabel(label, fallback){
-    var s = String(label || '').replace(/\s*(바로\s*)?(응모하기|참여하기|도\s*참여하기|바로가기)\s*$/,'').trim();
-    return s || fallback;
-  }
 
   function rowHTML(r){
     var ev = r.ev;
@@ -502,15 +476,6 @@
         '<span class="act res">개별발표</span></div>';
     }
 
-    if (ev.url2) {
-      return '<div class="' + cls + '" data-id="' + esc(r.key) + '">' + open + main +
-        '<span class="acts">' +
-          '<a href="' + esc(ev.url || '#') + '" target="_blank" rel="noopener noreferrer">' +
-            esc(shortLabel(ev.url_short || ev.url_label, '차관급')) + ' →</a>' +
-          '<a href="' + esc(ev.url2) + '" target="_blank" rel="noopener noreferrer">' +
-            esc(shortLabel(ev.url2_short || ev.url2_label, '장관급')) + ' →</a>' +
-        '</span></div>';
-    }
     return '<a class="' + cls + '" data-id="' + esc(r.key) + '" href="' + esc(ev.url || '#') + '" target="_blank" rel="noopener noreferrer">' +
         open + main +
         '<span class="act">' + (out ? '마감' : '<span class="lbl">응모 </span><span>→</span>') + '</span>' +
@@ -526,7 +491,7 @@
   function render(){
     var list = document.getElementById('list');
     var rows = visible();
-    var shown = rows.slice(0, STATE.limit);
+    var shown = rows;
 
     // 카운트
     var active = 0, soon = 0, fresh = 0, closed = 0;
@@ -551,14 +516,6 @@
           ? '최근 30일 안에 마감된 이벤트가 없습니다.'
           : '해당하는 이벤트가 없습니다.') + '</p>';
 
-    // 더 보기 — 남은 행이 있을 때만
-    var more = document.getElementById('more');
-    var btnMore = document.getElementById('moreBtn');
-    var rest = rows.length - shown.length;
-    btnMore.hidden = rest <= 0;
-    btnMore.textContent = rest > 0 ? '더 보기 (' + rest + ')' : '';
-    more.hidden = btnMore.hidden;
-
     Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
       b.setAttribute('aria-selected', String(b.getAttribute('data-f') === STATE.filter));
     });
@@ -573,16 +530,11 @@
     Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
       b.addEventListener('click', function () {
         STATE.filter = b.getAttribute('data-f');
-        STATE.limit = PAGE;
         render();
       });
     });
     document.getElementById('sortBtn').addEventListener('click', function () {
       STATE.sort = STATE.sort === 'deadline' ? 'new' : 'deadline';
-      render();
-    });
-    document.getElementById('moreBtn').addEventListener('click', function () {
-      STATE.limit += PAGE;
       render();
     });
     // 행·버튼을 누르면 즉시 방문 기록 (한 번 누른 이벤트는 회색 처리)
