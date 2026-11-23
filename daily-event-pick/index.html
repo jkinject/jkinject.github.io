@@ -3,333 +3,365 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>줍줍노트 · 오늘 마감 임박 경품 이벤트</title>
-<meta name="description" content="오늘 마감 임박한 경품 이벤트만 골라 담았습니다. 카드에서 바로 응모하세요. 매일 아침 8시 업데이트 · @daily.event.pick">
-<meta name="theme-color" content="#0D1017">
+<title>줍줍노트 · 경품 이벤트 목록</title>
+<meta name="description" content="지금 응모할 수 있는 경품 이벤트를 마감 빠른 순으로 한 줄씩 정리했습니다. 매일 오전 8시 업데이트 · @daily.event.pick">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
-<meta property="og:title" content="줍줍노트 · 오늘 마감 임박 경품 이벤트">
-<meta property="og:description" content="5분이면 끝나는 경품 이벤트, 마감 빠른 순으로. 카드에서 바로 응모하세요.">
-<meta property="og:image" content="https://jkinject.github.io/daily-event-pick/assets/og.jpg">
+<meta property="og:title" content="줍줍노트 · 경품 이벤트 목록">
+<meta property="og:description" content="지금 응모할 수 있는 경품 이벤트를 마감 빠른 순으로. 한 줄에 하나, 눌러서 바로 응모.">
+<meta property="og:image" content="https://jkinject.github.io/daily-event-pick/assets/og.png">
 <meta property="og:url" content="https://jkinject.github.io/daily-event-pick/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D1017'/%3E%3Cpath d='M20 26h24l-3 20H23z' fill='%234A8BFF'/%3E%3Cpath d='M24 26l4-8h8l4 8' stroke='%234A8BFF' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23191B1F'/%3E%3Cpath d='M21 26h22l-2.5 19h-17z' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linejoin='round'/%3E%3Cpath d='M26 26v-4a6 6 0 0 1 12 0v4' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <style>
-  @font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2') format('woff2-variations');
-    font-weight: 45 920;
-    font-style: normal;
-    font-display: swap;
+  @font-face{
+    font-family:'Pretendard';
+    src:url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2') format('woff2-variations');
+    font-weight:45 920; font-style:normal; font-display:swap;
   }
-  :root{
-    --bg:#0D1017; --card:#131922; --card2:#161D28;
-    --line:#232B38; --line2:#2C3644;
-    --tx:#EEF2F8; --tx2:#9AA3B2; --dim:#5F6A7C;
-    --blue:#4A8BFF; --red:#E8412F; --red-soft:#FF6A57;
-    --r:20px;
-  }
-  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
-  html,body{margin:0; padding:0}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
   body{
-    background:var(--bg); color:var(--tx);
-    font-family:'Pretendard', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
-    font-size:16px; line-height:1.5; letter-spacing:-0.01em;
-    -webkit-font-smoothing:antialiased;
+    margin:0; background:#fff; color:#191b1f;
+    font-family:'Pretendard',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+    font-size:15px; line-height:1.5; letter-spacing:-0.012em;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     padding-bottom:env(safe-area-inset-bottom);
   }
   a{color:inherit; text-decoration:none}
-  .wrap{max-width:520px; margin:0 auto; padding:0 18px}
+  button{font:inherit; color:inherit}
+  :focus-visible{outline:2px solid #191b1f; outline-offset:2px; border-radius:4px}
+  .wrap{max-width:720px; margin:0 auto; padding:0 18px}
 
-  /* ---------- header ---------- */
-  .hdr{
-    position:sticky; top:0; z-index:20;
-    background:rgba(13,16,23,.82); backdrop-filter:saturate(160%) blur(14px);
-    border-bottom:1px solid rgba(35,43,56,.7);
-    padding:calc(env(safe-area-inset-top) + 12px) 0 12px;
-  }
-  .hdr .wrap{display:flex; align-items:center; justify-content:space-between; gap:10px}
-  .brand{display:flex; align-items:center; gap:8px; font-weight:800; font-size:17px; letter-spacing:-0.02em}
-  .brand .mark{width:9px; height:9px; border-radius:3px; background:var(--blue); box-shadow:0 0 12px rgba(74,139,255,.7)}
-  .brand .handle{font-weight:600; font-size:12px; color:var(--dim); letter-spacing:0}
-  .ig-btn{
-    font-size:12.5px; font-weight:700; color:#CFE0FF;
-    border:1px solid #2A3D5E; background:rgba(74,139,255,.10);
-    padding:8px 12px; border-radius:999px; white-space:nowrap;
-  }
+  /* header */
+  .top{border-bottom:1px solid #eceef1}
+  .top .wrap{display:flex; align-items:center; justify-content:space-between; gap:10px; height:54px}
+  .brand{display:flex; align-items:baseline; gap:7px; font-size:16px; font-weight:700; letter-spacing:-0.03em}
+  .brand span{font-size:12px; font-weight:400; color:#a2a7ad; letter-spacing:0}
+  .ig{font-size:12.5px; color:#7c8187; white-space:nowrap}
+  .ig:hover{color:#191b1f}
 
-  /* ---------- hero ---------- */
-  .hero{padding:30px 0 6px}
-  .kicker{display:flex; align-items:center; gap:8px; color:var(--blue); font-size:13px; font-weight:800; letter-spacing:.06em}
-  .kicker .line{flex:1; height:1px; background:linear-gradient(90deg, rgba(74,139,255,.55), rgba(74,139,255,0))}
-  h1{font-size:31px; line-height:1.22; font-weight:900; letter-spacing:-0.035em; margin:14px 0 10px; word-break:keep-all}
-  h1 em{font-style:normal; color:var(--blue)}
-  .sub{color:var(--tx2); font-size:14.5px; margin:0}
-  .stamp{color:var(--dim); font-size:12px; margin:14px 0 0}
+  /* intro */
+  .lede{padding:26px 0 4px}
+  .lede h1{margin:0; font-size:19px; font-weight:700; letter-spacing:-0.035em; line-height:1.35}
+  .lede p{margin:5px 0 0; font-size:13px; color:#8a8f96; letter-spacing:0}
 
-  /* ---------- date tabs ---------- */
-  .tabs{display:flex; gap:8px; overflow-x:auto; padding:18px 0 4px; scrollbar-width:none}
-  .tabs::-webkit-scrollbar{display:none}
-  .tab{
-    flex:0 0 auto; padding:9px 15px; border-radius:999px; font-size:13.5px; font-weight:700;
-    color:var(--tx2); background:#12171F; border:1px solid var(--line);
+  /* filter bar */
+  .bar{position:sticky; top:0; z-index:10; margin-top:18px; background:#fff; border-bottom:1px solid #eceef1}
+  .bar .wrap{display:flex; align-items:center; justify-content:space-between; gap:10px; height:44px}
+  .tabs{display:flex; gap:16px; min-width:0}
+  .tabs button{
+    position:relative; height:44px; padding:0; border:0; background:none; cursor:pointer;
+    font-size:13.5px; font-weight:500; color:#8a8f96; letter-spacing:0; white-space:nowrap;
   }
-  .tab.on{color:#0C1220; background:var(--tx); border-color:var(--tx)}
+  .tabs button:hover{color:#4a4f55}
+  .tabs button[aria-selected="true"]{color:#191b1f; font-weight:600}
+  .tabs button[aria-selected="true"]::after{content:''; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:#191b1f}
+  .tabs .n{margin-left:3px; font-size:12px; font-weight:400; color:#b3b7bc}
+  .sort{padding:6px 0; border:0; background:none; cursor:pointer; font-size:12.5px; color:#8a8f96; letter-spacing:0; white-space:nowrap}
+  .sort:hover{color:#191b1f}
 
-  /* ---------- cards ---------- */
-  .list{display:flex; flex-direction:column; gap:14px; padding:16px 0 8px}
-  .card{
-    position:relative; overflow:hidden;
-    background:linear-gradient(180deg, var(--card2), var(--card));
-    border:1px solid var(--line); border-radius:var(--r);
-    padding:20px 18px 18px;
-    animation:up .45s cubic-bezier(.2,.7,.3,1) both;
+  /* list */
+  .list{padding:0 0 4px}
+  .row{
+    display:flex; align-items:center; gap:12px;
+    padding:11px 2px; border-bottom:1px solid #f2f3f5;
+    transition:background .1s linear;
   }
-  .card::after{
-    content:''; position:absolute; inset:0 0 auto 0; height:1px;
-    background:linear-gradient(90deg, rgba(74,139,255,0), rgba(74,139,255,.45), rgba(74,139,255,0));
+  a.row:hover, a.row:active, div.row:hover{background:#fafbfc}
+  .dd{
+    flex:0 0 42px; font-size:11.5px; font-weight:600; color:#a2a7ad; letter-spacing:0;
+    font-variant-numeric:tabular-nums;
   }
-  @keyframes up{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:none}}
-  .card-top{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:14px}
-  .idx{font-size:12px; font-weight:800; color:var(--dim); letter-spacing:.08em}
-  .badges{display:flex; align-items:center; gap:6px}
-  .dday{
-    font-size:12.5px; font-weight:900; letter-spacing:.02em;
-    padding:5px 10px; border-radius:8px;
-    color:var(--tx2); background:#1B2230; border:1px solid var(--line2);
+  .dd.hot{color:#d33a2c}
+  .main{flex:1 1 auto; min-width:0}
+  .t{
+    display:block; font-size:14.5px; font-weight:500; color:#191b1f;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   }
-  .dday.hot{color:#FFFFFF; background:var(--red); border-color:var(--red)}
-  .dday.soon{color:var(--red-soft); background:rgba(232,65,47,.13); border-color:rgba(232,65,47,.42)}
-  .tag{font-size:11.5px; font-weight:700; color:var(--dim); border:1px solid var(--line2); padding:4px 8px; border-radius:7px}
-  .org{font-size:12.5px; font-weight:700; color:var(--blue); letter-spacing:0; margin:0 0 6px}
-  .title{font-size:16.5px; font-weight:800; line-height:1.38; margin:0 0 16px; letter-spacing:-0.02em; word-break:keep-all}
-  .prize{background:#0F141C; border:1px solid #1E2632; border-radius:14px; padding:13px 14px}
-  .prize .lbl{font-size:11px; font-weight:800; color:var(--dim); letter-spacing:.1em}
-  .prize .val{font-size:18.5px; font-weight:900; line-height:1.35; letter-spacing:-0.025em; margin-top:5px; word-break:keep-all}
-  .meta{display:flex; flex-wrap:wrap; gap:6px; margin:12px 0 0}
-  .chip{font-size:12.5px; font-weight:700; color:#C7D0DE; background:#1A212C; border:1px solid var(--line); padding:6px 10px; border-radius:9px}
-  .chip b{color:#FFF; font-weight:900}
-  .tip{font-size:13px; color:var(--tx2); line-height:1.5; margin:12px 0 0; word-break:keep-all}
-  .cta{
-    display:flex; align-items:center; justify-content:center; gap:8px;
-    margin-top:16px; height:54px; border-radius:14px;
-    background:var(--blue); color:#FFFFFF;
-    font-size:16px; font-weight:900; letter-spacing:-0.01em;
-    box-shadow:0 8px 22px rgba(74,139,255,.26);
-    transition:transform .12s ease, filter .12s ease;
+  .t em{font-style:normal; font-weight:400; font-size:13px; color:#8a8f96; margin-left:4px}
+  .m{
+    display:block; margin-top:2px; font-size:12.5px; font-weight:400; color:#8a8f96; letter-spacing:0;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   }
-  .cta:active{transform:scale(.985); filter:brightness(.94)}
-  .cta .arw{font-weight:900}
-  .cta2{
-    display:flex; align-items:center; justify-content:center; gap:6px;
-    margin-top:9px; height:46px; border-radius:12px;
-    border:1px solid #2A3D5E; background:rgba(74,139,255,.09); color:#CFE0FF;
-    font-size:14px; font-weight:800;
+  .m b{font-weight:500; color:#5f6469}
+  .m i{font-style:normal; color:#d6d9dd; margin:0 3px}
+  .act{flex:0 0 auto; font-size:12.5px; font-weight:500; color:#191b1f; letter-spacing:0; white-space:nowrap}
+  .act span{color:#a2a7ad; font-weight:400}
+  .acts{flex:0 0 auto; display:flex; gap:6px}
+  .acts a{
+    font-size:12px; font-weight:500; color:#191b1f; letter-spacing:0; white-space:nowrap;
+    padding:4px 8px; border:1px solid #e4e6ea; border-radius:6px;
   }
-  .cta2:active{filter:brightness(.95)}
+  .acts a:hover{background:#f4f5f7}
+  .row.out{opacity:.42}
+  .row.out .act{color:#8a8f96}
 
-  /* ---------- footer ---------- */
-  .foot{margin:26px 0 0; padding:22px 0 40px; border-top:1px solid var(--line)}
-  .follow{
-    display:block; text-align:center; padding:18px 16px; border-radius:18px;
-    background:radial-gradient(120% 140% at 50% 0%, rgba(74,139,255,.20), rgba(74,139,255,.05) 60%, rgba(0,0,0,0) 100%);
-    border:1px solid #24334B;
+  .more{padding:12px 0 0}
+  .more button{
+    padding:4px 0; border:0; background:none; cursor:pointer;
+    font-size:12.5px; color:#8a8f96; letter-spacing:0;
+    text-decoration:underline; text-underline-offset:3px; text-decoration-color:#d6d9dd;
   }
-  .follow .a{font-size:15px; font-weight:900; letter-spacing:-0.01em}
-  .follow .b{font-size:13px; color:var(--tx2); margin-top:6px}
-  .follow .id{display:inline-block; margin-top:10px; font-size:13.5px; font-weight:800; color:var(--blue)}
-  .notice{font-size:11.5px; color:var(--dim); line-height:1.7; margin:18px 0 0; text-align:center}
-  .neterr{color:var(--red-soft); font-size:13.5px; padding:20px 0; text-align:center}
-  .skel{height:210px; border-radius:var(--r); background:linear-gradient(100deg,#141A23,#1A2230,#141A23); background-size:200% 100%; animation:sh 1.1s infinite}
-  @keyframes sh{from{background-position:0 0} to{background-position:-200% 0}}
+  .more button:hover{color:#191b1f}
+  .empty{padding:34px 0; font-size:13.5px; color:#a2a7ad; text-align:center}
+  .err{padding:30px 0; font-size:13.5px; color:#8a8f96; text-align:center; line-height:1.7}
+
+  /* footer */
+  .foot{margin-top:26px; padding:18px 0 calc(34px + env(safe-area-inset-bottom)); border-top:1px solid #eceef1}
+  .foot p{margin:0; font-size:11.5px; line-height:1.75; color:#a2a7ad; letter-spacing:0}
+  .foot p + p{margin-top:4px}
+  .foot a{color:#7c8187; text-decoration:underline; text-underline-offset:2px; text-decoration-color:#dcdfe3}
+
+  @media (max-width:430px){
+    .tabs{gap:13px}
+    .tabs .n{display:none}
+    .acts a{padding:4px 7px; font-size:11.5px}
+    .dd{flex-basis:38px; font-size:11px; letter-spacing:-0.02em}
+  }
+  @media (min-width:721px){
+    .row{padding:12px 4px}
+    .t{font-size:15px}
+  }
 </style>
 </head>
 <body>
 
-<header class="hdr">
+<header class="top">
   <div class="wrap">
-    <div class="brand"><span class="mark"></span>줍줍노트 <span class="handle" id="hdrHandle">@daily.event.pick</span></div>
-    <a class="ig-btn" id="hdrIg" href="https://www.instagram.com/daily.event.pick/" target="_blank" rel="noopener">팔로우</a>
+    <div class="brand">줍줍노트 <span>경품 이벤트</span></div>
+    <a class="ig" id="igTop" href="https://www.instagram.com/daily.event.pick/" target="_blank" rel="noopener">@daily.event.pick</a>
   </div>
 </header>
 
 <main class="wrap">
-  <section class="hero">
-    <div class="kicker"><span id="kickerDate">2026.11.24</span><span class="line"></span></div>
-    <h1 id="headline">오늘 마감 임박<br><em>경품 이벤트</em></h1>
-    <p class="sub" id="sub">5분이면 끝나는 경품 4건 · 마감 빠른 순</p>
-    <p class="stamp" id="stamp"></p>
+  <section class="lede">
+    <h1>지금 응모할 수 있는 경품</h1>
+    <p>행을 누르면 기관 응모 페이지가 새 창으로 열립니다.</p>
   </section>
-
-  <nav class="tabs" id="tabs" aria-label="날짜 선택"></nav>
-  <div class="list" id="list">
-    <div class="skel"></div><div class="skel"></div>
-  </div>
 </main>
 
-<footer class="wrap foot">
-  <a class="follow" id="followBox" href="https://www.instagram.com/daily.event.pick/" target="_blank" rel="noopener">
-    <div class="a">매일 아침 8시, 새 경품 올라옵니다</div>
-    <div class="b">놓치면 그냥 사라져요 — 저장해두고 하나씩 줍줍</div>
-    <div class="id" id="footHandle">@daily.event.pick 팔로우 →</div>
-  </a>
-  <p class="notice">
-    경품·마감은 기관 공지 기준이며 변동될 수 있습니다.<br>
-    응모는 각 기관 페이지에서 직접 진행됩니다 · 문의 <span id="footHandle2">@daily.event.pick</span>
-  </p>
-</footer>
+<div class="bar">
+  <div class="wrap">
+    <nav class="tabs" id="tabs" role="tablist" aria-label="목록 필터">
+      <button role="tab" data-f="all" aria-selected="true">전체 <span class="n" id="nAll"></span></button>
+      <button role="tab" data-f="soon" aria-selected="false">마감임박 <span class="n" id="nSoon"></span></button>
+      <button role="tab" data-f="new" aria-selected="false">오늘 추가 <span class="n" id="nNew"></span></button>
+    </nav>
+    <button class="sort" id="sortBtn" type="button">마감임박순 ↕</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="list" id="list" aria-live="polite">
+    <p class="empty">불러오는 중…</p>
+  </div>
+  <div class="more" id="more" hidden><button type="button" id="moreBtn"></button></div>
+  <footer class="foot">
+    <p id="note">경품·마감은 기관 공지 기준이며 변동될 수 있습니다. 응모는 각 기관 페이지에서 진행됩니다.</p>
+    <p id="stamp"></p>
+  </footer>
+</main>
+
+<noscript><div class="wrap"><p class="err">목록을 보려면 자바스크립트를 켜 주세요.</p></div></noscript>
 
 <script>
 (function () {
-  var DATA_URL = './data/events.json';
   var WD = ['일','월','화','수','목','금','토'];
+  var DATA_URL = './data/events.json';
+  var SOON_DAYS = 3;            // D-3 이하를 '마감임박'으로 봄
+  var LIMIT = 600;              // 목록 최대 표시 수 (안전장치)
 
   function pad(n){ return (n < 10 ? '0' : '') + n; }
-
-  // 오늘 날짜(KST)를 YYYY-MM-DD 로
-  function todayKST(){
-    var now = new Date();
-    var kst = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (9 * 3600000));
-    return kst.getFullYear() + '-' + pad(kst.getMonth() + 1) + '-' + pad(kst.getDate());
-  }
-  function parseDate(s){ var p = String(s).split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
-  function dday(deadline, base){
-    var d = parseDate(deadline), b = parseDate(base || todayKST());
-    return Math.round((d - b) / 86400000);
-  }
-  function ddayText(n){
-    if (n < 0) return '마감';
-    if (n === 0) return 'D-DAY';
-    return 'D-' + n;
-  }
-  function ddayClass(n){
-    if (n <= 0) return 'dday hot';
-    if (n <= 2) return 'dday soon';
-    if (n <= 5) return 'dday soon';
-    return 'dday';
-  }
-  function dateLabel(s){ // 2026-11-25 -> 11.25(수)
-    var d = parseDate(s);
-    return pad(d.getMonth() + 1) + '.' + pad(d.getDate()) + '(' + WD[d.getDay()] + ')';
-  }
   function esc(t){
     return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) {
       return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
     });
   }
 
-  function card(ev, i, dayDate){
-    var n = dday(ev.deadline, dayDate);
-    var num = pad(i + 1);
-    var url = ev.url || '#';
-    var mainLabel = ev.url_label || '바로 응모하기';
-    var html = ''
-      + '<article class="card" style="animation-delay:' + (i * 60) + 'ms">'
-      +   '<div class="card-top">'
-      +     '<span class="idx">' + num + '</span>'
-      +     '<span class="badges">'
-      +       (ev.tag ? '<span class="tag">' + esc(ev.tag) + '</span>' : '')
-      +       '<span class="' + ddayClass(n) + '">' + ddayText(n) + '</span>'
-      +     '</span>'
-      +   '</div>'
-      +   '<p class="org">' + esc(ev.org) + '</p>'
-      +   '<h2 class="title">' + esc(ev.title) + '</h2>'
-      +   '<div class="prize">'
-      +     '<div class="lbl">경품</div>'
-      +     '<div class="val">' + esc(ev.prize) + '</div>'
-      +   '</div>'
-      +   '<div class="meta">'
-      +     (ev.winners ? '<span class="chip">당첨 <b>' + esc(ev.winners) + '</b></span>' : '')
-      +     '<span class="chip">마감 <b>' + dateLabel(ev.deadline) + '</b></span>'
-      +   '</div>'
-      +   (ev.tip ? '<p class="tip">' + esc(ev.tip) + '</p>' : '')
-      +   '<a class="cta" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">'
-      +     esc(mainLabel) + ' <span class="arw">→</span>'
-      +   '</a>'
-      +   (ev.url2 ? '<a class="cta2" href="' + esc(ev.url2) + '" target="_blank" rel="noopener noreferrer">'
-      +     esc(ev.url2_label || '두 번째 투표도 참여하기') + ' <span class="arw">→</span></a>' : '')
-      + '</article>';
-    return html;
+  // 오늘 날짜(KST) — 'YYYY-MM-DD'
+  var now = new Date();
+  var kst = new Date(now.getTime() + now.getTimezoneOffset() * 60000 + 9 * 3600000);
+  var TODAY = kst.getFullYear() + '-' + pad(kst.getMonth() + 1) + '-' + pad(kst.getDate());
+
+  function ymd(s){ return String(s == null ? '' : s).slice(0, 10); }
+  function utc(s){
+    var p = ymd(s).split('-');
+    return Date.UTC(+p[0], (+p[1] || 1) - 1, +p[2] || 1);
+  }
+  function diff(a, b){ return Math.round((utc(a) - utc(b)) / 86400000); }
+  function md(s){
+    var p = ymd(s).split('-');
+    if (p.length < 3) return '';
+    var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
+    return (+p[1]) + '.' + pad(+p[2]) + '(' + WD[d.getUTCDay()] + ')';
+  }
+  function stamp(t){
+    var d = new Date(t);
+    if (isNaN(d)) return '';
+    var k = new Date(d.getTime() + d.getTimezoneOffset() * 60000 + 9 * 3600000);
+    return '업데이트 ' + k.getFullYear() + '.' + pad(k.getMonth() + 1) + '.' + pad(k.getDate()) +
+      ' ' + pad(k.getHours()) + ':' + pad(k.getMinutes());
   }
 
-  function renderDay(day){
-    var list = document.getElementById('list');
-    var events = (day.events || []).slice().sort(function (a, b) {
-      return parseDate(a.deadline) - parseDate(b.deadline);
+  var STATE = { filter: 'all', sort: 'deadline', showOut: false };
+  var ALL = [];
+
+  // days[] 를 한 줄 목록으로 펼치고, 같은 이벤트는 최근 등록분만 남긴다
+  function flatten(data){
+    var rows = [], seen = {};
+    var days = (data.days || []).slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+
+    function push(ev, added){
+      if (!ev) return;
+      var key = ev.id || ev.url || ((ev.org || '') + '|' + (ev.title || ''));
+      if (!key) return;
+      var row = { ev: ev, added: ymd(added) || '' };
+      var prev = seen[key];
+      if (prev != null && (rows[prev].added || '') > row.added) return;  // 기존이 더 최신
+      row.n = ymd(ev.deadline) ? diff(ev.deadline, TODAY) : null;
+      if (prev != null) { rows[prev] = row; return; }
+      seen[key] = rows.length;
+      rows.push(row);
+    }
+
+    days.forEach(function (day) {
+      (day.events || []).forEach(function (ev) { push(ev, day.date); });
     });
-    list.innerHTML = events.map(function (ev, i) { return card(ev, i, day.date); }).join('');
+    // 최상위 events[] 도 지원 (평면 배열로 쌓이는 경우)
+    (data.events || []).forEach(function (ev) { push(ev, ev.added || ev.registered || ev.date); });
+
+    return rows;
   }
 
-  function renderTabs(days, activeIdx, onPick){
-    var tabs = document.getElementById('tabs');
-    if (!days || days.length < 2) { tabs.innerHTML = ''; return; }
-    tabs.innerHTML = days.map(function (d, i) {
-      var cls = 'tab' + (i === activeIdx ? ' on' : '');
-      var label = (d.label ? d.label + ' · ' : '') + String(d.date).replace(/-/g, '.');
-      return '<button class="' + cls + '" data-i="' + i + '">' + esc(label) + '</button>';
-    }).join('');
-    Array.prototype.forEach.call(tabs.querySelectorAll('.tab'), function (b) {
-      b.addEventListener('click', function () { onPick(+b.getAttribute('data-i')); });
+  function isOut(r){ return r.n != null && r.n < 0; }
+  function visible(){
+    var rows = ALL.filter(function (r) {
+      if (STATE.filter === 'soon') return r.n != null && r.n >= 0 && r.n <= SOON_DAYS;
+      if (STATE.filter === 'new') return r.added === TODAY && !isOut(r);
+      return !isOut(r);
+    });
+    rows.sort(STATE.sort === 'new'
+      ? function (a, b) { return (a.added < b.added ? 1 : a.added > b.added ? -1 : 0) || ((a.n == null ? 9e9 : a.n) - (b.n == null ? 9e9 : b.n)); }
+      : function (a, b) { return (a.n == null ? 9e9 : a.n) - (b.n == null ? 9e9 : b.n); });
+    return rows.slice(0, LIMIT);
+  }
+
+  function ddayText(r){
+    if (r.n == null) return '–';
+    if (r.n < 0) return '마감';
+    if (r.n === 0) return 'D-DAY';
+    return 'D-' + r.n;
+  }
+  function shortLabel(label, fallback){
+    var s = String(label || '').replace(/\s*(바로\s*)?(응모하기|참여하기|도\s*참여하기|바로가기)\s*$/,'').trim();
+    return s || fallback;
+  }
+
+  function rowHTML(r){
+    var ev = r.ev;
+    var out = isOut(r);
+    var open = '<span class="dd' + (!out && r.n != null && r.n <= SOON_DAYS ? ' hot' : '') + '">' + ddayText(r) + '</span>';
+    var head = '<span class="t" title="' + esc(ev.title || '') + '">' + esc(ev.title || '(제목 없음)') +
+      (ev.org ? '<em>' + esc(ev.org) + '</em>' : '') + '</span>';
+    var bits = [];
+    if (ev.prize) bits.push('<b>' + esc(ev.prize) + '</b>' + (ev.winners ? ' ' + esc(ev.winners) : ''));
+    if (ev.deadline) bits.push('~' + md(ev.deadline));
+    var meta = '<span class="m">' + bits.join('<i>·</i>') + '</span>';
+    var main = '<span class="main">' + head + meta + '</span>';
+
+    if (ev.url2) {
+      return '<div class="row' + (out ? ' out' : '') + '">' + open + main +
+        '<span class="acts">' +
+          '<a href="' + esc(ev.url || '#') + '" target="_blank" rel="noopener noreferrer">' +
+            esc(shortLabel(ev.url_short || ev.url_label, '차관급')) + ' →</a>' +
+          '<a href="' + esc(ev.url2) + '" target="_blank" rel="noopener noreferrer">' +
+            esc(shortLabel(ev.url2_short || ev.url2_label, '장관급')) + ' →</a>' +
+        '</span></div>';
+    }
+    return '<a class="row' + (out ? ' out' : '') + '" href="' + esc(ev.url || '#') + '" target="_blank" rel="noopener noreferrer">' +
+        open + main +
+        '<span class="act">' + (out ? '마감' : '응모 <span>→</span>') + '</span>' +
+      '</a>';
+  }
+
+  function render(){
+    var list = document.getElementById('list');
+    var rows = visible();
+
+    // 카운트
+    var active = 0, soon = 0, fresh = 0;
+    ALL.forEach(function (r) {
+      if (!isOut(r)) {
+        active++;
+        if (r.n != null && r.n <= SOON_DAYS) soon++;
+        if (r.added === TODAY) fresh++;
+      }
+    });
+    document.getElementById('nAll').textContent = active;
+    document.getElementById('nSoon').textContent = soon;
+    document.getElementById('nNew').textContent = fresh;
+
+    list.innerHTML = rows.length
+      ? rows.map(rowHTML).join('')
+      : '<p class="empty">해당하는 이벤트가 없습니다.</p>';
+
+    // 지난 이벤트(마감) 토글 — '전체' 탭에서만
+    var outRows = ALL.filter(isOut).sort(function (a, b) { return b.n - a.n; });
+    var more = document.getElementById('more');
+    var btn = document.getElementById('moreBtn');
+    if (STATE.filter !== 'all' || !outRows.length) {
+      more.hidden = true;
+    } else if (STATE.showOut) {
+      more.hidden = false;
+      btn.textContent = '지난 이벤트 접기';
+      list.insertAdjacentHTML('beforeend', outRows.slice(0, LIMIT).map(rowHTML).join(''));
+    } else {
+      more.hidden = false;
+      btn.textContent = '지난 이벤트 ' + outRows.length + '건 보기';
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
+      b.setAttribute('aria-selected', String(b.getAttribute('data-f') === STATE.filter));
+    });
+    document.getElementById('sortBtn').textContent =
+      (STATE.sort === 'new' ? '최신순' : '마감임박순') + ' ↕';
+  }
+
+  function bind(){
+    Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
+      b.addEventListener('click', function () {
+        STATE.filter = b.getAttribute('data-f');
+        STATE.showOut = false;
+        render();
+        window.scrollTo({ top: document.querySelector('.bar').offsetTop, behavior: 'smooth' });
+      });
+    });
+    document.getElementById('sortBtn').addEventListener('click', function () {
+      STATE.sort = STATE.sort === 'deadline' ? 'new' : 'deadline';
+      render();
+    });
+    document.getElementById('moreBtn').addEventListener('click', function () {
+      STATE.showOut = !STATE.showOut;
+      render();
     });
   }
 
   function boot(data){
+    ALL = flatten(data || {});
     var site = data.site || {};
-    var days = data.days || [];
-    if (!days.length) {
-      document.getElementById('list').innerHTML = '<p class="neterr">오늘의 이벤트를 준비 중입니다.</p>';
-      return;
-    }
-
-    // 최신 날짜가 앞에 오도록 정렬
-    days.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
-
-    if (site.handle) {
-      document.getElementById('hdrHandle').textContent = site.handle;
-      document.getElementById('footHandle').textContent = site.handle + ' 팔로우 →';
-      document.getElementById('footHandle2').textContent = site.handle;
-    }
     if (site.instagram) {
-      document.getElementById('hdrIg').href = site.instagram;
-      document.getElementById('followBox').href = site.instagram;
-    }
-
-    var active = 0;
-    function paint(i){
-      active = i;
-      var day = days[i];
-      var h1 = document.getElementById('headline');
-      var head = day.headline || '오늘 마감 임박 경품 이벤트';
-      // 마지막 두 어절을 포인트 컬러로 강조
-      var parts = head.split(' ');
-      if (parts.length >= 3) {
-        var tail = parts.splice(-2).join(' ');
-        h1.innerHTML = esc(parts.join(' ')) + '<br><em>' + esc(tail) + '</em>';
-      } else {
-        h1.innerHTML = '<em>' + esc(head) + '</em>';
-      }
-      document.getElementById('sub').textContent = day.sub || '';
-      document.getElementById('kickerDate').textContent =
-        String(day.date).replace(/-/g, '.') + ' · ' + (day.label || '');
-      renderDay(day);
-      renderTabs(days, i, paint);
-    }
-    paint(0);
-
-    if (site.updated_at) {
-      var u = new Date(site.updated_at);
-      if (!isNaN(u)) {
-        var k = new Date(u.getTime() + (u.getTimezoneOffset() * 60000) + (9 * 3600000));
-        document.getElementById('stamp').textContent =
-          '업데이트 ' + k.getFullYear() + '.' + pad(k.getMonth() + 1) + '.' + pad(k.getDate()) +
-          ' ' + pad(k.getHours()) + ':' + pad(k.getMinutes()) + ' KST';
-      }
+      document.getElementById('igTop').href = site.instagram;
     }
     if (site.disclaimer) {
-      var notice = document.querySelector('.notice');
-      if (notice) notice.innerHTML = esc(site.disclaimer) + '<br>응모는 각 기관 페이지에서 직접 진행됩니다 · 문의 ' +
-        '<span id="footHandle2">' + esc(site.handle || '') + '</span>';
+      document.getElementById('note').textContent =
+        site.disclaimer + ' 응모는 각 기관 페이지에서 진행됩니다.';
     }
+    document.getElementById('stamp').textContent =
+      [stamp(site.updated_at), site.handle].filter(Boolean).join(' · ');
+    bind();
+    render();
   }
 
   fetch(DATA_URL, { cache: 'no-store' })
@@ -337,7 +369,7 @@
     .then(boot)
     .catch(function () {
       document.getElementById('list').innerHTML =
-        '<p class="neterr">이벤트를 불러오지 못했어요. 잠시 후 새로고침해 주세요.</p>';
+        '<p class="err">목록을 불러오지 못했습니다.<br>잠시 후 새로고침해 주세요.</p>';
     });
 })();
 </script>
