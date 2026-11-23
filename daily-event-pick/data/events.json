@@ -1,0 +1,67 @@
+{
+  "site": {
+    "name": "줍줍노트",
+    "handle": "@daily.event.pick",
+    "tagline": "오늘 마감 임박 경품 이벤트",
+    "instagram": "https://www.instagram.com/daily.event.pick/",
+    "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
+    "updated_at": "2026-11-24T02:25:00+09:00"
+  },
+  "days": [
+    {
+      "date": "2026-11-24",
+      "label": "오늘",
+      "headline": "오늘 마감 임박 경품 이벤트",
+      "sub": "5분이면 끝나는 경품 4건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "nongjeongwon-modunong-2026",
+          "org": "농림수산식품교육문화정보원",
+          "title": "「모두가 도시농부」 누리집 이용자 만족도 설문",
+          "prize": "스타벅스 아메리카노 + 베이글 + 크림치즈 세트",
+          "winners": "30명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdrgHUx69R7Oy91jiQ6Stv-OeHgiEf6h5w_Gzb9exhe6Yow7w/viewform",
+          "tip": "5페이지 만족도 설문 · 당첨 발표 11.27",
+          "tag": "설문"
+        },
+        {
+          "id": "fss-homepage-2026",
+          "org": "금융감독원",
+          "title": "2026 홈페이지 이용자 만족도 조사",
+          "prize": "1만원 모바일 상품권 (스타벅스·배민·네이버페이 중 택1)",
+          "winners": "500명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://kon.kric.com/project/2610028_A/INDEX.asp",
+          "tip": "25문항 · 3분이면 끝 · 대상은 전 국민",
+          "tag": "설문"
+        },
+        {
+          "id": "korean-ai-malpyung-2026",
+          "org": "국립국어원",
+          "title": "2026 인공지능 말평 이용자 만족도 조사",
+          "prize": "네이버페이 포인트",
+          "winners": "선착순 소진",
+          "deadline": "2026-12-09",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLScgJ9IwRxTUjYTOd2WMw6xgLeEi7FQ_nbO6hMIrnJ2qQ3IGIQ/viewform",
+          "tip": "5~7분 · 써본 적 없어도 '이용 경험 없음'으로 응답 가능",
+          "tag": "설문"
+        },
+        {
+          "id": "mois-innovation-vote-2026",
+          "org": "행정안전부 · 모두의 광장",
+          "title": "2026 정부혁신 우수사례 국민투표 (차관급·장관급)",
+          "prize": "갤럭시 버즈4 2명 · 배민 1만원 80명 · 다이소 5천원 800명",
+          "winners": "882명 추첨",
+          "deadline": "2026-12-13",
+          "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=34c91837d0b34becbc65761b8d2a0224",
+          "url_label": "차관급 투표 바로 응모하기",
+          "url2": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=b27603eb3aaa45b286d4a71b0d02875d",
+          "url2_label": "장관급 투표도 참여하기",
+          "tip": "모두의 광장 로그인(카카오 간편인증) 후 각 3건 투표 — 둘 다 하면 확률 2배",
+          "tag": "투표"
+        }
+      ]
+    }
+  ]
+}
