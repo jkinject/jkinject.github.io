@@ -69,20 +69,24 @@
   /* list */
   .list{padding:0 0 4px}
   .row{
-    display:flex; align-items:center; gap:12px;
+    position:relative; display:flex; align-items:center; gap:12px;
     padding:11px 2px; border-bottom:1px solid #f2f3f5;
     transition:background .1s linear;
   }
-  a.row:hover, a.row:active, div.row:hover{background:#fafbfc}
+  .row:hover, .row:active{background:#fafbfc}
+  /* 제목 링크가 행 전체를 덮는다 (제보 버튼만 그 위에 올라옴) */
+  .t.go::after{content:''; position:absolute; inset:0; z-index:1}
+  .t.go:focus-visible{outline:0}
+  .t.go:focus-visible::after{outline:2px solid #191b1f; outline-offset:-2px; border-radius:4px}
   .dd{
     flex:0 0 42px; font-size:11.5px; font-weight:600; color:#93989e; letter-spacing:0;
-    font-variant-numeric:tabular-nums;
+    font-variant-numeric:tabular-nums; white-space:nowrap;
   }
   .dd.hot{color:#d33a2c}
   .main{flex:1 1 auto; min-width:0}
   .hd{display:flex; align-items:flex-start; gap:6px; min-width:0}
   .hd .t{flex:1 1 0%; min-width:0}
-  .new{
+  .pick{
     flex:0 0 auto; display:inline-block; margin-top:3.5px; padding:1.5px 4px 1px; border-radius:3px;
     background:#eef4ff; color:#1a6bff; font-size:9.5px; font-weight:700;
     letter-spacing:.06em; line-height:1.25; text-indent:.06em;
@@ -105,6 +109,23 @@
   }
   .m .ic svg{display:block; width:18px; height:18px}
   .m i{font-style:normal; color:#d6d9dd; margin:0 3px}
+  .rp{
+    position:relative; z-index:2; padding:0; border:0; background:none; cursor:pointer;
+    font-size:11.5px; color:#a3a8ae; white-space:nowrap;
+    text-decoration:underline; text-underline-offset:2px; text-decoration-color:#dfe2e6;
+  }
+  .rp::before{content:''; position:absolute; inset:-9px -10px}
+  .rp:hover{color:#191b1f}
+  .rp.done{cursor:default; color:#b4b9bf; text-decoration:none}
+  .rp.done::before{content:none}
+  .tp{
+    display:block; margin-top:3px; font-size:11.5px; color:#878d94;
+    letter-spacing:0; line-height:1.45; word-break:keep-all; overflow-wrap:anywhere;
+  }
+  .tp b{
+    display:inline-block; margin-right:5px; padding:0 3.5px; border:1px solid #e1e4e8; border-radius:3px;
+    font-size:9px; font-weight:700; letter-spacing:.06em; line-height:1.5; color:#8d939b; vertical-align:1px;
+  }
   .act{flex:0 0 auto; font-size:12.5px; font-weight:500; color:#191b1f; letter-spacing:0; white-space:nowrap}
   .act span{color:#9aa0a6; font-weight:400}
   .act.res{font-weight:400; color:#98a0a9}
@@ -121,11 +142,8 @@
 
   /* 방문한 이벤트 */
   .row.is-visited,
-  a.row.is-visited,
-  a.row.is-visited:hover,
-  a.row.is-visited:active,
-  div.row.is-visited,
-  div.row.is-visited:hover{background:#f3f5f7}
+  .row.is-visited:hover,
+  .row.is-visited:active{background:#f3f5f7}
   .row.is-visited{border-bottom-color:#e8ecef}
   .row.is-visited .t{color:#7a828e}
   .row.is-visited .t em{color:#969da6}
@@ -135,6 +153,7 @@
   .row.is-visited .m b{color:#7e858e}
   .row.is-visited .m i{color:#d3d8dd}
   .row.is-visited .m .ic{color:#a5acb4}
+  .row.is-visited .tp{color:#9aa1a9}
   .row.is-visited .act{color:#98a0a9}
   .row.is-visited.out{opacity:.55}
 
@@ -145,25 +164,72 @@
   .foot{margin-top:26px; padding:18px 0 calc(34px + env(safe-area-inset-bottom)); border-top:1px solid #eceef1}
   .foot p{margin:0; font-size:11.5px; line-height:1.75; color:#979ca2; letter-spacing:0}
   .foot p + p{margin-top:4px}
-  .foot a{color:#7c8187; text-decoration:underline; text-underline-offset:2px; text-decoration-color:#dcdfe3}
+  .foot a, .foot .lk{color:#7c8187; text-decoration:underline; text-underline-offset:2px; text-decoration-color:#dcdfe3}
+  .foot .lk{padding:0; border:0; background:none; cursor:pointer; font-size:inherit; letter-spacing:0}
+  .foot .lk:hover{color:#191b1f}
+
+  /* 오류 제보 창 */
+  [hidden]{display:none !important}
+  dialog:not([open]){display:none}
+  html.dlg-open{overflow:hidden}
+  .dlg{
+    position:fixed; inset:0; margin:auto; height:fit-content; max-height:calc(100% - 32px);
+    width:min(420px, calc(100% - 32px)); max-width:none; padding:0; border:0; border-radius:14px;
+    background:#fff; color:#191b1f; box-shadow:0 12px 40px rgba(25,27,31,.18); overflow:auto;
+  }
+  .dlg::backdrop{background:rgba(25,27,31,.4)}
+  .dlg-in{padding:22px 22px 20px}
+  .dlg h2{margin:0; font-size:17px; font-weight:700; letter-spacing:-0.03em}
+  .dlg-ev{margin:6px 0 0; font-size:13px; color:#6f747a; letter-spacing:0; line-height:1.5; word-break:keep-all}
+  .dlg-rs{margin:18px 0 0; padding:0; border:0; min-width:0; display:flex; flex-wrap:wrap; gap:7px}
+  .dlg-rs legend, .dlg-lb{padding:0; margin:0 0 8px; font-size:12.5px; font-weight:600; color:#4d5257; letter-spacing:0}
+  .dlg-rs label{position:relative; cursor:pointer}
+  .dlg-rs input{position:absolute; opacity:0; inset:0; margin:0; cursor:pointer}
+  .dlg-rs span{
+    display:block; padding:7px 12px; border:1px solid #e1e4e8; border-radius:999px;
+    font-size:13px; color:#4d5257; letter-spacing:0; white-space:nowrap;
+  }
+  .dlg-rs input:checked + span{border-color:#191b1f; background:#191b1f; color:#fff}
+  .dlg-rs input:focus-visible + span{outline:2px solid #191b1f; outline-offset:2px}
+  .dlg-msg{display:block; margin-top:18px}
+  .dlg-lb{display:block}
+  .dlg-msg textarea{
+    display:block; width:100%; min-height:76px; padding:10px 12px; border:1px solid #e1e4e8; border-radius:10px;
+    font:inherit; font-size:16px; line-height:1.5; color:#191b1f; letter-spacing:0; resize:vertical; background:#fff;
+  }
+  .dlg-msg textarea:focus{outline:0; border-color:#191b1f}
+  .dlg-msg textarea::placeholder{color:#adb2b8}
+  .dlg .hp{position:absolute; left:-9999px; width:1px; height:1px; opacity:0}
+  .dlg-err{margin:10px 0 0; font-size:12.5px; color:#d33a2c; letter-spacing:0}
+  .dlg-btns{display:flex; justify-content:flex-end; gap:8px; margin-top:18px}
+  .dlg-btns button{
+    height:42px; padding:0 18px; border:1px solid #e1e4e8; border-radius:10px; background:#fff; cursor:pointer;
+    font-size:14px; font-weight:500; color:#4d5257; letter-spacing:0;
+  }
+  .dlg-btns .b1{border-color:#191b1f; background:#191b1f; color:#fff; font-weight:600}
+  .dlg-btns button:disabled{opacity:.5; cursor:default}
+  .dlg-done p{margin:8px 0 0; font-size:13.5px; color:#6f747a; letter-spacing:0; line-height:1.6}
 
   @media (max-width:480px){
     .wrap{padding:0 16px}
     .tabs{gap:13px}
-    .tabs .n{display:none}
+    .tabs .n{margin-left:2px; font-size:11px}
     .sort{padding-left:8px}
     .row{gap:9px; padding:10px 0}
-    .dd{flex:0 0 34px; font-size:11px; letter-spacing:-0.02em}
+    .dd{flex:0 0 40px; font-size:11px; letter-spacing:-0.02em}
     .t{white-space:normal; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; line-height:1.34}
     .t em{margin-left:3px}
     .hd{gap:5px}
-    .new{margin-top:3px; padding:1px 3.5px 0.5px; font-size:9px; letter-spacing:.04em}
+    .pick{margin-top:3px; padding:1px 3.5px 0.5px; font-size:9px; letter-spacing:.04em}
     .m{font-size:12px; line-height:1.5}
     .m .ic{width:17px; height:17px; margin-right:4px; vertical-align:-3px}
     .m .ic svg{width:17px; height:17px}
     .act{font-size:12.5px; color:#a2a7ad; align-self:center}
     .act .lbl{display:none}
     .row.out .act{color:#b9bdc3}
+    .dlg{inset:auto 0 0 0; margin:0; width:100%; max-height:92%; border-radius:16px 16px 0 0}
+    .dlg-in{padding:22px 18px calc(18px + env(safe-area-inset-bottom))}
+    .dlg-btns button{flex:1 1 0; height:46px}
   }
   @media (min-width:721px){
     .row{padding:12px 4px}
@@ -199,7 +265,7 @@
     <nav class="tabs" id="tabs" role="tablist" aria-label="목록 필터">
       <button role="tab" data-f="open" aria-selected="true">진행중 <span class="n" id="nOpen"></span></button>
       <button role="tab" data-f="soon" aria-selected="false">마감임박 <span class="n" id="nSoon"></span></button>
-      <button role="tab" data-f="new" aria-selected="false">오늘 추가 <span class="n" id="nNew"></span></button>
+      <button role="tab" data-f="new" aria-selected="false">신규 <span class="n" id="nNew"></span></button>
       <button role="tab" data-f="closed" aria-selected="false">마감 <span class="n" id="nClosed"></span></button>
     </nav>
     <button class="sort" id="sortBtn" type="button">마감임박순 ↕</button>
@@ -212,9 +278,40 @@
   </div>
   <footer class="foot">
     <p id="note">경품·마감은 기관 공지 기준이며 변동될 수 있습니다. 응모는 각 기관 페이지에서 진행됩니다.</p>
+    <p>잘못된 정보나 빠진 이벤트가 있다면 <button class="lk" id="rpOpen" type="button">제보해 주세요</button>.</p>
     <p id="stamp"></p>
   </footer>
 </main>
+
+<dialog class="dlg" id="rpDlg" aria-labelledby="rpTitle">
+  <form class="dlg-in" id="rpForm" novalidate>
+    <h2 id="rpTitle">오류 제보</h2>
+    <p class="dlg-ev" id="rpEv"></p>
+    <fieldset class="dlg-rs" id="rpReasons">
+      <legend>어떤 문제가 있나요?</legend>
+      <label><input type="radio" name="reason" value="deadline"><span>마감일이 달라요</span></label>
+      <label><input type="radio" name="reason" value="link"><span>링크가 안 열려요</span></label>
+      <label><input type="radio" name="reason" value="info"><span>경품·인원이 달라요</span></label>
+      <label><input type="radio" name="reason" value="ended"><span>이미 종료됐어요</span></label>
+      <label><input type="radio" name="reason" value="etc"><span>기타</span></label>
+    </fieldset>
+    <label class="dlg-msg">
+      <span class="dlg-lb" id="rpMsgLabel">자세한 내용 (선택)</span>
+      <textarea id="rpMsg" name="message" maxlength="500" rows="3"></textarea>
+    </label>
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <p class="dlg-err" id="rpErr" role="alert" hidden></p>
+    <div class="dlg-btns">
+      <button type="button" id="rpCancel">취소</button>
+      <button type="submit" class="b1" id="rpSend">제보하기</button>
+    </div>
+  </form>
+  <div class="dlg-in dlg-done" id="rpDone" hidden>
+    <h2>제보가 접수됐습니다</h2>
+    <p>알려 주셔서 감사합니다. 확인 후 목록에 반영하겠습니다.</p>
+    <div class="dlg-btns"><button type="button" class="b1" id="rpClose">닫기</button></div>
+  </div>
+</dialog>
 
 <noscript><div class="wrap"><p class="err">목록을 보려면 자바스크립트를 켜 주세요.</p></div></noscript>
 
@@ -222,7 +319,9 @@
 (function () {
   var WD = ['일','월','화','수','목','금','토'];
   var DATA_URL = './data/events.json';
-  var SOON_DAYS = 3;            // D-3 이하를 '마감임박'으로 봄
+  var SOON_DAYS = 1;            // 오늘·내일 마감(D-1 이하)을 '마감임박'으로 봄
+  var HOT_DAYS = 3;             // D-3 이하는 D-day를 레드로 표시
+  var REPORT_URL = 'https://event.lalatap.kr/api/report';   // 오류 제보 접수 (Cloudflare Worker)
   var CLOSED_DAYS = 30;         // 마감 후 30일까지만 노출
 
   function pad(n){ return (n < 10 ? '0' : '') + n; }
@@ -259,24 +358,28 @@
 
   var STATE = { filter: 'open', sort: 'deadline' };
   var ALL = [];
+  var BYKEY = {};
   var FEATURED = {};            // 오늘 소개분(최신 featured_date) 키 모음
+  var LATEST = '';              // 가장 최근 업데이트 날짜 — '신규' 탭 기준
 
   // 탭마다 바뀌는 상단 제목·설명
   var LEDE = {
     open: ['지금 응모할 수 있는 경품', '행을 누르면 기관 응모 페이지가 새 창으로 열립니다.'],
-    soon: ['곧 마감되는 경품', '마감 3일 이내 이벤트만 모았습니다.'],
-    new: ['오늘 새로 올라온 경품', '오늘 추가된 이벤트만 모아 봤습니다.'],
+    soon: ['곧 마감되는 경품', '오늘·내일 마감되는 이벤트만 모았습니다.'],
+    new: ['새로 올라온 경품', '가장 최근 업데이트에 추가된 이벤트입니다.'],
     closed: ['최근 30일 마감된 경품', '마감 30일 이내의 지난 이벤트만 표시됩니다.']
   };
 
   /* ── 방문 기록 (localStorage) ────────────────────────────── */
   var VISIT_KEY = 'visited_events_v1';
-  var VISITED = loadVisited();
+  var REPORT_KEY = 'reported_events_v1';
+  var VISITED = loadMap(VISIT_KEY);
+  var REPORTED = loadMap(REPORT_KEY);
 
-  function loadVisited(){
+  function loadMap(name){
     var m = {};
     try {
-      var raw = localStorage.getItem(VISIT_KEY);
+      var raw = localStorage.getItem(name);
       if (!raw) return m;
       var v = JSON.parse(raw);
       if (Array.isArray(v)) v.forEach(function (k) { if (k) m[String(k)] = 1; });
@@ -284,13 +387,13 @@
     } catch (e) {}
     return m;
   }
-  function storeVisited(){
-    try { localStorage.setItem(VISIT_KEY, JSON.stringify(VISITED)); } catch (e) {}
+  function storeMap(name, m){
+    try { localStorage.setItem(name, JSON.stringify(m)); } catch (e) {}
   }
   function markVisited(key){
     if (!key || VISITED[key]) return;
     VISITED[key] = new Date().toISOString();
-    storeVisited();
+    storeMap(VISIT_KEY, VISITED);
   }
 
   /* ── 경품 아이콘 (18×18 인라인 SVG, 이모지 없음) ─────────── */
@@ -308,9 +411,10 @@
       '<path d="M2.6 9.8h18.8"/>' +
       '<path d="M6.4 14.6h4.2"/>' +
       '<circle cx="17.2" cy="14.4" r="1.5"/></svg>',
-    // 치킨
+    // 치킨 (닭다리)
     chicken: SVG_OPEN +
-      '<path d="M15.2 3.4c3.1 0 5.6 2.5 5.6 5.6 0 3-2.3 5.4-5.2 5.6l-.3 1.4-3.9 3.9a2.2 2.2 0 1 1-3.1-3.1l3.9-3.9 1.4-.3c.2-2.9.5-9.2 1.6-9.2Z" fill="currentColor" fill-opacity=".18"/></svg>',
+      '<path d="M14.6 3.4a6 6 0 1 1-1.2 11.9c-1-.1-1.8.2-2.5.9l-.9.9-3.1-3.1.9-.9c.7-.7 1-1.5.9-2.5a6 6 0 0 1 5.9-7.2Z" fill="currentColor" fill-opacity=".16"/>' +
+      '<path d="M7.9 15 5.7 17.2a1.8 1.8 0 1 0-1.5 2.56 1.8 1.8 0 1 0 2.56-1.5L9 16.1"/></svg>',
     // 버거·페스트푸드·베이커리
     burger: SVG_OPEN +
       '<path d="M3.6 9.6a8.4 8.4 0 0 1 16.8 0"/>' +
@@ -371,6 +475,17 @@
     return '<span class="ic" title="' + esc(ICON_LABEL[k] || '경품') + '" aria-hidden="true">' + (ICONS[k] || ICONS.gift) + '</span>';
   }
 
+  // '신규' 탭 기준일 — 오늘 이전 날짜 중 가장 최근 업데이트분 (자정~업데이트 전에도 비지 않게)
+  function computeLatest(rows){
+    var best = '', any = '';
+    rows.forEach(function (r) {
+      if (!r.added) return;
+      if (r.added > any) any = r.added;
+      if (r.added <= TODAY && r.added > best) best = r.added;
+    });
+    LATEST = best || any;
+  }
+
   // 오늘(최신 featured_date) 소개분 표시
   function computeFeatured(rows){
     FEATURED = {};
@@ -424,16 +539,21 @@
   function visible(){
     var rows = ALL.filter(function (r) {
       if (STATE.filter === 'soon') return r.n != null && r.n >= 0 && r.n <= SOON_DAYS;
-      if (STATE.filter === 'new') return r.added === TODAY && !isOut(r);
+      if (STATE.filter === 'new') return !!LATEST && r.added === LATEST && !isOut(r);
       if (STATE.filter === 'closed') return recentlyClosed(r);
       return !isOut(r);
     });
     var base = STATE.sort === 'new' ? cmpAdded : (STATE.filter === 'closed' ? cmpClosed : cmpDeadline);
     var pin = STATE.filter !== 'closed';   // '마감 30일' 탭에서는 고정하지 않음
+    // 고정 순서: 오늘 마감(D-DAY) → 오늘 소개분(PICK) → 나머지. 최신순에서는 PICK만 고정.
+    function rank(r){
+      if (STATE.sort === 'deadline' && r.n === 0) return 0;
+      return FEATURED[r.key] ? 1 : 2;
+    }
     rows.sort(function (a, b) {
       if (pin) {
-        var fa = FEATURED[a.key] ? 1 : 0, fb = FEATURED[b.key] ? 1 : 0;
-        if (fa !== fb) return fb - fa;     // 오늘 소개분을 맨 위로
+        var ra = rank(a), rb = rank(b);
+        if (ra !== rb) return ra - rb;
       }
       return base(a, b);
     });
@@ -452,34 +572,35 @@
     var out = isOut(r);
     var seen = !!VISITED[r.key];
     var fresh = !!FEATURED[r.key];
-    var open = '<span class="dd' + (!out && r.n != null && r.n <= SOON_DAYS ? ' hot' : '') + '">' + ddayText(r) + '</span>';
+    var open = '<span class="dd' + (!out && r.n != null && r.n <= HOT_DAYS ? ' hot' : '') + '">' + ddayText(r) + '</span>';
+    // 제목이 곧 링크 — 진행중이면 응모 페이지, 마감이면 결과 페이지(없으면 링크 없음)
+    var href = out ? (ev.result_url || '') : (ev.url || '#');
+    var name = esc(ev.title || '(제목 없음)') + (ev.org ? '<em>' + esc(ev.org) + '</em>' : '');
     var head = '<span class="hd">' +
-      (fresh ? '<span class="new" title="오늘 소개한 이벤트">NEW</span>' : '') +
-      '<span class="t" title="' + esc(ev.title || '') + '">' + esc(ev.title || '(제목 없음)') +
-        (ev.org ? '<em>' + esc(ev.org) + '</em>' : '') + '</span>' +
+      (fresh ? '<span class="pick" title="인스타 카드뉴스에서 소개한 이벤트">PICK</span>' : '') +
+      (href
+        ? '<a class="t go" title="' + esc(ev.title || '') + '" href="' + esc(href) + '" target="_blank" rel="noopener noreferrer">' + name + '</a>'
+        : '<span class="t" title="' + esc(ev.title || '') + '">' + name + '</span>') +
       '</span>';
     var pz = ev.prize
       ? '<span class="p"><b>' + esc(ev.prize) + '</b>' + (ev.winners ? ' ' + esc(ev.winners) : '') + '</span>'
       : '';
-    var un = ev.deadline ? '<span class="u">~' + md(ev.deadline) + '</span>' : '';
-    var meta = '<span class="m">' + iconHTML(ev) + pz + (pz && un ? '<i>·</i>' : '') + un + '</span>';
-    var main = '<span class="main">' + head + meta + '</span>';
-    var cls = 'row' + (out ? ' out' : '') + (seen ? ' is-visited' : '');
+    var rp = REPORTED[r.key]
+      ? '<span class="rp done">제보됨</span>'
+      : '<button class="rp" type="button" aria-label="이 이벤트 오류 제보">제보</button>';
+    // 마감일과 '제보'는 한 덩어리로 줄바꿈
+    var un = '<span class="u">' + (ev.deadline ? '~' + md(ev.deadline) + '<i>·</i>' : '') + rp + '</span>';
+    var meta = '<span class="m">' + iconHTML(ev) + pz + (pz ? '<i>·</i>' : '') + un + '</span>';
+    var tip = ev.tip ? '<span class="tp"><b>TIP</b>' + esc(ev.tip) + '</span>' : '';
+    var main = '<span class="main">' + head + meta + tip + '</span>';
+    var cls = 'row' + (out ? ' out' : '') + (seen ? ' is-visited' : '') + (href ? '' : ' nores');
 
-    // 마감된 이벤트: 결과 페이지가 있으면 결과보기 링크, 없으면 링크 없는 '개별발표'
-    if (out) {
-      if (ev.result_url) {
-        return '<a class="' + cls + '" data-id="' + esc(r.key) + '" href="' + esc(ev.result_url) + '" target="_blank" rel="noopener noreferrer">' +
-          open + main + '<span class="act res link">결과보기 <span>→</span></span></a>';
-      }
-      return '<div class="' + cls + ' nores" data-id="' + esc(r.key) + '">' + open + main +
-        '<span class="act res">개별발표</span></div>';
-    }
+    // 마감된 이벤트: 결과 페이지가 있으면 결과보기, 없으면 링크 없는 '개별발표'
+    var act = out
+      ? (ev.result_url ? '<span class="act res link">결과보기 <span>→</span></span>' : '<span class="act res">개별발표</span>')
+      : '<span class="act"><span class="lbl">응모 </span><span>→</span></span>';
 
-    return '<a class="' + cls + '" data-id="' + esc(r.key) + '" href="' + esc(ev.url || '#') + '" target="_blank" rel="noopener noreferrer">' +
-        open + main +
-        '<span class="act">' + (out ? '마감' : '<span class="lbl">응모 </span><span>→</span>') + '</span>' +
-      '</a>';
+    return '<div class="' + cls + '" data-id="' + esc(r.key) + '">' + open + main + act + '</div>';
   }
 
   // 클릭한 행을 즉시 방문 표시 (배경·글자 톤만 바뀜)
@@ -499,7 +620,7 @@
       if (!isOut(r)) {
         active++;
         if (r.n != null && r.n <= SOON_DAYS) soon++;
-        if (r.added === TODAY) fresh++;
+        if (LATEST && r.added === LATEST) fresh++;
       } else if (recentlyClosed(r)) {
         closed++;
       }
@@ -521,7 +642,9 @@
     });
     var lede = LEDE[STATE.filter] || LEDE.open;
     document.getElementById('ledeTitle').textContent = lede[0];
-    document.getElementById('ledeDesc').textContent = lede[1];
+    document.getElementById('ledeDesc').textContent = (STATE.filter === 'new' && LATEST)
+      ? (LATEST === TODAY ? '오늘 추가된 이벤트만 모았습니다.' : md(LATEST) + ' 업데이트에 추가된 이벤트입니다.')
+      : lede[1];
     document.getElementById('sortBtn').textContent =
       (STATE.sort === 'new' ? '최신순' : (STATE.filter === 'closed' ? '최근 마감순' : '마감임박순')) + ' ↕';
   }
@@ -537,20 +660,126 @@
       STATE.sort = STATE.sort === 'deadline' ? 'new' : 'deadline';
       render();
     });
-    // 행·버튼을 누르면 즉시 방문 기록 (한 번 누른 이벤트는 회색 처리)
+    // 행(제목 링크)을 누르면 즉시 방문 기록, '제보'를 누르면 제보 창
     document.getElementById('list').addEventListener('click', function (e) {
       var row = e.target.closest ? e.target.closest('.row') : null;
       if (!row) return;
-      if (row.classList.contains('nores')) return;   // 결과 페이지가 없는 마감 행은 반응하지 않음
       var key = row.getAttribute('data-id');
       if (!key) return;
+      if (e.target.closest('.rp')) {
+        if (!REPORTED[key] && BYKEY[key]) openReport(BYKEY[key]);
+        return;
+      }
+      if (!e.target.closest('a.go')) return;         // 링크가 없는 마감 행은 반응하지 않음
       markVisited(key);
       paintVisited(row);
     });
+    bindReport();
+  }
+
+  /* ── 오류 제보 ───────────────────────────────────────────── */
+  var RP = { row: null, busy: false };
+  function el(id){ return document.getElementById(id); }
+
+  function openReport(r){
+    var dlg = el('rpDlg'), ev = r ? r.ev : null;
+    RP.row = r || null;
+    el('rpForm').reset();
+    el('rpForm').hidden = false;
+    el('rpDone').hidden = true;
+    el('rpErr').hidden = true;
+    el('rpEv').textContent = ev
+      ? (ev.title || '') + (ev.org ? ' · ' + ev.org : '')
+      : '빠진 이벤트나 사이트 오류를 알려 주세요.';
+    el('rpReasons').hidden = !ev;
+    el('rpMsgLabel').textContent = ev ? '자세한 내용 (선택)' : '내용';
+    el('rpMsg').placeholder = ev ? '예: 실제 마감일은 11월 30일이에요' : '예: ○○기관 이벤트가 빠져 있어요 (링크를 함께 적어 주세요)';
+    document.documentElement.classList.add('dlg-open');
+    if (dlg.showModal) { if (!dlg.open) dlg.showModal(); } else dlg.setAttribute('open', '');
+  }
+  function closeReport(){
+    var dlg = el('rpDlg');
+    if (dlg.close) dlg.close(); else dlg.removeAttribute('open');
+    document.documentElement.classList.remove('dlg-open');
+  }
+  function paintReported(key){
+    Array.prototype.forEach.call(document.querySelectorAll('#list .row'), function (row) {
+      if (row.getAttribute('data-id') !== key) return;
+      var b = row.querySelector('.rp');
+      if (!b) return;
+      var s = document.createElement('span');
+      s.className = 'rp done';
+      s.textContent = '제보됨';
+      b.parentNode.replaceChild(s, b);
+    });
+  }
+  function sendReport(e){
+    e.preventDefault();
+    if (RP.busy) return;
+    var form = el('rpForm'), err = el('rpErr'), btn = el('rpSend');
+    var r = RP.row, ev = r ? r.ev : {};
+    var picked = form.querySelector('input[name="reason"]:checked');
+    var msg = el('rpMsg').value.trim();
+    function fail(t){ err.textContent = t; err.hidden = false; }
+    if (r && !picked) return fail('어떤 문제인지 골라 주세요.');
+    if ((!r || picked.value === 'etc') && msg.length < 5) return fail('내용을 조금 더 자세히 적어 주세요.');
+    err.hidden = true;
+    RP.busy = true;
+    btn.disabled = true;
+    btn.textContent = '보내는 중…';
+    fetch(REPORT_URL, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        id: r ? r.key : '',
+        title: ev.title || '',
+        org: ev.org || '',
+        url: ev.url || '',
+        deadline: ymd(ev.deadline),
+        reason: r ? picked.value : 'etc',
+        message: msg,
+        page: location.host + location.pathname,
+        hp: form.elements.website.value
+      })
+    })
+      .then(function (res) {
+        if (res.status === 429) throw new Error('rate');
+        if (!res.ok) throw new Error('http');
+        if (r) {
+          REPORTED[r.key] = new Date().toISOString();
+          storeMap(REPORT_KEY, REPORTED);
+          paintReported(r.key);
+        }
+        form.hidden = true;
+        el('rpDone').hidden = false;
+        el('rpClose').focus();
+      })
+      .catch(function (x) {
+        fail(x && x.message === 'rate'
+          ? '제보가 많이 접수되어 잠시 쉬어 갑니다. 조금 뒤에 다시 시도해 주세요.'
+          : '전송하지 못했습니다. 잠시 후 다시 시도해 주세요.');
+      })
+      .then(function () {
+        RP.busy = false;
+        btn.disabled = false;
+        btn.textContent = '제보하기';
+      });
+  }
+  function bindReport(){
+    var dlg = el('rpDlg');
+    el('rpOpen').addEventListener('click', function () { openReport(null); });
+    el('rpCancel').addEventListener('click', closeReport);
+    el('rpClose').addEventListener('click', closeReport);
+    el('rpForm').addEventListener('submit', sendReport);
+    dlg.addEventListener('close', function () { document.documentElement.classList.remove('dlg-open'); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) closeReport(); });   // 바깥(배경) 클릭
   }
 
   function boot(data){
     ALL = flatten(data || {});
+    BYKEY = {};
+    ALL.forEach(function (r) { BYKEY[r.key] = r; });
+    computeLatest(ALL);
     computeFeatured(ALL);
     var site = data.site || {};
     if (site.instagram) {
