@@ -100,7 +100,8 @@
   .row.out{opacity:.42}
   .row.out .act{color:#93989e}
 
-  .more{padding:12px 0 0}
+  .more{display:flex; flex-wrap:wrap; gap:16px; padding:12px 0 0}
+  .more[hidden]{display:none}
   .more button{
     padding:4px 0; border:0; background:none; cursor:pointer;
     font-size:12.5px; color:#787d83; letter-spacing:0;
@@ -166,7 +167,10 @@
   <div class="list" id="list" aria-live="polite">
     <p class="empty">불러오는 중…</p>
   </div>
-  <div class="more" id="more" hidden><button type="button" id="moreBtn"></button></div>
+  <div class="more" id="more" hidden>
+    <button type="button" id="moreBtn" hidden></button>
+    <button type="button" id="outBtn" hidden></button>
+  </div>
   <footer class="foot">
     <p id="note">경품·마감은 기관 공지 기준이며 변동될 수 있습니다. 응모는 각 기관 페이지에서 진행됩니다.</p>
     <p id="stamp"></p>
@@ -214,7 +218,8 @@
       ' ' + pad(k.getHours()) + ':' + pad(k.getMinutes());
   }
 
-  var STATE = { filter: 'all', sort: 'deadline', showOut: false };
+  var PAGE = 60;                // 처음에 보여줄 행 수 (더 보기로 60씩 추가)
+  var STATE = { filter: 'all', sort: 'deadline', showOut: false, limit: PAGE };
   var ALL = [];
 
   // days[] 를 한 줄 목록으로 펼치고, 같은 이벤트는 최근 등록분만 남긴다
@@ -254,7 +259,7 @@
     rows.sort(STATE.sort === 'new'
       ? function (a, b) { return (a.added < b.added ? 1 : a.added > b.added ? -1 : 0) || ((a.n == null ? 9e9 : a.n) - (b.n == null ? 9e9 : b.n)); }
       : function (a, b) { return (a.n == null ? 9e9 : a.n) - (b.n == null ? 9e9 : b.n); });
-    return rows.slice(0, LIMIT);
+    return rows;
   }
 
   function ddayText(r){
@@ -299,6 +304,7 @@
   function render(){
     var list = document.getElementById('list');
     var rows = visible();
+    var shown = rows.slice(0, STATE.limit);
 
     // 카운트
     var active = 0, soon = 0, fresh = 0;
@@ -313,24 +319,28 @@
     document.getElementById('nSoon').textContent = soon;
     document.getElementById('nNew').textContent = fresh;
 
-    list.innerHTML = rows.length
-      ? rows.map(rowHTML).join('')
+    list.innerHTML = shown.length
+      ? shown.map(rowHTML).join('')
       : '<p class="empty">해당하는 이벤트가 없습니다.</p>';
+
+    // 더 보기 — 남은 행이 있을 때만
+    var more = document.getElementById('more');
+    var btnMore = document.getElementById('moreBtn');
+    var btnOut = document.getElementById('outBtn');
+    var rest = rows.length - shown.length;
+    btnMore.hidden = rest <= 0;
+    if (rest > 0) btnMore.textContent = '더 보기 (' + rest + ')';
 
     // 지난 이벤트(마감) 토글 — '전체' 탭에서만
     var outRows = ALL.filter(isOut).sort(function (a, b) { return b.n - a.n; });
-    var more = document.getElementById('more');
-    var btn = document.getElementById('moreBtn');
-    if (STATE.filter !== 'all' || !outRows.length) {
-      more.hidden = true;
-    } else if (STATE.showOut) {
-      more.hidden = false;
-      btn.textContent = '지난 이벤트 접기';
-      list.insertAdjacentHTML('beforeend', outRows.slice(0, LIMIT).map(rowHTML).join(''));
-    } else {
-      more.hidden = false;
-      btn.textContent = '지난 이벤트 ' + outRows.length + '건 보기';
+    btnOut.hidden = !(STATE.filter === 'all' && outRows.length && rest <= 0);
+    if (!btnOut.hidden) {
+      btnOut.textContent = STATE.showOut ? '지난 이벤트 접기' : '지난 이벤트 ' + outRows.length + '건 보기';
     }
+    if (STATE.showOut) {
+      list.insertAdjacentHTML('beforeend', outRows.slice(0, LIMIT).map(rowHTML).join(''));
+    }
+    more.hidden = btnMore.hidden && btnOut.hidden;
 
     Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
       b.setAttribute('aria-selected', String(b.getAttribute('data-f') === STATE.filter));
@@ -344,6 +354,7 @@
       b.addEventListener('click', function () {
         STATE.filter = b.getAttribute('data-f');
         STATE.showOut = false;
+        STATE.limit = PAGE;
         render();
         window.scrollTo({ top: document.querySelector('.bar').offsetTop, behavior: 'smooth' });
       });
@@ -353,6 +364,10 @@
       render();
     });
     document.getElementById('moreBtn').addEventListener('click', function () {
+      STATE.limit += PAGE;
+      render();
+    });
+    document.getElementById('outBtn').addEventListener('click', function () {
       STATE.showOut = !STATE.showOut;
       render();
     });
