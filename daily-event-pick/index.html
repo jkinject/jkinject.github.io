@@ -199,8 +199,8 @@
 
 <main class="wrap">
   <section class="lede">
-    <h1>지금 응모할 수 있는 경품</h1>
-    <p>행을 누르면 기관 응모 페이지가 새 창으로 열립니다.</p>
+    <h1 id="ledeTitle">지금 응모할 수 있는 경품</h1>
+    <p id="ledeDesc">행을 누르면 기관 응모 페이지가 새 창으로 열립니다.</p>
   </section>
 </main>
 
@@ -210,7 +210,7 @@
       <button role="tab" data-f="open" aria-selected="true">진행중 <span class="n" id="nOpen"></span></button>
       <button role="tab" data-f="soon" aria-selected="false">마감임박 <span class="n" id="nSoon"></span></button>
       <button role="tab" data-f="new" aria-selected="false">오늘 추가 <span class="n" id="nNew"></span></button>
-      <button role="tab" data-f="closed" aria-selected="false">마감 30일 <span class="n" id="nClosed"></span></button>
+      <button role="tab" data-f="closed" aria-selected="false">마감 <span class="n" id="nClosed"></span></button>
     </nav>
     <button class="sort" id="sortBtn" type="button">마감임박순 ↕</button>
   </div>
@@ -275,6 +275,14 @@
   var STATE = { filter: 'open', sort: 'deadline', limit: PAGE };
   var ALL = [];
   var FEATURED = {};            // 오늘 소개분(최신 featured_date) 키 모음
+
+  // 탭마다 바뀌는 상단 제목·설명
+  var LEDE = {
+    open: ['지금 응모할 수 있는 경품', '행을 누르면 기관 응모 페이지가 새 창으로 열립니다.'],
+    soon: ['곧 마감되는 경품', '마감 3일 이내 이벤트만 모았습니다.'],
+    new: ['오늘 새로 올라온 경품', '오늘 추가된 이벤트만 모아 봤습니다.'],
+    closed: ['최근 30일 마감된 경품', '마감 30일 이내의 지난 이벤트만 표시됩니다.']
+  };
 
   /* ── 방문 기록 (localStorage) ────────────────────────────── */
   var VISIT_KEY = 'visited_events_v1';
@@ -547,6 +555,9 @@
     Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
       b.setAttribute('aria-selected', String(b.getAttribute('data-f') === STATE.filter));
     });
+    var lede = LEDE[STATE.filter] || LEDE.open;
+    document.getElementById('ledeTitle').textContent = lede[0];
+    document.getElementById('ledeDesc').textContent = lede[1];
     document.getElementById('sortBtn').textContent =
       (STATE.sort === 'new' ? '최신순' : (STATE.filter === 'closed' ? '최근 마감순' : '마감임박순')) + ' ↕';
   }
