@@ -1,0 +1,156 @@
+/* DriveSync marketing site. Colors follow design/DESIGN_SYSTEM.md. */
+:root {
+  --primary: #2257D6;
+  --primary-deep: #173EAA;
+  --primary-soft: #DCE5FF;
+  --on-primary-soft: #0A2B73;
+  --teal: #006A64;
+  --teal-soft: #9CF2E8;
+  --amber-soft: #FFE08A;
+  --bg: #F8F9FF;
+  --card: #FFFFFF;
+  --card-alt: #F2F3FA;
+  --text: #191C23;
+  --muted: #44464F;
+  --line: #E1E2EC;
+  --shadow: 0 1px 2px rgba(17, 30, 70, .06), 0 8px 24px rgba(17, 30, 70, .08);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #B5C4FF;
+    --primary-soft: #173EAA;
+    --on-primary-soft: #DEE6FF;
+    --teal: #80D5CD;
+    --amber-soft: #5C4300;
+    --bg: #111318;
+    --card: #1D2026;
+    --card-alt: #191C22;
+    --text: #E2E2EA;
+    --muted: #C4C6D0;
+    --line: #2E3038;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo",
+    "Noto Sans KR", "Hiragino Sans", "Noto Sans JP", "PingFang TC", "Noto Sans TC", "Malgun Gothic", sans-serif;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--primary); }
+h1, h2, h3 { line-height: 1.25; margin: 0; }
+h1, h2, h3, p, li { overflow-wrap: break-word; }
+h1, h2 { text-wrap: balance; }
+.hero-grid > *, .steps > *, .dirs > *, .grid > *, .plans > * { min-width: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+section { margin: 0 auto; padding-top: 72px; }
+
+/* header */
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.bar { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px;
+  color: var(--text); text-decoration: none; }
+.brand img { border-radius: 8px; }
+.lang { position: relative; }
+.lang summary { list-style: none; cursor: pointer; padding: 6px 12px; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 14px; color: var(--muted); }
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::before { content: "🌐 "; }
+.lang nav { position: absolute; right: 0; top: calc(100% + 6px); background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; box-shadow: var(--shadow); padding: 6px; display: grid; min-width: 150px; }
+.lang nav a { padding: 8px 12px; border-radius: 8px; color: var(--text); text-decoration: none; font-size: 15px; }
+.lang nav a:hover { background: var(--card-alt); }
+.lang nav a[aria-current] { font-weight: 700; color: var(--primary); }
+
+/* hero */
+.hero { padding: 0; background: linear-gradient(160deg, #2257D6 0%, #1A47B8 60%, #143A99 100%); color: #fff;
+  overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center;
+  padding-top: 72px; padding-bottom: 0; }
+.hero-copy { padding-bottom: 72px; }
+.eyebrow { display: inline-block; margin: 0 0 18px; padding: 5px 12px; border-radius: 999px;
+  background: rgba(156, 242, 232, .16); color: #9CF2E8; font-size: 13px; font-weight: 700;
+  letter-spacing: .04em; line-height: 1.4; }
+.hero h1 { font-size: clamp(34px, 5.2vw, 56px); letter-spacing: -.02em; margin-bottom: 18px; }
+.lede { font-size: 19px; color: #DEE6FF; margin: 0 0 28px; max-width: 34em; }
+.badge { display: inline-block; }
+.badge img { height: 56px; width: auto; }
+.phone { justify-self: center; width: min(300px, 100%); padding: 10px 10px 0; background: #0D1530;
+  border-radius: 36px 36px 0 0; box-shadow: 0 30px 60px rgba(0, 0, 0, .35); align-self: end; }
+.phone img { border-radius: 28px 28px 0 0; aspect-ratio: 9 / 13; object-fit: cover; object-position: top; }
+
+/* headings */
+h2 { font-size: clamp(26px, 3.4vw, 36px); letter-spacing: -.01em; margin-bottom: 28px; }
+.center { text-align: center; }
+.label { font-size: 15px; font-weight: 800; letter-spacing: .06em; color: var(--primary); }
+h2.label { font-size: 17px; margin-bottom: 24px; }
+
+/* steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.steps li { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 24px;
+  box-shadow: var(--shadow); }
+.steps p { margin: 12px 0 0; }
+.n { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  background: var(--primary-soft); color: var(--on-primary-soft); font-weight: 800; }
+.note { color: var(--muted); font-size: 14px; margin: 20px 0 0; }
+
+/* directions */
+.dirs { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.dir { background: var(--card-alt); border-radius: 20px; padding: 28px; border: 1px solid var(--line); }
+.route { display: flex; align-items: center; gap: 10px; color: var(--primary); margin-bottom: 14px; }
+.route .ic { width: 32px; height: 32px; }
+.arrow { color: var(--teal); font-weight: 800; font-size: 22px; }
+.dir h3 { font-size: 21px; margin-bottom: 6px; }
+.dir p { margin: 0; color: var(--muted); }
+
+/* feature cards */
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding-top: 20px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 28px;
+  box-shadow: var(--shadow); }
+.ic.big { width: 40px; height: 40px; padding: 8px; border-radius: 12px; background: var(--primary-soft);
+  color: var(--on-primary-soft); margin-bottom: 14px; }
+.card h3 { margin-bottom: 10px; }
+.card ul, .plan ul { margin: 0; padding: 0; list-style: none; }
+.card li, .plan li { position: relative; padding-left: 26px; margin-top: 10px; }
+.card li::before, .plan li::before { content: ""; position: absolute; left: 2px; top: .45em; width: 14px; height: 8px;
+  border-left: 2.5px solid var(--teal); border-bottom: 2.5px solid var(--teal); transform: rotate(-45deg); }
+
+/* screenshots */
+.strip { list-style: none; display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding-bottom: 12px; margin-top: 0; margin-bottom: 0; }
+.strip li { flex: 1 0 150px; max-width: 220px; scroll-snap-align: start; }
+.strip img { border-radius: 18px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+
+/* plans */
+.plans { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 760px; margin: 0 auto; }
+.plan { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+.plan.pro { border: 2px solid var(--primary); box-shadow: var(--shadow); }
+.plan h3 { font-size: 24px; }
+.plan .sub { display: inline-block; margin: 8px 0 0; padding: 3px 10px; border-radius: 999px;
+  background: var(--amber-soft); font-size: 13px; font-weight: 700; }
+
+/* final call to action */
+.cta { margin-top: 72px; padding: 64px 0; background: var(--card-alt); text-align: center;
+  border-top: 1px solid var(--line); }
+.cta img { margin: 0 auto 16px; border-radius: 18px; }
+.cta h2 { margin-bottom: 10px; }
+.cta p { color: var(--muted); margin: 0 auto 24px; max-width: 32em; }
+
+.foot { padding-top: 32px; padding-bottom: 48px; color: var(--muted); font-size: 13px; }
+.foot p { margin: 0 0 10px; }
+
+@media (max-width: 820px) {
+  section { padding-top: 56px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 8px; padding-top: 48px; }
+  .hero-copy { padding-bottom: 32px; }
+  .phone { width: 250px; }
+  .steps, .dirs, .grid, .plans { grid-template-columns: 1fr; }
+  .lede { font-size: 17px; }
+  .strip li { flex: 0 0 200px; }
+}
