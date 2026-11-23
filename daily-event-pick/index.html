@@ -93,14 +93,14 @@
   }
   .t em{font-style:normal; font-weight:400; font-size:13px; color:#75797f; margin-left:4px}
   .m{
-    display:flex; align-items:baseline; margin-top:2px; font-size:12.5px; font-weight:400; color:#6f747a;
-    letter-spacing:0; min-width:0; white-space:nowrap;
+    display:block; margin-top:2px; font-size:12.5px; font-weight:400; color:#6f747a;
+    letter-spacing:0; min-width:0; line-height:1.45; word-break:keep-all; overflow-wrap:anywhere;
   }
-  .m .p{min-width:0; overflow:hidden; text-overflow:ellipsis}
-  .m .u{flex:0 0 auto; color:#94999f}
+  .m .p{display:inline}
+  .m .u{color:#94999f; white-space:nowrap}
   .m b{font-weight:500; color:#4d5257}
   .m .ic{
-    flex:0 0 auto; align-self:center; display:inline-flex;
+    display:inline-block; vertical-align:-3.5px;
     width:18px; height:18px; margin:0 5px 0 0; color:#8d939b;
   }
   .m .ic svg{display:block; width:18px; height:18px}
@@ -174,7 +174,8 @@
     .t em{margin-left:3px}
     .hd{gap:5px}
     .new{margin-top:3px; padding:1px 3.5px 0.5px; font-size:9px; letter-spacing:.04em}
-    .m .ic{width:17px; height:17px; margin-right:4px}
+    .m{font-size:12px; line-height:1.5}
+    .m .ic{width:17px; height:17px; margin-right:4px; vertical-align:-3px}
     .m .ic svg{width:17px; height:17px}
     .act{font-size:12.5px; color:#a2a7ad; align-self:center}
     .act .lbl{display:none}
