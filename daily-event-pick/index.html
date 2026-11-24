@@ -88,8 +88,8 @@
   .hd .t{flex:1 1 0%; min-width:0}
   .pick{
     flex:0 0 auto; display:inline-block; margin-top:3.5px; padding:1.5px 4px 1px; border-radius:3px;
-    background:#eef4ff; color:#1a6bff; font-size:9.5px; font-weight:700;
-    letter-spacing:.06em; line-height:1.25; text-indent:.06em;
+    background:#eef4ff; color:#1a6bff; font-size:10px; font-weight:700;
+    letter-spacing:0; line-height:1.3; white-space:nowrap;
   }
   .t{
     display:block; font-size:14.5px; font-weight:500; color:#191b1f; word-break:keep-all;
@@ -220,7 +220,7 @@
     .t{white-space:normal; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; line-height:1.34}
     .t em{margin-left:3px}
     .hd{gap:5px}
-    .pick{margin-top:3px; padding:1px 3.5px 0.5px; font-size:9px; letter-spacing:.04em}
+    .pick{margin-top:3px; padding:1px 3.5px 0.5px; font-size:9.5px}
     .m{font-size:12px; line-height:1.5}
     .m .ic{width:17px; height:17px; margin-right:4px; vertical-align:-3px}
     .m .ic svg{width:17px; height:17px}
@@ -545,15 +545,11 @@
     });
     var base = STATE.sort === 'new' ? cmpAdded : (STATE.filter === 'closed' ? cmpClosed : cmpDeadline);
     var pin = STATE.filter !== 'closed';   // '마감 30일' 탭에서는 고정하지 않음
-    // 고정 순서: 오늘 마감(D-DAY) → 오늘 소개분(PICK) → 나머지. 최신순에서는 PICK만 고정.
-    function rank(r){
-      if (STATE.sort === 'deadline' && r.n === 0) return 0;
-      return FEATURED[r.key] ? 1 : 2;
-    }
+    // 고정 순서: 오늘픽(오늘 소개분) → 나머지. 오늘픽은 오늘 마감(D-DAY)보다도 위에 둔다.
     rows.sort(function (a, b) {
       if (pin) {
-        var ra = rank(a), rb = rank(b);
-        if (ra !== rb) return ra - rb;
+        var fa = FEATURED[a.key] ? 1 : 0, fb = FEATURED[b.key] ? 1 : 0;
+        if (fa !== fb) return fb - fa;
       }
       return base(a, b);
     });
@@ -577,7 +573,7 @@
     var href = out ? (ev.result_url || '') : (ev.url || '#');
     var name = esc(ev.title || '(제목 없음)') + (ev.org ? '<em>' + esc(ev.org) + '</em>' : '');
     var head = '<span class="hd">' +
-      (fresh ? '<span class="pick" title="인스타 카드뉴스에서 소개한 이벤트">PICK</span>' : '') +
+      (fresh ? '<span class="pick" title="오늘 인스타 카드뉴스에서 소개한 이벤트">오늘픽</span>' : '') +
       (href
         ? '<a class="t go" title="' + esc(ev.title || '') + '" href="' + esc(href) + '" target="_blank" rel="noopener noreferrer">' + name + '</a>'
         : '<span class="t" title="' + esc(ev.title || '') + '">' + name + '</span>') +
