@@ -5,7 +5,7 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-24T02:55:00+09:00"
+    "updated_at": "2026-11-24T10:22:00+09:00"
   },
   "days": [
     {
@@ -851,7 +851,7 @@
       "date": "2026-11-24",
       "label": "오늘",
       "headline": "오늘 추가된 경품",
-      "sub": "15건 · 마감 빠른 순",
+      "sub": "19건 · 마감 빠른 순",
       "events": [
         {
           "id": "ev-3ecba54a48",
@@ -969,6 +969,16 @@
           "tip": "모두의 광장 로그인 필요"
         },
         {
+          "id": "ev-b278ee4a55",
+          "org": "한국철도공사",
+          "title": "공공데이터 활용 및 개방 수요조사",
+          "prize": "모바일 상품권 5,000원",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://form.naver.com/response/8iZIZqjRoVE",
+          "tip": "로그인·인증 없이 참여 가능 · 5분 내외"
+        },
+        {
           "id": "ev-4fed9152a7",
           "org": "부산항만공사",
           "title": "청소년 인권 존중 포스터 공모전 국민심사",
@@ -979,6 +989,16 @@
           "tip": "모두의 광장 로그인 필요"
         },
         {
+          "id": "ev-8dfd67a416",
+          "org": "포천시",
+          "title": "포천웹툰 「오성이랑 한음이랑」 53화 영상 퀴즈",
+          "prize": "올리브영 모바일상품권 1만원",
+          "winners": "정답자 중 100명 추첨",
+          "deadline": "2026-11-29",
+          "url": "https://naver.me/GxrzibQj",
+          "tip": "영상 속 힌트로 정답 찾기 · 당첨 발표 12.1"
+        },
+        {
           "id": "ev-15addd1a96",
           "org": "보조금통합포털",
           "title": "2026년 보조금통합포털 만족도 설문조사",
@@ -986,6 +1006,17 @@
           "winners": "",
           "deadline": "2026-11-30",
           "url": "https://form.naver.com/response/6TsIPYoa1u8"
+        },
+        {
+          "id": "ev-c522a979b3",
+          "org": "경기관광공사",
+          "title": "2026 경기관광 플랫폼 이용 만족도 설문",
+          "prize": "여기어때 5만원 50명 · 컴포즈 돌체라떼 500명",
+          "winners": "",
+          "deadline": "2026-12-06",
+          "url": "https://forms.gle/1pSJVrAbJTwHSvbC9",
+          "tip": "16문항 · 당첨 발표 12.9",
+          "icon": "giftcard"
         },
         {
           "id": "korean-ai-malpyung-2026",
