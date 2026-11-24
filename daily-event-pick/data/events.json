@@ -5,7 +5,7 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-25T06:40:00+09:00"
+    "updated_at": "2026-11-25T07:44:00+09:00"
   },
   "days": [
     {
@@ -264,7 +264,8 @@
           "prize": "모바일상품권 1만원",
           "winners": "150명 추첨",
           "deadline": "2026-11-27",
-          "url": "https://kosis.kr/survey/survey47.do"
+          "url": "https://kosis.kr/survey/survey47.do",
+          "featured_date": "2026-11-25"
         },
         {
           "id": "ev-fdf0f67f0f",
@@ -273,7 +274,8 @@
           "prize": "투썸 뉴욕치즈 피스·아메리카노 세트",
           "winners": "100명",
           "deadline": "2026-11-27",
-          "url": "https://chuksaro.nias.go.kr/event20261102dtl.jsp"
+          "url": "https://chuksaro.nias.go.kr/event20261102dtl.jsp",
+          "featured_date": "2026-11-25"
         },
         {
           "id": "ev-25cb90bf62",
@@ -736,7 +738,8 @@
           "prize": "햄버거 기프티콘",
           "winners": "130명",
           "deadline": "2026-11-26",
-          "url": "https://form.naver.com/response/87jxmoqZ8LA"
+          "url": "https://form.naver.com/response/87jxmoqZ8LA",
+          "featured_date": "2026-11-25"
         },
         {
           "id": "ev-6f6c6a2508",
@@ -790,7 +793,8 @@
           "prize": "서울사랑상품권 5,000원",
           "winners": "400명",
           "deadline": "2026-11-29",
-          "url": "https://forms.gle/q4TZ6TrNWWEijg2cA"
+          "url": "https://forms.gle/q4TZ6TrNWWEijg2cA",
+          "featured_date": "2026-11-25"
         },
         {
           "id": "ev-8c2be7ff06",
