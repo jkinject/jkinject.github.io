@@ -5,7 +5,7 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-24T15:47:00+09:00"
+    "updated_at": "2026-11-25T07:25:00+09:00"
   },
   "days": [
     {
@@ -455,7 +455,8 @@
           "prize": "이디야커피 아이스",
           "winners": "100명 추첨",
           "deadline": "2026-11-22",
-          "url": "https://form.naver.com/response/H99F46manU0"
+          "url": "https://form.naver.com/response/H99F46manU0",
+          "result_url": "https://www.kogl.or.kr/news/eventWinView.do?dataIdx=12"
         },
         {
           "id": "ev-cf6b07c988",
@@ -849,8 +850,8 @@
     },
     {
       "date": "2026-11-24",
-      "label": "오늘",
-      "headline": "오늘 추가된 경품",
+      "label": "11월 24일",
+      "headline": "11월 24일 추가된 경품",
       "sub": "19건 · 마감 빠른 순",
       "events": [
         {
@@ -1056,6 +1057,41 @@
           "tag": "투표",
           "featured_date": "2026-11-24",
           "icon": "tech"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "label": "오늘",
+      "headline": "오늘 추가된 경품",
+      "sub": "3건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-f516f15eaa",
+          "org": "국민체육진흥공단(KSPO)",
+          "title": "2026년 체육시설 안전 체감도 조사",
+          "prize": "커피 기프티콘",
+          "winners": "101명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://kspo-survey.vercel.app/"
+        },
+        {
+          "id": "ev-a0eba6e564",
+          "org": "모두가 도시농부",
+          "title": "누리집 이용자 설문조사",
+          "prize": "스타벅스 아메리카노",
+          "winners": "30명 추첨",
+          "deadline": "2026-11-25",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdrgHUx69R7Oy91jiQ6Stv-OeHgiEf6h5w_Gzb9exhe6Yow7w/viewform"
+        },
+        {
+          "id": "ev-faa7761cca",
+          "org": "소완비(소상공인 지원정보 채널)",
+          "title": "2026년 카카오톡채널 만족도 조사",
+          "prize": "메가MGC커피 더블 아아 세트",
+          "winners": "70명 추첨",
+          "deadline": "2026-11-27",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfPTs7ZBdR4EAAGGwCePzXush25_r_687DYreuGk1wGz0i8hw/viewform"
         }
       ]
     }
