@@ -57,6 +57,9 @@ section { margin: 0 auto; padding-top: 72px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px;
   color: var(--text); text-decoration: none; }
 .brand img { border-radius: 8px; }
+.nav { display: flex; align-items: center; gap: 14px; }
+.navlink { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 600; }
+.navlink:hover { color: var(--primary); }
 .lang { position: relative; }
 .lang summary { list-style: none; cursor: pointer; padding: 6px 12px; border: 1px solid var(--line);
   border-radius: 999px; font-size: 14px; color: var(--muted); }
@@ -154,3 +157,41 @@ h2.label { font-size: 17px; margin-bottom: 24px; }
   .lede { font-size: 17px; }
   .strip li { flex: 0 0 200px; }
 }
+
+/* guides */
+.post { max-width: 760px; padding-top: 40px; }
+.post h1 { font-size: clamp(28px, 4.4vw, 42px); letter-spacing: -.02em; margin-bottom: 10px; }
+.post h2 { font-size: clamp(22px, 2.8vw, 28px); margin: 44px 0 14px; }
+.post h3 { font-size: 19px; margin: 28px 0 8px; }
+.post p, .post ul, .post ol { margin: 0 0 16px; }
+.post ul, .post ol { padding-left: 24px; }
+.post li { margin-bottom: 6px; }
+.post code { background: var(--card-alt); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px;
+  font-size: .92em; }
+.crumb { font-size: 14px; margin-bottom: 10px; }
+.crumb a { text-decoration: none; font-weight: 700; }
+.byline { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+.callout { background: var(--primary-soft); color: var(--on-primary-soft); border-radius: 14px; padding: 16px 18px;
+  margin: 0 0 16px; }
+.callout a { color: inherit; }
+.tablewrap { overflow-x: auto; margin: 0 0 16px; }
+.post table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.post th, .post td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+.post th { background: var(--card-alt); }
+.post figure { margin: 24px auto; max-width: 280px; }
+.post figure img { border-radius: 18px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.post figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 8px; }
+.getapp { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; background: var(--card);
+  border: 1px solid var(--line); border-radius: 20px; padding: 20px; margin: 40px 0 0; box-shadow: var(--shadow); }
+.getapp img { border-radius: 14px; }
+.getapp > div { flex: 1 1 240px; min-width: 0; }
+.getapp p { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+.getapp .badge img { height: 48px; border-radius: 0; }
+.more h2 { margin-top: 48px; }
+.postlist { list-style: none; padding: 0 !important; margin: 0; display: grid; gap: 12px; }
+.postlist a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 18px 20px; text-decoration: none; color: var(--text); }
+.postlist a:hover { border-color: var(--primary); }
+.pt { display: block; font-weight: 700; font-size: 18px; line-height: 1.35; }
+.pd { display: block; color: var(--muted); font-size: 15px; margin-top: 4px; }
+.postlist time { display: block; color: var(--muted); font-size: 13px; margin-top: 8px; }

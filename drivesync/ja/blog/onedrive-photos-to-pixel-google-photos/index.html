@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OneDriveの写真を古いPixelに移して、Google フォトにバックアップする方法【機種別の条件と注意点】 | DriveSync</title>
+<meta name="description" content="Pixel 5以前のPixelは、Google フォトに無料・無制限でバックアップできます（条件は機種ごとに違います）。OneDriveの写真をPixelへ移す手順を、画質の注意点とOneDriveのごみ箱の空け方まで、アプリの開発者が正直にまとめました。">
+<link rel="canonical" href="https://jkinject.github.io/drivesync/ja/blog/onedrive-photos-to-pixel-google-photos/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DriveSync">
+<meta property="og:title" content="OneDriveの写真を古いPixelに移して、Google フォトにバックアップする方法【機種別の条件と注意点】 | DriveSync">
+<meta property="og:description" content="Pixel 5以前のPixelは、Google フォトに無料・無制限でバックアップできます（条件は機種ごとに違います）。OneDriveの写真をPixelへ移す手順を、画質の注意点とOneDriveのごみ箱の空け方まで、アプリの開発者が正直にまとめました。">
+<meta property="og:url" content="https://jkinject.github.io/drivesync/ja/blog/onedrive-photos-to-pixel-google-photos/">
+<meta property="og:image" content="https://jkinject.github.io/drivesync/img/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2257D6">
+<link rel="icon" href="../../../img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../img/icon-180.png">
+<link rel="stylesheet" href="../../../style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "OneDriveの写真を古いPixelに移して、Google フォトにバックアップする方法【機種別の条件と注意点】", "description": "Pixel 5以前のPixelは、Google フォトに無料・無制限でバックアップできます（条件は機種ごとに違います）。OneDriveの写真をPixelへ移す手順を、画質の注意点とOneDriveのごみ箱の空け方まで、アプリの開発者が正直にまとめました。", "datePublished": "2026-11-25", "inLanguage": "ja", "mainEntityOfPage": "https://jkinject.github.io/drivesync/ja/blog/onedrive-photos-to-pixel-google-photos/", "image": "https://jkinject.github.io/drivesync/img/og.png", "author": {"@type": "Organization", "name": "DriveSync", "url": "https://jkinject.github.io/drivesync/ja/"}, "publisher": {"@type": "Organization", "name": "DriveSync", "logo": {"@type": "ImageObject", "url": "https://jkinject.github.io/drivesync/img/icon-512.png"}}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../../../ja/"><img src="../../../img/icon-64.png" width="32" height="32" alt="">DriveSync</a>
+    <div class="nav"><a class="navlink" href="../../../ja/blog/">ガイド</a></div>
+  </div>
+</header>
+<main>
+<article class="wrap post">
+  <p class="crumb"><a href="../">ガイド</a></p>
+  <h1>OneDriveの写真を古いPixelに移して、Google フォトにバックアップする方法【機種別の条件と注意点】</h1>
+  <p class="byline">DriveSync開発チーム · <time datetime="2026-11-25">2026-11-25</time></p>
+  <p>OneDriveの容量がいっぱいになってきた。でも引き出しには、しまったままのPixel 4aやPixel 5がある。そんな方に向けた記事です。</p>
+<p>Pixel 5以前のPixelには、その端末からGoogle フォトにバックアップした写真と動画を無料・無制限で保存できる特典が残っています。OneDriveにたまった写真をそのPixelに移してバックアップすれば、OneDriveの容量を空けられます。</p>
+<p>書いているのは、この用途に合わせてAndroidアプリ「DriveSync」を作っている開発チームです。アプリを入れない方にも役立つように、条件と注意点から先にまとめます。</p>
+<ul><li>無料・無制限になる条件は<strong>機種ごとに違います</strong>。Pixel 5a (5G) とPixel 6以降は対象外です。</li><li>Pixel 2〜5で無料になるのは<strong>「保存容量の節約画質」</strong>です。元の画質のまま無料で残るのは第1世代のPixelだけです。</li><li>OneDriveの容量は、ファイルを消しただけでは空きません。<strong>OneDriveのごみ箱を空にして</strong>はじめて空きます。</li></ul>
+<h2>無料・無制限でバックアップできるPixelはどれか</h2>
+<p>Googleのヘルプには「Google Pixel 5 以前の Google Pixel をお使いの場合、そのデバイスから無制限ストレージに写真と動画を無料でバックアップできます」と書かれています。機種ごとの条件は次のとおりです（2026年11月25日に日本語のヘルプで確認）。</p>
+<div class="tablewrap"><table><thead><tr><th>機種</th><th>無料・無制限でバックアップできる範囲</th></tr></thead><tbody><tr><td>Pixel（第1世代、2016年）</td><td><strong>元の画質</strong>で無制限</td></tr><tr><td>Pixel 2</td><td>2021年1月16日より後にバックアップした分は、<strong>保存容量の節約画質</strong>で無制限</td></tr><tr><td>Pixel 3</td><td>2022年1月31日より後にバックアップした分は、<strong>保存容量の節約画質</strong>で無制限</td></tr><tr><td>Pixel 3a・4・4a・5</td><td><strong>保存容量の節約画質</strong>で無制限（元の画質でバックアップすると保存容量を使います）</td></tr><tr><td>Pixel 5a (5G)、Pixel 6以降</td><td>無料の無制限バックアップはありません</td></tr></tbody></table></div>
+<p>出典はGoogle フォト ヘルプの<a href="https://support.google.com/photos/answer/6220791?hl=ja&amp;co=GENIE.Platform%3DAndroid" rel="noopener">写真と動画のバックアップの画質を選択する</a>（Androidのタブの「Google Pixel での Google フォトのバックアップについて」）と、<a href="https://support.google.com/photos/answer/10100180?hl=ja" rel="noopener">Google フォトのアクティビティとストレージについて</a>です。</p>
+<aside class="callout">対象になるのは「そのPixelからバックアップした写真と動画」です。ヘルプに終了時期は書かれていませんが、Googleはこの条件を変更することがあります。始める前に、上のヘルプで最新の内容を確認してください。</aside>
+<p>「Pixel 5a (5G) も対象」と書いているブログもありますが、Googleのヘルプが挙げているのは「Pixel 5 以前」「Pixel 3a～Pixel 5」です。迷ったときはヘルプの記載を基準にしてください。</p>
+<h2>「保存容量の節約画質」は元の画質ではありません</h2>
+<p>Googleのヘルプによると、保存容量の節約画質では写真は容量を節約するために圧縮され、16MPを超える写真は16MPに縮小されます。動画は、解像度が1080pを上回る場合に1080pへサイズ変更されます。字幕など一部の情報が失われる可能性がある、とも書かれています。</p>
+<p>つまり、元のファイルをそのままPixelに移しても、Pixel 2〜5で<strong>無料で</strong>Google フォトに残るのは圧縮されたものです。Pixel 3a〜5で「元の画質」を選べばそのまま保存できますが、その分はGoogle アカウントの保存容量を使います。</p>
+<aside class="callout">元のファイルが大事な方は、OneDriveのごみ箱を空にする前に、元のファイルを外付けSSDやパソコンなど別の場所にも保管してください。ごみ箱を空にしたあとは、OneDriveから取り戻せません。</aside>
+<h2>全体の流れ</h2>
+<ol><li>PixelのGoogle フォトでバックアップをオンにし、画質を確認する</li><li>OneDriveの写真と動画を、Pixelの <code>DCIM/Camera</code> に移す</li><li>Google フォトのバックアップが終わったことを確認する</li><li>OneDriveのごみ箱を空にする</li><li>Pixelの空き容量が足りなくなったら、バックアップ済みの写真を端末から消して、続きを移す</li></ol>
+<p>画質は、Google フォト アプリの上部にあるプロフィール写真から [Google フォトの設定] → [バックアップ] → [写真と動画の画質] で確認できます。Pixel 3a〜5で無料の範囲に収めたい場合は「保存容量の節約画質」を選びます。</p>
+<p>保存先を <code>DCIM/Camera</code> にするのは、Google フォトが追加の設定なしでバックアップするフォルダだからです。ほかのフォルダに入れた場合は、Google フォトでそのフォルダのバックアップをオンにする必要があります。</p>
+<p>Pixelの空き容量より写真のほうが多くても大丈夫です。バックアップが終わった写真は、Google フォト アプリで選んで「デバイスから削除」すれば端末から消せます（Googleのヘルプ：<a href="https://support.google.com/photos/answer/6128858?hl=ja" rel="noopener">写真や動画を削除する</a>）。空きができたら続きを移します。</p>
+<h2>OneDriveの写真をPixelに移す方法</h2>
+<h3>パソコンを経由する</h3>
+<p>ブラウザーでOneDriveを開いて写真をパソコンにダウンロードし、USBケーブルでつないだPixelの <code>DCIM/Camera</code> にコピーします。特別なアプリは要りませんが、パソコン側に空き容量が必要で、OneDrive側の元ファイルは自分で消すことになります。</p>
+<h3>OneDriveの公式アプリで保存する</h3>
+<p>Android版のOneDriveアプリでは、ファイルを複数選んで [保存] をタップし、保存先のフォルダーを選べます（Microsoftのヘルプ：<a href="https://support.microsoft.com/ja-jp/office/c81487ff-47e4-480e-98f8-7912f78b5246" rel="noopener">OneDrive ファイルをモバイルにダウンロードする方法</a>）。枚数が少なければこれで十分です。こちらも、元ファイルはあとから自分で削除します。</p>
+<h3>汎用の同期アプリを使う</h3>
+<p>FolderSyncやSyncthingのような同期アプリで、古いPixelを「アップロード専用機」にしている方もいます（例：Qiitaの<a href="https://qiita.com/miso_develop/items/12d605a4cb043097a0b6" rel="noopener">FolderSyncとSFTPでPixelに写真を送る構成の記事</a>）。これらのアプリでOneDriveの写真を移す使い方は私たちが検証していないので、紹介にとどめます。</p>
+<h3>DriveSyncを使う</h3>
+<p><a href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=ja&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dja-onedrive-photos-to-pixel-google-photos" rel="noopener">DriveSync</a>は、まさにこの作業のために作ったアプリです。</p>
+<ul><li>写真と動画を、フォルダを選ばずに <code>DCIM/Camera</code> へ直接保存します（Android 10以降。アプリ自体はAndroid 8以降で動きます）。</li><li>ファイルは元のまま、1バイトも変えずにPixelへ移します。まずコピーし、サイズとハッシュで検証して、確認できた場合にのみOneDrive側の元ファイルを削除します。</li><li>OneDrive全体の画像、画像+動画、すべてのファイルをまとめて移せます。移したいファイルやフォルダだけを選ぶこともできます。</li><li>ファイルはスマートフォンとMicrosoftの間で直接転送されます。DriveSyncのサーバーも、新しく作るアカウントもありません。サインインにはMicrosoft公式のサインインを使います。</li></ul>
+<figure><img src="../../../img/en/01-move.webp" width="360" height="640" loading="lazy" alt="移動する範囲を選ぶ画面（スクリーンショットは英語版です。アプリは日本語に対応しています）"><figcaption>移動する範囲を選ぶ画面（スクリーンショットは英語版です。アプリは日本語に対応しています）</figcaption></figure>
+<p>使い方は次のとおりです。</p>
+<ol><li>Pixelにインストールします。サインインの前に、サンプルファイルでアプリ全体を試せます。</li><li>ご自身のMicrosoftアカウントでサインインします。</li><li>移す範囲（画像、画像+動画、すべてのファイル）を選ぶか、ファイルやフォルダを自分で選びます。</li><li>内容を確認して開始します。速度と残り時間が表示され、画面を消しても移動は続きます。</li><li>終わったら移動履歴を確認します。失敗した項目は再試行できます。</li></ol>
+<figure><img src="../../../img/en/04-confirm.webp" width="360" height="640" loading="lazy" alt="移動を始める前の確認画面"><figcaption>移動を始める前の確認画面</figcaption></figure>
+<aside class="callout">無料プランは、同時3件、<strong>1ファイル最大100MB</strong>、広告ありです。100MBを超えるファイル（長めの動画など）は無料プランでは移せず、OneDriveに残ります。その分はパソコン経由で移すか、プレミアム（買い切り。サブスクリプションではありません。同時10件、1ファイル最大4GB、広告なし）をご検討ください。</aside>
+<p>なお、動作を確認しているのは個人用のMicrosoftアカウントのOneDriveです。DriveSyncは独立したアプリで、MicrosoftやGoogleとの提携や承認を受けたものではありません。</p>
+<h2>OneDriveのごみ箱を空にして、はじめて容量が空きます</h2>
+<p>見落としやすいのが最後のこの一手です。</p>
+<p>OneDriveで削除したファイルは、まずOneDriveのごみ箱に移動します（Microsoftのヘルプ：<a href="https://support.microsoft.com/ja-jp/office/21fe345a-e488-4fa7-932b-f053c1bebe8a" rel="noopener">OneDrive でファイルまたはフォルダーを削除する</a>）。DriveSyncが検証後に削除した元ファイルも同じで、ごみ箱から復元できます。</p>
+<p>そして、Microsoftのヘルプ「<a href="https://support.microsoft.com/ja-jp/onedrive/my-onedrive-says-it-s-full" rel="noopener">OneDrive がいっぱいだと表示される</a>」では、ストレージの使用量に数えられるものとして、ごみ箱内のアイテムも挙げられています。ごみ箱に残っているあいだは、容量は空きません。</p>
+<p>順番は次のとおりです。</p>
+<ol><li>PixelのGoogle フォトで、移した写真のバックアップが終わっていることを確認する</li><li>元のファイルを残したい写真は、別の場所に保管してあることを確認する</li><li>ブラウザーでOneDriveを開き、左側の [ごみ箱] を開いて、中身を完全に削除する</li></ol>
+<p>削除が使用量の表示に反映されるまで、少し時間がかかる場合があります。「消したのに容量が減らない」と感じたら、まずごみ箱を見て、それから少し待ってみてください。</p>
+<h2>おわりに</h2>
+<p>ここまでの作業は、手作業でも同じようにできます。枚数が多くて、コピーの確認や削除を1件ずつやっていられないときは、DriveSyncを試してみてください。アプリについては<a href="../../../ja/">紹介ページ</a>にもまとめています。</p>
+  <aside class="getapp"><img src="../../../img/icon-180.png" width="56" height="56" alt=""><div><strong>DriveSync: OneDriveからスマホへ</strong><p>OneDriveの写真をPixelに移してGoogle フォトでバックアップ。検証後に元ファイルを削除します。</p></div><a class="badge" href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=ja&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dja-onedrive-photos-to-pixel-google-photos" rel="noopener"><img src="../../../img/badge-ja.png" alt="Google Play で手に入れよう" height="48"></a></aside>
+  
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="links"><a href="../../../ja/">DriveSync</a> · <a href="https://jkinject.github.io/drivesync-privacy/">プライバシーポリシー</a> · <a href="mailto:support@lalatap.kr">お問い合わせ</a></p>
+</footer>
+</body>
+</html>

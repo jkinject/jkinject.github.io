@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>원드라이브 사진을 픽셀로 옮겨 구글포토에 백업하기: 기종별 무제한 조건과 순서 | DriveSync</title>
+<meta name="description" content="구글포토 백업용 픽셀을 쓰는 분을 위한 정리. 기종별 무료 백업 조건, 저장용량 절약과 원본 화질의 차이, 원드라이브 사진을 옮기는 세 가지 방법, 마지막 휴지통 비우기까지.">
+<link rel="canonical" href="https://jkinject.github.io/drivesync/ko/blog/onedrive-photos-to-pixel-google-photos/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DriveSync">
+<meta property="og:title" content="원드라이브 사진을 픽셀로 옮겨 구글포토에 백업하기: 기종별 무제한 조건과 순서 | DriveSync">
+<meta property="og:description" content="구글포토 백업용 픽셀을 쓰는 분을 위한 정리. 기종별 무료 백업 조건, 저장용량 절약과 원본 화질의 차이, 원드라이브 사진을 옮기는 세 가지 방법, 마지막 휴지통 비우기까지.">
+<meta property="og:url" content="https://jkinject.github.io/drivesync/ko/blog/onedrive-photos-to-pixel-google-photos/">
+<meta property="og:image" content="https://jkinject.github.io/drivesync/img/og.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2257D6">
+<link rel="icon" href="../../../img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../img/icon-180.png">
+<link rel="stylesheet" href="../../../style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "원드라이브 사진을 픽셀로 옮겨 구글포토에 백업하기: 기종별 무제한 조건과 순서", "description": "구글포토 백업용 픽셀을 쓰는 분을 위한 정리. 기종별 무료 백업 조건, 저장용량 절약과 원본 화질의 차이, 원드라이브 사진을 옮기는 세 가지 방법, 마지막 휴지통 비우기까지.", "datePublished": "2026-11-25", "inLanguage": "ko", "mainEntityOfPage": "https://jkinject.github.io/drivesync/ko/blog/onedrive-photos-to-pixel-google-photos/", "image": "https://jkinject.github.io/drivesync/img/og.png", "author": {"@type": "Organization", "name": "DriveSync", "url": "https://jkinject.github.io/drivesync/ko/"}, "publisher": {"@type": "Organization", "name": "DriveSync", "logo": {"@type": "ImageObject", "url": "https://jkinject.github.io/drivesync/img/icon-512.png"}}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../../../ko/"><img src="../../../img/icon-64.png" width="32" height="32" alt="">DriveSync</a>
+    <div class="nav"><a class="navlink" href="../../../ko/blog/">가이드</a></div>
+  </div>
+</header>
+<main>
+<article class="wrap post">
+  <p class="crumb"><a href="../">가이드</a></p>
+  <h1>원드라이브 사진을 픽셀로 옮겨 구글포토에 백업하기: 기종별 무제한 조건과 순서</h1>
+  <p class="byline">DriveSync 개발팀 작성 · <time datetime="2026-11-25">2026-11-25</time></p>
+  <p>서랍 속 픽셀 한 대를 구글포토 백업 전용으로 쓰는 분들이 있습니다. 중고나 직구로 구한 예전 Pixel에 사진을 넣어 두면 Google 포토가 무료로 백업해 주기 때문입니다. 클리앙이나 미코에 올라온 구성은 대개 비슷합니다. 평소 쓰는 폰의 사진을 OneDrive(원드라이브)에 올리고, Pixel에서 그 사진을 내려받고, Google 포토가 백업하게 두는 식입니다.</p>
+<p>그런데 삼성 갤러리의 OneDrive 동기화가 2026년 9월 30일에 끝나면서, OneDrive에 사진이 잔뜩 남은 채로 이 흐름을 다시 짜야 하는 분이 늘었습니다. 이 글은 그 일을 처음부터 끝까지 정리한 것입니다. 저희는 이 용도에 맞춰 DriveSync라는 앱을 만든 개발팀이라 앱 이야기도 나오지만, 앱 없이 하는 방법과 앱이 못 하는 것도 함께 적었습니다.</p>
+<h2>먼저 확인할 것: 내 Pixel은 어떤 조건인가</h2>
+<p>"픽셀이면 무제한"이라고 뭉뚱그려 알려져 있지만 기종마다 조건이 다릅니다. 아래는 2026년 11월 25일에 Google 포토 고객센터 한국어 페이지에서 다시 확인한 내용입니다.</p>
+<div class="tablewrap"><table><thead><tr><th>기종</th><th>무료 백업 조건</th></tr></thead><tbody><tr><td>Pixel (1세대, 2016)</td><td><strong>원본 화질</strong> 무제한. 저장용량 절약으로는 백업할 수 없음</td></tr><tr><td>Pixel 2</td><td>2021년 1월 16일 이후 백업분은 <strong>저장용량 절약</strong> 화질로 무제한</td></tr><tr><td>Pixel 3</td><td>2022년 2월 1일 이후 백업분은 <strong>저장용량 절약</strong> 화질로 무제한</td></tr><tr><td>Pixel 3a, 4, 4a, 5</td><td><strong>저장용량 절약</strong> 화질로 무제한. 원본 화질로 올리면 계정 용량을 씀</td></tr><tr><td>Pixel 5a, Pixel 6 이후</td><td>무료 무제한 백업 없음</td></tr></tbody></table></div>
+<p>출처는 <a href="https://support.google.com/photos/answer/6220791?hl=ko&amp;co=GENIE.Platform%3DAndroid" rel="noopener">백업 화질 선택하기</a>의 "Pixel에서의 Google 포토 백업 알아보기"와 <a href="https://support.google.com/photos/answer/10100180?hl=ko" rel="noopener">Google 포토 활동 및 저장용량 정보</a>입니다. 두 가지를 기억해 두세요.</p>
+<ul><li>혜택은 <strong>그 Pixel에서 백업한</strong> 사진과 동영상에만 적용됩니다. 다른 폰이나 PC에서 같은 계정으로 올리면 계정 용량을 씁니다.</li><li>Google이 정한 조건이라 Google이 바꿀 수 있습니다. 중고 Pixel을 새로 사기 전에는 위 페이지를 다시 확인하세요.</li></ul>
+<aside class="callout"><strong>원본이 무료로 남는 것은 1세대 Pixel뿐입니다.</strong> Pixel 2부터 5까지는 Google 포토가 압축한 저장용량 절약 화질로 보관됩니다. 고객센터 설명으로는 16MP보다 큰 사진은 16MP로, 1080p를 넘는 동영상은 1080p로 줄어듭니다. 원본과 같은 파일이 아닙니다.</aside>
+<h2>OneDrive에 사진이 쌓여 있는 이유</h2>
+<p>갤럭시를 써 온 분이라면 갤러리의 "OneDrive와 동기화"를 켜 둔 적이 있을 겁니다. 이 기능은 끝났습니다. Microsoft는 <a href="https://support.microsoft.com/ko-kr/onedrive/changes-to-samsung-gallery-sync-and-onedrive" rel="noopener">2026년 9월 30일부터 삼성 갤러리가 OneDrive와 직접 동기화되지 않는다</a>고 안내했고, <a href="https://news.samsung.com/kr/%ec%8a%a4%eb%a7%88%ed%8a%b8%ed%8f%b0-%ec%82%ac%ec%a7%84%ec%9d%84-%ed%83%ad%ec%97%90%ec%84%9c-%eb%b0%94%eb%a1%9c-%ec%82%bc%ec%84%b1-%ea%b0%a4%eb%9f%ac%eb%a6%ac-%ea%b5%ac%ea%b8%80-%ec%8a%a4" rel="noopener">삼성전자 뉴스룸</a>도 같은 날짜에 종료됐다고 밝혔습니다.</p>
+<p>사진이 지워진 것은 아닙니다. 이미 올라간 사진과 동영상은 OneDrive에 그대로 있고, OneDrive 앱이나 onedrive.com에서 볼 수 있습니다. 다만 갤러리에서는 더 보이지 않고, OneDrive 용량은 계속 차지합니다.</p>
+<h2>옮기는 방법 세 가지</h2>
+<p><strong>1. PC를 거치는 방법.</strong> onedrive.com에서 사진을 내려받아 USB로 Pixel의 <code>DCIM/Camera</code> 폴더에 복사합니다. Google 포토 백업이 끝난 것을 확인한 뒤 OneDrive에서 지웁니다. 앱을 깔 필요가 없지만 손이 많이 가고, 빠짐없이 옮겨졌는지는 직접 세어 봐야 합니다.</p>
+<p><strong>2. 동기화 앱.</strong> 커뮤니티에는 OneSync나 FolderSync 같은 동기화 앱으로 "내려받은 뒤 클라우드 쪽은 삭제"를 걸어 두는 구성이 여러 번 소개됐습니다(<a href="https://www.clien.net/service/board/lecture/16371624" rel="noopener">클리앙의 구축기</a>가 대표적입니다). 정해 둔 간격으로 알아서 돌게 할 수 있다는 점을 장점으로 꼽습니다. 저희가 직접 비교해 본 것은 아니니 자세한 동작은 각 앱의 안내를 보세요.</p>
+<p><strong>3. DriveSync.</strong> 한 번에 전부 옮기고 싶거나, "정말 다 넘어왔나"를 앱이 확인해 주기를 바라는 분께 맞습니다. 대신 예약 기능은 없습니다. 옮길 때마다 직접 시작해야 합니다.</p>
+<h2>DriveSync로 옮기는 순서</h2>
+<ol><li>Pixel에 <a href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=ko&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dko-onedrive-photos-to-pixel-google-photos" rel="noopener">DriveSync</a>를 설치합니다. 로그인하기 전에 <strong>로그인 없이 둘러보기</strong>로 샘플 파일을 써서 화면을 먼저 볼 수 있습니다.</li><li>본인의 Microsoft 계정으로 로그인합니다. Microsoft의 공식 로그인 화면이 뜨고, 따로 만드는 계정은 없습니다. 파일은 휴대폰과 Microsoft 사이에서 직접 오가며 저희 서버를 거치지 않습니다.</li><li><strong>옮기기</strong> 탭에서 <code>OneDrive → 휴대폰</code>을 고르고 옮길 종류(이미지 / 이미지+동영상 / 모든 파일)를 정합니다.</li><li>확인 창에서 파일 수와 필요한 공간을 보고 <strong>옮기기 시작</strong>을 누릅니다.</li><li>앱은 파일을 복사한 다음 크기와 해시로 검증하고, 검증된 파일만 OneDrive에서 지웁니다. 화면을 꺼도 계속되고, 실패한 파일은 다시 시도할 수 있습니다.</li><li>Google 포토 백업이 끝났는지 확인하고, Pixel에서 사진을 정리한 뒤 다음 묶음을 옮깁니다.</li></ol>
+<figure><img src="../../../img/ko/01-move.webp" width="360" height="640" loading="lazy" alt="옮기기 화면: OneDrive에서 DCIM/Camera로, 옮길 파일 종류 선택"><figcaption>옮기기 화면: OneDrive에서 DCIM/Camera로, 옮길 파일 종류 선택</figcaption></figure>
+<p>사진과 동영상은 <code>DCIM/Camera</code>에 바로 저장됩니다. Google 포토가 따로 설정하지 않아도 백업하는 폴더라서, Google 포토의 백업만 켜져 있으면 폴더를 고르거나 하위 폴더 백업을 켤 필요가 없습니다(이 기본 저장은 Android 10 이상에서 동작합니다). 파일은 바이트 단위로 원본 그대로 도착합니다.</p>
+<p>32GB 모델처럼 공간이 작다면 한꺼번에 옮기지 말고 <strong>파일을 직접 고르기</strong>로 폴더를 나눠 옮기세요. 확인 창에 휴대폰 여유 공간과 필요 공간이 나란히 나옵니다.</p>
+<h2>무료로 어디까지 되나</h2>
+<ul><li>무료: 동시에 3개씩, <strong>파일당 최대 100MB</strong>, 광고 있음</li><li>프리미엄: ₩3,900 한 번 결제(구독 아님), 동시에 10개씩, 파일당 최대 4GB, 광고 없음</li></ul>
+<p>사진만 옮긴다면 무료로 충분합니다. 걸리는 것은 긴 동영상입니다. 100MB를 넘는 파일은 옮길 대상에서 빠지고 OneDrive에 그대로 남습니다. 4GB를 넘는 파일은 프리미엄에서도 옮길 수 없으니 PC로 내려받으세요.</p>
+<h2>마지막 단계: OneDrive 휴지통 비우기</h2>
+<p>여기서 멈추면 OneDrive 용량은 그대로입니다. OneDrive에서 지워진 파일은 완전히 삭제되는 것이 아니라 <strong>OneDrive 휴지통</strong>으로 갑니다. 잘못 옮겼다면 거기서 되살릴 수 있습니다. 용량을 실제로 돌려받으려면 onedrive.com에 로그인해 휴지통을 비워야 합니다. Microsoft 안내에 따르면 개인 계정의 휴지통 항목은 <a href="https://support.microsoft.com/ko-kr/onedrive/restore-deleted-files-or-folders-in-onedrive" rel="noopener">30일 뒤 자동으로 삭제</a>되고, 비운 뒤 용량에 반영되기까지 <a href="https://support.microsoft.com/ko-kr/onedrive/delete-files-or-folders-in-onedrive" rel="noopener">잠시 걸릴 수 있습니다</a>.</p>
+<aside class="callout"><strong>휴지통을 비우기 전에 확인하세요.</strong> Google 포토 백업이 끝났는지 먼저 봅니다. 그리고 Pixel 2~5라면 Google 포토에 남는 것은 압축본입니다. 원본이 필요한 사진은 Pixel에 내려받은 파일을 PC나 외장 디스크에도 복사해 둔 다음에 휴지통을 비우세요. 휴지통을 비우면 OneDrive 쪽 원본은 되돌릴 수 없습니다.</aside>
+<h2>정리하면</h2>
+<ul><li>무료 백업 조건은 기종마다 다르고, 원본이 남는 것은 1세대뿐입니다.</li><li>삼성 갤러리 동기화로 올라간 사진은 OneDrive에 남아 있습니다. 옮기는 방법은 PC, 동기화 앱, DriveSync 세 가지입니다.</li><li>어떤 방법을 쓰든 순서는 같습니다. Pixel로 옮기기, Google 포토 백업 확인, 원본 따로 보관, OneDrive 휴지통 비우기.</li></ul>
+<p>DriveSync는 Microsoft나 Google과 제휴하거나 보증받은 앱이 아닌 독립 앱입니다. 앱 소개는 <a href="../../../ko/">DriveSync 소개 페이지</a>에 있고, 궁금한 점은 support@lalatap.kr로 보내 주세요.</p>
+  <aside class="getapp"><img src="../../../img/icon-180.png" width="56" height="56" alt=""><div><strong>DriveSync: OneDrive 사진 옮기기</strong><p>OneDrive 사진을 Pixel로 옮겨 Google 포토에 백업하세요. 검증 후에만 원본을 지웁니다.</p></div><a class="badge" href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=ko&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dko-onedrive-photos-to-pixel-google-photos" rel="noopener"><img src="../../../img/badge-ko.png" alt="Google Play에서 다운로드" height="48"></a></aside>
+  
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="links"><a href="../../../ko/">DriveSync</a> · <a href="https://jkinject.github.io/drivesync-privacy/">개인정보처리방침</a> · <a href="mailto:support@lalatap.kr">문의</a></p>
+</footer>
+</body>
+</html>
