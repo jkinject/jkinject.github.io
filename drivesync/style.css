@@ -195,3 +195,6 @@ h2.label { font-size: 17px; margin-bottom: 24px; }
 .pt { display: block; font-weight: 700; font-size: 18px; line-height: 1.35; }
 .pd { display: block; color: var(--muted); font-size: 15px; margin-top: 4px; }
 .postlist time { display: block; color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+/* Korean breaks lines between words, not inside them */
+:lang(ko) { word-break: keep-all; }
