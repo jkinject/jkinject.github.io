@@ -72,8 +72,19 @@
 <h2>常見問題</h2>
 <h3>我的 Pixel 是 5a 或 6 之後的機型，還能用這招嗎？</h3>
 <p>不行。這些機型不在 Google 列出的範圍內。相片一樣可以搬到手機、備份到 Google 相簿，但會計入 Google 帳戶的儲存空間。</p>
-<h3>無限備份會不會哪天被取消？</h3>
-<p>沒有人能保證。Google 的說明頁目前仍寫著 Pixel 5 和更早的機型可以免費備份，但條件由 Google 決定。Google 也寫明，超過 2 年沒有使用 Google 相簿，內容可能會被刪除。重要的相片不要只放在一個地方。</p>
+<h3>無限相簿遲早會被改掉吧？</h3>
+<p>沒有人能保證不會，而且 Google 確實改過：</p>
+<ul><li>Pixel 2 和 Pixel 3 原本可以免費用原始畫質備份，分別在 2021 年 1 月 16 日和 2022 年 1 月 31 日之後，改成只有壓縮畫質免費。</li><li>2021 年 6 月 1 日以前，所有人用「高畫質」備份都不計入儲存空間；之後只剩 Pixel 5 和更早的機型還有免費無限備份。</li></ul>
+<p>這兩次改的都是之後才備份的內容。依 <a href="https://support.google.com/photos/answer/10100180?hl=zh-Hant" rel="noopener">Google 的說明</a>，2021 年 6 月 1 日前以高畫質備份的相片仍然不計入儲存空間；Pixel 2、3 在期限前以原始畫質備份的內容，也「仍可免費以原始畫質選項儲存」。不過這是過去的做法，不是對未來的承諾。比較實際的心態是：</p>
+<ul><li>把它當成「趁現在還能用」的方法，不要當成永久方案。要為了這招特地買二手 Pixel，先把可能被改的風險算進去。</li><li>雲端只是其中一份備份，原檔自己另外留一份。</li><li>Google 也寫明，超過 2 年沒有使用 Google 相簿，或已超出儲存空間上限，相片和影片可能會遭到刪除。重要的相片不要只放在一個地方。</li></ul>
+<h3>先把相片搬到舊 Pixel 再上傳，聽起來很麻煩，值得嗎？</h3>
+<p>確實麻煩，PTT 上試過的人也多半這樣說。麻煩的地方可以拆成三段：</p>
+<ol><li>把檔案弄進 Pixel：用電腦要下載、接線、複製；Pixel 容量小，還得分好幾批。</li><li>等 Google 相簿備份：檔案多、影片大，就得放著等，舊手機也要一直開著。</li><li>收尾：確認備份完成、清掉手機上的檔案、刪掉 OneDrive 的原檔、清空資源回收筒。</li></ol>
+<p>第 2 段不管用什麼方法都省不掉。DriveSync 省的是第 1 段和第 3 段的一部分：在 Pixel 上直接從 OneDrive 搬，驗證完才刪 OneDrive 原檔，成功和失敗的檔案都留在移動記錄裡。但它沒有排程或定期自動搬移的功能，每一批都要自己按開始。</p>
+<p>所以這招最划算的情況，是「一次把 OneDrive 裡的舊相片清掉」：工作量有盡頭，做完就結束。如果你想要的是主力機拍完就自動送進 Pixel 的長期流程，PTT 和部落格上有人用 Syncthing、Resilio Sync 這類同步工具，把主力機的相片傳到 Pixel 的 <code>DCIM</code> 資料夾。那是另一種做法，設定請以各工具的說明為準，一樣先拿少量檔案測試。</p>
+<h3>舊 Pixel 電池老化了，拿來當上傳機安全嗎？</h3>
+<p>不少人手上的初代、二代 Pixel 已經出現電池膨脹、發燙或一直重開機。這不是 App 能解決的問題，只能自己留意：</p>
+<ul><li>分批搬的話，Pixel 只有在搬檔案和備份的那段時間需要開著，不必 24 小時插電當伺服器。</li><li>上傳時放在通風、不會被蓋住的地方，不要放在床上、枕頭下或包包裡邊充邊傳。</li><li>背蓋鼓起、螢幕被頂起、機身變形，就停止使用、不要再充電，交給維修中心處理。</li><li>會自己重開機或掉電很快的手機，備份可能做到一半就停了。每搬完一批，先到 Google 相簿確認那一批真的都備份好，再刪除手機和 OneDrive 上的檔案。</li></ul>
 <h3>Pixel 2 到 5 可以改用原始畫質備份嗎？</h3>
 <p>可以選，但依 Google 的說明，在這些機型上用原始畫質備份的相片和影片會計入 Google 帳戶儲存空間，就不是免費無限了。想兩邊都顧到的做法是：雲端放壓縮畫質，原檔自己另外留一份。</p>
   <aside class="getapp"><img src="../../../img/icon-180.png" width="56" height="56" alt=""><div><strong>DriveSync: OneDrive 移到手機</strong><p>把 OneDrive 相片移到 Pixel，交給 Google 相簿備份。驗證無誤後才刪除原始檔。</p></div><a class="badge" href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=zh-TW&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dzh-tw-old-pixel-onedrive-backup" rel="noopener"><img src="../../../img/badge-zh-tw.png" alt="立即在 Google Play 下載" height="48"></a></aside>
