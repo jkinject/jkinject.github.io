@@ -5,7 +5,7 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-26T07:44:00+09:00"
+    "updated_at": "2026-11-27T07:20:00+09:00"
   },
   "days": [
     {
@@ -90,7 +90,8 @@
           "prize": "배달의민족 1만원권",
           "winners": "40명 추첨",
           "deadline": "2026-11-19",
-          "url": "https://form.naver.com/response/3zNNfbbmbNj"
+          "url": "https://form.naver.com/response/3zNNfbbmbNj",
+          "result_url": "https://blog.naver.com/dreamcampus/224488517043"
         }
       ]
     },
@@ -1105,8 +1106,8 @@
     },
     {
       "date": "2026-11-26",
-      "label": "오늘",
-      "headline": "오늘 추가된 경품",
+      "label": "11월 26일",
+      "headline": "11월 26일 추가된 경품",
       "sub": "3건 · 마감 빠른 순",
       "events": [
         {
@@ -1135,6 +1136,50 @@
           "winners": "50명 추첨",
           "deadline": "2026-12-09",
           "url": "https://form.naver.com/response/A9ez79gXKd2"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "label": "오늘",
+      "headline": "오늘 추가된 경품",
+      "sub": "4건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-c4d08a94fa",
+          "org": "상주시",
+          "title": "제2회 2026년 상주쌀 학력고사 (미소진품 탐구영역)",
+          "prize": "상주쌀 4kg",
+          "winners": "250명 추첨",
+          "deadline": "2026-12-02",
+          "url": "https://form.naver.com/response/IzvcZwhQzUl"
+        },
+        {
+          "id": "ev-c70553ebb1",
+          "org": "대구오페라하우스",
+          "title": "2026 대구오페라하우스 SNS 채널 만족도 조사",
+          "prize": "배달의민족 1만원권·커피 기프티콘",
+          "winners": "40명 추첨",
+          "deadline": "2026-12-13",
+          "url": "https://form.naver.com/response/FJiuGBYjWI0"
+        },
+        {
+          "id": "ev-994b34a038",
+          "org": "한국쌀산업연합회",
+          "title": "2026 쌀력고사 듣기평가 이벤트",
+          "prize": "네이버페이 5,000원",
+          "winners": "1,000명 추첨",
+          "deadline": "2026-12-14",
+          "url": "https://vo.la/qCeD78L"
+        },
+        {
+          "id": "ev-e9aefb4c9f",
+          "org": "행정안전부",
+          "title": "착한가격업소 및 홈페이지 이용자 만족도 설문조사",
+          "prize": "소정의 경품",
+          "winners": "추첨",
+          "deadline": "2026-12-16",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSc99EdUa6fRDl_CaspD-U_s2aanCI6pKRCewkIMXSikVtxFAQ/viewform"
         }
       ]
     }
