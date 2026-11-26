@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Google 相簿空間不足？用舊 Pixel 免費備份相片的「無限相簿」入門 | DriveSync</title>
-<meta name="description" content="Google 帳戶 15 GB 滿了、每個月付 Google One？Google 說明頁寫著 Pixel 5 和更早的機型可以免費無限備份。這篇從零講清楚原理、要準備什麼、怎麼搭配主力機，以及要先知道的風險。">
+<title>Google 相簿永久免費、無限備份！一支舊 Pixel 就搞定的「無限相簿」攻略 | DriveSync</title>
+<meta name="description" content="Google 15 GB 又滿了？先別急著付 Google One。一支 Pixel 5 以前的舊手機，就能把相片永久免費、無限量備份到 Google 相簿。原理、準備和搭配主力機的做法一次教你。">
 <link rel="canonical" href="https://jkinject.github.io/drivesync/zh-tw/blog/pixel-free-photo-backup/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="DriveSync">
-<meta property="og:title" content="Google 相簿空間不足？用舊 Pixel 免費備份相片的「無限相簿」入門 | DriveSync">
-<meta property="og:description" content="Google 帳戶 15 GB 滿了、每個月付 Google One？Google 說明頁寫著 Pixel 5 和更早的機型可以免費無限備份。這篇從零講清楚原理、要準備什麼、怎麼搭配主力機，以及要先知道的風險。">
+<meta property="og:title" content="Google 相簿永久免費、無限備份！一支舊 Pixel 就搞定的「無限相簿」攻略 | DriveSync">
+<meta property="og:description" content="Google 15 GB 又滿了？先別急著付 Google One。一支 Pixel 5 以前的舊手機，就能把相片永久免費、無限量備份到 Google 相簿。原理、準備和搭配主力機的做法一次教你。">
 <meta property="og:url" content="https://jkinject.github.io/drivesync/zh-tw/blog/pixel-free-photo-backup/">
 <meta property="og:image" content="https://jkinject.github.io/drivesync/img/og.png">
 <meta property="og:locale" content="zh_TW">
@@ -18,7 +18,7 @@
 <link rel="icon" href="../../../img/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../../../img/icon-180.png">
 <link rel="stylesheet" href="../../../style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Google 相簿空間不足？用舊 Pixel 免費備份相片的「無限相簿」入門", "description": "Google 帳戶 15 GB 滿了、每個月付 Google One？Google 說明頁寫著 Pixel 5 和更早的機型可以免費無限備份。這篇從零講清楚原理、要準備什麼、怎麼搭配主力機，以及要先知道的風險。", "datePublished": "2026-11-26", "inLanguage": "zh-TW", "mainEntityOfPage": "https://jkinject.github.io/drivesync/zh-tw/blog/pixel-free-photo-backup/", "image": "https://jkinject.github.io/drivesync/img/og.png", "author": {"@type": "Organization", "name": "DriveSync", "url": "https://jkinject.github.io/drivesync/zh-tw/"}, "publisher": {"@type": "Organization", "name": "DriveSync", "logo": {"@type": "ImageObject", "url": "https://jkinject.github.io/drivesync/img/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Google 相簿永久免費、無限備份！一支舊 Pixel 就搞定的「無限相簿」攻略", "description": "Google 15 GB 又滿了？先別急著付 Google One。一支 Pixel 5 以前的舊手機，就能把相片永久免費、無限量備份到 Google 相簿。原理、準備和搭配主力機的做法一次教你。", "datePublished": "2026-11-26", "inLanguage": "zh-TW", "mainEntityOfPage": "https://jkinject.github.io/drivesync/zh-tw/blog/pixel-free-photo-backup/", "image": "https://jkinject.github.io/drivesync/img/og.png", "author": {"@type": "Organization", "name": "DriveSync", "url": "https://jkinject.github.io/drivesync/zh-tw/"}, "publisher": {"@type": "Organization", "name": "DriveSync", "logo": {"@type": "ImageObject", "url": "https://jkinject.github.io/drivesync/img/icon-512.png"}}}</script>
 </head>
 <body>
 <header class="top">
@@ -30,10 +30,10 @@
 <main>
 <article class="wrap post">
   <p class="crumb"><a href="../">教學</a></p>
-  <h1>Google 相簿空間不足？用舊 Pixel 免費備份相片的「無限相簿」入門</h1>
+  <h1>Google 相簿永久免費、無限備份！一支舊 Pixel 就搞定的「無限相簿」攻略</h1>
   <p class="byline">DriveSync 開發團隊 · <time datetime="2026-11-26">2026-11-26</time></p>
-  <p>手機跳出「Google 帳戶儲存空間已滿」，或是每個月都在付 Google One 的錢，多半是因為相片。每個 Google 帳戶的 15 GB 由 Gmail、Google 雲端硬碟和 Google 相簿共用，相片和影片一多，很快就不夠用。</p>
-<p>很多人不知道的是：Google 自己的說明頁寫著，用 Pixel 5 和更早推出的 Pixel 從手機備份相片，不會計入這 15 GB。台灣的 PTT 上大家叫它「無限相簿」，有人特地留一支舊 Pixel 專門負責上傳，叫「上傳機」或「備份機」。這篇寫給第一次聽到的人：它是什麼、為什麼可行、要準備什麼、別人怎麼搭配主力機用，以及動手前要先知道的風險。</p>
+  <p>手機又跳出「Google 帳戶儲存空間已滿」？每個月乖乖付 Google One 之前，先看這篇：<strong>一支 Pixel 5 以前的舊手機，就能讓你的相片永久免費、無限量備份到 Google 相簿。</strong> 不是破解，是 Google 說明頁上白紙黑字寫的。</p>
+<p>台灣 PTT 上的老手叫它「無限相簿」，有人特地留一支舊 Pixel 專門負責上傳，叫「上傳機」。每個 Google 帳戶只有 15 GB，由 Gmail、Google 雲端硬碟和 Google 相簿共用，相片一多很快就滿。這篇從零教你：它是什麼、為什麼可行、要準備什麼、怎麼搭配主力機用，以及動手前要注意的事。</p>
 <h2>先看空間滿了會怎樣</h2>
 <p>依 <a href="https://support.google.com/googleone/answer/9312312?hl=zh-Hant" rel="noopener">Google One 說明「Google 儲存空間的使用方式」</a>，用量超出配額之後：</p>
 <ul><li>無法再把任何相片和影片備份到 Google 相簿。</li><li>Gmail 收發信件可能會受到影響。</li><li>雲端硬碟的檔案只能下載、刪除，不能做其他操作。</li><li>超出配額達 2 年以上，帳戶裡的內容（包括 Gmail、Google 相簿、雲端硬碟）可能會被移除。</li></ul>
@@ -41,7 +41,7 @@
 <h2>無限相簿是什麼</h2>
 <p>不是漏洞，也不是破解。Google 相簿說明「<a href="https://support.google.com/photos/answer/10100180?hl=zh-Hant" rel="noopener">關於 Google 相簿活動和儲存空間</a>」裡有這一句：</p>
 <aside class="callout">如果使用 Pixel 5 或更早推出的機型，可免費從裝置備份相片和影片，並享有無限儲存空間。</aside>
-<p>重點有兩個。第一，是「從裝置備份」：相片要放在那支 Pixel 上，由那支 Pixel 的 Google 相簿 App 備份上去；用電腦網頁或別支手機上傳的，照一般規則計入儲存空間。第二，以 2026 年 11 月 26 日的說明頁來看，這項待遇沒有寫結束日期。但那是 Google 目前的說明，不是合約上的保證，Google 可以改，也真的改過（後面「風險」會講）。</p>
+<p>重點有兩個。第一，是「從裝置備份」：相片要放在那支 Pixel 上，由那支 Pixel 的 Google 相簿 App 備份上去；用電腦網頁或別支手機上傳的，照一般規則計入儲存空間。第二，Google 說明頁目前沒有寫結束日期，不過 Google 隨時可以修改條件。</p>
 <figure class="photo"><img src="../../../img/photos/pixel-1.webp" width="1200" height="674" loading="lazy" alt="第一代 Google Pixel 與 Pixel XL（2016 年）。唯一能以原始畫質免費無限備份的機型"><figcaption>第一代 Google Pixel 與 Pixel XL（2016 年）。唯一能以原始畫質免費無限備份的機型<br><small><a href="https://commons.wikimedia.org/wiki/File:Google_Pixel_and_Pixel_XL_smartphones_(30155266465).jpg" rel="noopener">Maurizio Pesce from Milan, Italia</a>, <a href="https://creativecommons.org/licenses/by/2.0" rel="noopener license">CC BY 2.0</a>, Wikimedia Commons</small></figcaption></figure>
 <h2>哪些 Pixel 可以，畫質差在哪</h2>
 <div class="tablewrap"><table><thead><tr><th>機型</th><th>免費無限備份的畫質</th></tr></thead><tbody><tr><td>Pixel（第 1 代）</td><td>原始畫質</td></tr><tr><td>Pixel 2、3、3a、4、4a、5</td><td>壓縮畫質（英文介面叫 Storage saver）</td></tr><tr><td>Pixel 5a、Pixel 6 及之後</td><td>沒有</td></tr></tbody></table></div>
@@ -60,8 +60,8 @@
 <p>還有一件容易忽略的事：<strong>主力機上的 Google 相簿如果也用同一個帳戶開著備份，主力機傳上去的那份會照常計入空間。</strong> 讓 Pixel 負責上傳，主力機的 Google 相簿備份要關掉或改用別的帳戶，不然等於白做。</p>
 <p>Pixel 的容量通常不大，滿了就用 Google 相簿的「釋出這部裝置的空間」，把已經備份的相片從 Pixel 清掉，再放下一批。</p>
 <figure class="photo"><img src="../../../img/photos/pixel-5.webp" width="1200" height="900" loading="lazy" alt="Google Pixel 5 正面。名單上最新的一款，之後的 5a、6 都沒有免費無限備份"><figcaption>Google Pixel 5 正面。名單上最新的一款，之後的 5a、6 都沒有免費無限備份<br><small><a href="https://commons.wikimedia.org/wiki/File:Google_Pixel_5_front.jpg" rel="noopener">ShadowRobotnikULF</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a>, Wikimedia Commons</small></figcaption></figure>
-<h2>動手前要知道的風險</h2>
-<ul><li><strong>條件會變，而且變過。</strong> Pixel 2、3 原本是原始畫質免費，後來改成只有壓縮畫質免費；2021 年 6 月 1 日以前，所有人用「高畫質」備份都不占空間，之後只剩 Pixel 5 和更早的機型。前幾次改的都是之後才備份的內容，但這不代表下次也一樣。</li><li><strong>已經在帳戶裡的相片不會因此變成免費。</strong> Google 沒有說原本已計入的相片會改成不計入。無限相簿影響的是之後從 Pixel 備份的內容。</li><li><strong>帳戶已經超出配額的話，先把用量降下來。</strong> Google 的說明寫著，超出配額時「無法將任何相片和影片備份到 Google 相簿」，沒有寫 Pixel 例外。先清掉 Gmail 大附件或雲端硬碟裡的檔案，回到上限以下再開始，一樣先小量測試。</li><li><strong>長期不用會被刪。</strong> Google 寫明，超過 2 年沒有使用 Google 相簿，或超出儲存空間上限，相片和影片可能會遭到刪除。</li><li><strong>舊手機本身。</strong> 舊 Pixel 的電池可能已經老化，背蓋鼓起就停止使用。更多舊機的注意事項寫在<a href="../old-pixel-onedrive-backup/">這篇的常見問題</a>。</li><li><strong>畫質。</strong> 再說一次：除了第一代，雲端上留下的是壓縮畫質，原檔要自己保存。</li></ul>
+<h2>動手前要注意的事</h2>
+<ul><li><strong>已經在帳戶裡的相片不會因此變成免費。</strong> Google 沒有說原本已計入的相片會改成不計入。無限相簿影響的是之後從 Pixel 備份的內容。</li><li><strong>帳戶已經超出配額的話，先把用量降下來。</strong> Google 的說明寫著，超出配額時「無法將任何相片和影片備份到 Google 相簿」，沒有寫 Pixel 例外。先清掉 Gmail 大附件或雲端硬碟裡的檔案，回到上限以下再開始，一樣先小量測試。</li><li><strong>長期不用會被刪。</strong> Google 寫明，超過 2 年沒有使用 Google 相簿，或超出儲存空間上限，相片和影片可能會遭到刪除。</li><li><strong>舊手機本身。</strong> 舊 Pixel 的電池可能已經老化，背蓋鼓起就停止使用。更多舊機的注意事項寫在<a href="../old-pixel-onedrive-backup/">這篇的常見問題</a>。</li><li><strong>畫質。</strong> 再說一次：除了第一代，雲端上留下的是壓縮畫質，原檔要自己保存。</li></ul>
 <h2>相片在 OneDrive 的話</h2>
 <p>如果你的舊相片不在主力機，而是堆在 OneDrive（例如三星手機以前開過 OneDrive 同步），我們開發團隊做了一個 Android App <a href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=zh-TW&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dzh-tw-pixel-free-photo-backup" rel="noopener">DriveSync</a>，可以直接在 Pixel 上把 OneDrive 的相片和影片搬進 <code>DCIM/Camera</code>，確認檔案完整後才刪除 OneDrive 上的原檔。它是獨立開發的 App，和 Google、Microsoft 沒有關聯；免費版單一檔案上限 100 MB。完整流程，包括最後要清空 OneDrive 資源回收筒才會真的釋出空間，請看<a href="../old-pixel-onedrive-backup/">舊 Pixel 無限相簿教學</a>。</p>
   <aside class="getapp"><img src="../../../img/icon-180.png" width="56" height="56" alt=""><div><strong>DriveSync: OneDrive 移到手機</strong><p>把 OneDrive 相片移到 Pixel，交給 Google 相簿備份。驗證無誤後才刪除原始檔。</p></div><a class="badge" href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=zh-TW&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dzh-tw-pixel-free-photo-backup" rel="noopener"><img src="../../../img/badge-zh-tw.png" alt="立即在 Google Play 下載" height="48"></a></aside>
