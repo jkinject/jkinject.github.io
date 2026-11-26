@@ -3,3 +3,4 @@ User-agent: *
 Disallow:
 
 Sitemap: https://jkinject.github.io/sitemap.xml
+Sitemap: https://jkinject.github.io/crypto-aod/sitemap.xml
