@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google フォトの容量がいっぱいなら。古いPixelで写真を無料・容量無制限でバックアップする方法【入門】 | DriveSync</title>
+<meta name="description" content="Google フォトの容量不足でGoogle Oneを検討している方へ。Pixel 5以前のPixelを使うと、写真を無料・容量無制限でバックアップできます。仕組みと必要なもの、メインのスマホとの組み合わせ方、注意点を一から説明します。">
+<link rel="canonical" href="https://jkinject.github.io/drivesync/ja/blog/old-pixel-google-photos-free-backup/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DriveSync">
+<meta property="og:title" content="Google フォトの容量がいっぱいなら。古いPixelで写真を無料・容量無制限でバックアップする方法【入門】 | DriveSync">
+<meta property="og:description" content="Google フォトの容量不足でGoogle Oneを検討している方へ。Pixel 5以前のPixelを使うと、写真を無料・容量無制限でバックアップできます。仕組みと必要なもの、メインのスマホとの組み合わせ方、注意点を一から説明します。">
+<meta property="og:url" content="https://jkinject.github.io/drivesync/ja/blog/old-pixel-google-photos-free-backup/">
+<meta property="og:image" content="https://jkinject.github.io/drivesync/img/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2257D6">
+<link rel="icon" href="../../../img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../img/icon-180.png">
+<link rel="stylesheet" href="../../../style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Google フォトの容量がいっぱいなら。古いPixelで写真を無料・容量無制限でバックアップする方法【入門】", "description": "Google フォトの容量不足でGoogle Oneを検討している方へ。Pixel 5以前のPixelを使うと、写真を無料・容量無制限でバックアップできます。仕組みと必要なもの、メインのスマホとの組み合わせ方、注意点を一から説明します。", "datePublished": "2026-11-26", "inLanguage": "ja", "mainEntityOfPage": "https://jkinject.github.io/drivesync/ja/blog/old-pixel-google-photos-free-backup/", "image": "https://jkinject.github.io/drivesync/img/og.png", "author": {"@type": "Organization", "name": "DriveSync", "url": "https://jkinject.github.io/drivesync/ja/"}, "publisher": {"@type": "Organization", "name": "DriveSync", "logo": {"@type": "ImageObject", "url": "https://jkinject.github.io/drivesync/img/icon-512.png"}}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../../../ja/"><img src="../../../img/icon-64.png" width="32" height="32" alt="">DriveSync</a>
+    <div class="nav"><a class="navlink" href="../../../ja/blog/">ガイド</a></div>
+  </div>
+</header>
+<main>
+<article class="wrap post">
+  <p class="crumb"><a href="../">ガイド</a></p>
+  <h1>Google フォトの容量がいっぱいなら。古いPixelで写真を無料・容量無制限でバックアップする方法【入門】</h1>
+  <p class="byline">DriveSync開発チーム · <time datetime="2026-11-26">2026-11-26</time></p>
+  <p>「Google アカウントの保存容量がいっぱいです」という通知が来て、Google Oneの有料プランを考えている。そんな方に、知っておいてほしい方法があります。古いPixelを1台用意して写真のバックアップ専用に使うと、写真と動画を無料・容量無制限でGoogle フォトに保存できる、というものです。</p>
+<p>ブログでは「裏技」と呼ばれることもありますが、Googleのヘルプに書かれている正式な特典です。この記事では、この方法を初めて聞く方向けに、仕組みから注意点までを順に説明します（Googleのヘルプの内容は2026年11月26日に日本語版で確認しました）。</p>
+<p>書いているのは、OneDriveの写真をPixelへ移すAndroidアプリ「DriveSync」の開発チームです。アプリの話は最後に少しだけで、それ以外はアプリを使わない方にも役立つ内容です。</p>
+<h2>この方法をひとことで言うと</h2>
+<p>Google アカウントには無料で15GBの保存容量があり、Google フォトの写真や動画もここに数えられます。いっぱいになれば、有料のGoogle Oneで容量を増やすのが普通の解決策です。</p>
+<p>ところが、Pixel 5以前のPixelからバックアップした写真と動画は、この容量に数えられません。Google フォト ヘルプ「<a href="https://support.google.com/photos/answer/10100180?hl=ja" rel="noopener">Google フォトのアクティビティとストレージについて</a>」には、こう書かれています。</p>
+<aside class="callout">「Google Pixel 5 以前の Google Pixel をお使いの場合、そのデバイスから無制限ストレージに写真と動画を無料でバックアップできます。」</aside>
+<p>そこで、普段の写真は今のスマホで撮り、その写真を古いPixelに送って、PixelからGoogle フォトにバックアップする。これがこの方法の全体像です。</p>
+<figure class="photo"><img src="../../../img/photos/pixel-1.webp" width="1200" height="674" loading="lazy" alt="第1世代のPixelとPixel XL（2016年）。元の画質のまま無料で保存できるのはこの世代だけです"><figcaption>第1世代のPixelとPixel XL（2016年）。元の画質のまま無料で保存できるのはこの世代だけです<br><small><a href="https://commons.wikimedia.org/wiki/File:Google_Pixel_and_Pixel_XL_smartphones_(30155266465).jpg" rel="noopener">Maurizio Pesce from Milan, Italia</a>, <a href="https://creativecommons.org/licenses/by/2.0" rel="noopener license">CC BY 2.0</a>, Wikimedia Commons</small></figcaption></figure>
+<h2>どのPixelが使えるか</h2>
+<p>ヘルプでは、条件が機種ごとに分かれています。ざっくり言うと次のとおりです。</p>
+<div class="tablewrap"><table><thead><tr><th>機種</th><th>無料・無制限になる画質</th></tr></thead><tbody><tr><td>Pixel（第1世代）</td><td>元の画質</td></tr><tr><td>Pixel 2〜Pixel 5</td><td>保存容量の節約画質（圧縮される）</td></tr><tr><td>Pixel 5a (5G)、Pixel 6以降</td><td>対象外（ヘルプに名前がない）</td></tr></tbody></table></div>
+<p>Pixel 2とPixel 3の日付の条件や、Pixel 5a (5G) の扱いなどは「<a href="../pixel-google-photos-unlimited-models/">Google フォトに無料・無制限でバックアップできるPixelはどれ？</a>」で詳しくまとめています。</p>
+<p>ヘルプに終了時期は書かれていませんが、Googleは条件を変えることがあります。「今のヘルプの記載では期限がない」というのが正確なところです。</p>
+<h2>必要なもの</h2>
+<ul><li>Pixel 5以前のPixel 1台（家に眠っているもので十分です）</li><li>今のスマホと同じGoogle アカウント</li><li>Pixelを置いておく場所とWi-Fi、充電器</li><li>今のスマホからPixelへ写真を送る手段（次の章で説明します）</li></ul>
+<figure class="photo"><img src="../../../img/photos/pixel-4a.webp" width="1200" height="2134" loading="lazy" alt="箱に入ったPixel 4a。引き出しにしまったままの端末が、そのまま使えるかもしれません"><figcaption>箱に入ったPixel 4a。引き出しにしまったままの端末が、そのまま使えるかもしれません<br><small><a href="https://commons.wikimedia.org/wiki/File:Google_Pixel_4A,_Hillegersberg,_Rotterdam_(2021)_01.jpg" rel="noopener">Donald Trung Quoc Don</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a>, Wikimedia Commons</small></figcaption></figure>
+<h2>今のスマホの写真をPixelへ送る方法</h2>
+<p>この方法のポイントは、写真が「Pixelの中」にあることです。Pixelの <code>DCIM/Camera</code> フォルダに入った写真は、Google フォトが追加の設定なしでバックアップします。ほかのフォルダに入れた場合は、Google フォトでそのフォルダのバックアップをオンにします。</p>
+<p>送り方は、実際に使っている人のブログを見ると、主に次の3つです。</p>
+<ul><li><strong>パソコン経由</strong>：今のスマホの写真をパソコンに取り込み、USBケーブルでつないだPixelにコピーする。追加のアプリは要りませんが、毎回手作業です。</li><li><strong>クラウド経由</strong>：今のスマホからDropboxなどに写真を上げ、Pixel側の同期アプリで自動的にダウンロードする（例：Dropbox＋Dropsync）。</li><li><strong>スマホ同士で直接同期</strong>：Syncthing系のアプリやFolderSyncで、今のスマホのフォルダをPixelに自動で同期する。Qiitaには、FolderSyncとSFTPでPixelを「アップロードサーバー」にする構成の<a href="https://qiita.com/miso_develop/items/12d605a4cb043097a0b6" rel="noopener">記事</a>もあります。</li></ul>
+<p>どのアプリも私たちが検証したものではないので、設定は各アプリの説明に従ってください。</p>
+<h2>設定の流れ</h2>
+<ol><li>Pixelを初期化するか整理して、今のスマホと同じGoogle アカウントでログインする</li><li>PixelのGoogle フォトでバックアップをオンにし、画質を確認する（プロフィール写真 → [Google フォトの設定] → [バックアップ] → [写真と動画の画質]）。Pixel 2〜5は「保存容量の節約画質」を選ぶ</li><li>写真の送り方を決めて、Pixelに写真が届くようにする</li><li>今のスマホのGoogle フォトのバックアップをオフにする</li></ol>
+<p>4を忘れると、今のスマホからのバックアップは普通に容量を使います。無料になるのは「そのデバイス」、つまりPixelからのバックアップだけだからです。ただし、オフにすると、Pixelに届くまでのあいだ写真は今のスマホにしかありません。送る仕組みが動いているか、ときどき確かめてください。</p>
+<h2>すでにGoogle フォトにある写真は？</h2>
+<p>この方法で無料になるのは、これからPixelからバックアップする分です。すでに容量を使っている写真は、そのままでは減りません。</p>
+<p>容量を空けるために、写真をいったんダウンロードしてPixelから上げ直す人もいます。ただ、noteの体験記事に「結構時間が掛かるので覚悟して欲しい」とあるように、量が多いと手間がかかります。Google フォトで写真を削除すると同じアカウントのすべての端末から消えるので、上げ直しが終わったことを確かめてから消してください。</p>
+<h2>知っておきたい注意点</h2>
+<ul><li><strong>画質</strong>：Pixel 2〜5で無料になるのは「保存容量の節約画質」です。ヘルプによると、16MPを超える写真は16MPに縮小され、1080pを超える動画は1080pになります。元の画質のまま無料なのは第1世代のPixelだけです。元のファイルを残したい写真は、パソコンや外付けドライブなど別の場所にも保管しておきましょう。</li><li><strong>ほかの端末で撮った写真</strong>：ヘルプのPixelの説明は「撮影した写真や動画」、ストレージのヘルプは「そのデバイスから」と書いていて、ほかの端末で撮った写真をPixelに送った場合について明記していません。多くのブログでは使えたと書かれていますが、まずは数十枚で試し、Google アカウントの使用量が増えないことを確かめてから本格的に使ってください。</li><li><strong>条件の変更</strong>：Googleは2021年6月1日にも保存容量の扱いを変えています。いつか条件が変わる前提で、元の写真の置き場所は別に持っておくのが安心です。</li><li><strong>古い端末であること</strong>：古い機種はソフトウェア アップデートの提供が終わっている場合があります。この目的のためだけに今から中古で買うかは、慎重に考えてください。つなぎっぱなしで使うなら、バッテリーの状態もときどき見ておきましょう。</li></ul>
+<figure class="photo"><img src="../../../img/photos/pixel-5.webp" width="1200" height="900" loading="lazy" alt="Pixel 5。Pixel 2〜5は「保存容量の節約画質」で無料・無制限です"><figcaption>Pixel 5。Pixel 2〜5は「保存容量の節約画質」で無料・無制限です<br><small><a href="https://commons.wikimedia.org/wiki/File:Google_Pixel_5_front.jpg" rel="noopener">ShadowRobotnikULF</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener license">CC BY-SA 4.0</a>, Wikimedia Commons</small></figcaption></figure>
+<h2>OneDriveに写真がたまっている場合</h2>
+<p>Galaxyのギャラリー連携などで、写真がOneDriveにたまっている方もいると思います。その写真をPixelに移してGoogle フォトにバックアップすれば、OneDriveの容量も空けられます。</p>
+<p>私たちが作っている<a href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=ja&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dja-old-pixel-google-photos-free-backup" rel="noopener">DriveSync</a>は、この作業のためのアプリです。OneDriveの写真と動画を元のファイルのままPixelの <code>DCIM/Camera</code> に保存し（Android 10以降）、サイズとハッシュで確認してからOneDrive側を削除します。削除したファイルはOneDriveのごみ箱に入るので、容量を空けるにはごみ箱を空にする必要があります。手順は「<a href="../onedrive-photos-to-pixel-google-photos/">OneDriveの写真を古いPixelに移して、Google フォトにバックアップする方法</a>」にまとめています。</p>
+<p>DriveSyncは独立したアプリで、GoogleやMicrosoftとの提携や承認を受けたものではありません。</p>
+<h2>まとめ</h2>
+<ul><li>Pixel 5以前のPixelからのバックアップは、Google アカウントの容量に数えられない（今のヘルプの記載では期限なし。変更の可能性はある）</li><li>今のスマホで撮った写真をPixelに送り、Pixelからバックアップする</li><li>Pixel 2〜5は圧縮された画質で保存される。元のファイルは別に保管する</li><li>ほかの端末の写真は、少量で試してから</li></ul>
+<p>Google Oneの契約を見直すのは、少量で試して使用量が増えないことを確かめてからでも遅くありません。</p>
+  <aside class="getapp"><img src="../../../img/icon-180.png" width="56" height="56" alt=""><div><strong>DriveSync: OneDriveからスマホへ</strong><p>OneDriveの写真をPixelに移してGoogle フォトでバックアップ。検証後に元ファイルを削除します。</p></div><a class="badge" href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=ja&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dja-old-pixel-google-photos-free-backup" rel="noopener"><img src="../../../img/badge-ja.png" alt="Google Play で手に入れよう" height="48"></a></aside>
+  <section class="more"><h2>ほかのガイド</h2><ul class="postlist"><li><a href="../pixel-google-photos-unlimited-models/"><span class="pt">Google フォトに無料・無制限でバックアップできるPixelはどれ？対象機種と画質、いつまで使えるか</span><span class="pd">Google フォトの無料・無制限バックアップが使えるのはPixel 5以前で、画質の条件は機種ごとに違います。Pixel 5aは対象か、画質はどうなるか、いつまで使えるかを、Googleのヘルプの記載にそってまとめました。</span><time datetime="2026-11-26">2026-11-26</time></a></li><li><a href="../onedrive-photos-to-pixel-google-photos/"><span class="pt">OneDriveの写真を古いPixelに移して、Google フォトにバックアップする方法【機種別の条件と注意点】</span><span class="pd">Pixel 5以前のPixelは、Google フォトに無料・無制限でバックアップできます（条件は機種ごとに違います）。OneDriveの写真をPixelへ移す手順を、画質の注意点とOneDriveのごみ箱の空け方まで、アプリの開発者が正直にまとめました。</span><time datetime="2026-11-25">2026-11-25</time></a></li></ul></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="links"><a href="../../../ja/">DriveSync</a> · <a href="https://jkinject.github.io/drivesync-privacy/">プライバシーポリシー</a> · <a href="mailto:support@lalatap.kr">お問い合わせ</a></p>
+</footer>
+</body>
+</html>

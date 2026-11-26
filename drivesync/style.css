@@ -181,6 +181,10 @@ h2.label { font-size: 17px; margin-bottom: 24px; }
 .post figure { margin: 24px auto; max-width: 280px; }
 .post figure img { border-radius: 18px; border: 1px solid var(--line); box-shadow: var(--shadow); }
 .post figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 8px; }
+.post figure.photo { max-width: 480px; }
+.post figure.photo img { border-radius: 12px; max-height: 560px; width: auto; height: auto; margin: 0 auto; display: block; object-fit: contain; }
+.post figcaption small { font-size: 11px; }
+.post figcaption small a { color: inherit; }
 .getapp { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; background: var(--card);
   border: 1px solid var(--line); border-radius: 20px; padding: 20px; margin: 40px 0 0; box-shadow: var(--shadow); }
 .getapp img { border-radius: 14px; }
