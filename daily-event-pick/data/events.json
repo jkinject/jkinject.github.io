@@ -5,7 +5,7 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-28T09:05:00+09:00"
+    "updated_at": "2026-11-28T07:44:00+09:00"
   },
   "days": [
     {
@@ -591,7 +591,8 @@
           "prize": "커피 쿠폰",
           "winners": "50명 추첨",
           "deadline": "2026-11-29",
-          "url": "https://form.naver.com/response/J0nJDiS3qua"
+          "url": "https://form.naver.com/response/J0nJDiS3qua",
+          "featured_date": "2026-11-28"
         },
         {
           "id": "ev-3a0948d804",
@@ -819,7 +820,8 @@
           "prize": "디지털온누리상품권 5천원",
           "winners": "100명",
           "deadline": "2026-12-02",
-          "url": "https://forms.gle/zZxjg5ZKZYHrKMsW7"
+          "url": "https://forms.gle/zZxjg5ZKZYHrKMsW7",
+          "featured_date": "2026-11-28"
         },
         {
           "id": "ev-f96165267c",
@@ -1201,7 +1203,8 @@
           "prize": "투썸플레이스 아메리카노",
           "winners": "100명 추첨",
           "deadline": "2026-11-30",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfPkJsLURUiVGBKSwQ43w6-yhtTsLZGnqZxOLOfI9rBANm2Pw/viewform"
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfPkJsLURUiVGBKSwQ43w6-yhtTsLZGnqZxOLOfI9rBANm2Pw/viewform",
+          "featured_date": "2026-11-28"
         },
         {
           "id": "ev-e78d9e3fc8",
@@ -1228,7 +1231,8 @@
           "prize": "자유이용권 2매",
           "winners": "500명 추첨",
           "deadline": "2026-12-03",
-          "url": "https://form.naver.com/response/JjrD6W0OeUR"
+          "url": "https://form.naver.com/response/JjrD6W0OeUR",
+          "featured_date": "2026-11-28"
         },
         {
           "id": "ev-c368c24109",
