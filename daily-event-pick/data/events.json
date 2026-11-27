@@ -5,7 +5,7 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-28T08:10:00+09:00"
+    "updated_at": "2026-11-28T09:05:00+09:00"
   },
   "days": [
     {
@@ -1192,7 +1192,7 @@
       "date": "2026-11-28",
       "label": "오늘",
       "headline": "11월 28일 추가된 경품",
-      "sub": "7건 · 마감 빠른 순",
+      "sub": "8건 · 마감 빠른 순",
       "events": [
         {
           "id": "ev-66efbddd22",
@@ -1247,6 +1247,15 @@
           "winners": "",
           "deadline": "2026-12-06",
           "url": "https://form.naver.com/response/8KRJmKtk7Gs"
+        },
+        {
+          "id": "ev-1357e46792",
+          "org": "행정안전부",
+          "title": "2026년 행정안전부 대표 홈페이지 이용자 만족도 조사",
+          "prize": "모바일쿠폰",
+          "winners": "추첨",
+          "deadline": "2026-12-06",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd4LMJm1UhaoGEOT1J1NcxtWZKHQwBj0FHIHZljujNxkJgoVQ/viewform"
         },
         {
           "id": "ev-068a4cfb03",
