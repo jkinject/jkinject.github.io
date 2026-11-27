@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OneDriveの容量がいっぱい。ファイルを削除しても容量が減らない理由と、空ける順番 | DriveSync</title>
+<meta name="description" content="OneDriveでファイルを消したのに容量が減らない。原因はごみ箱、Outlookの添付ファイル、PC側の「空き領域を増やす」の勘違いなどです。Microsoftのヘルプにそって、確認と空け方を順番にまとめました。">
+<link rel="canonical" href="https://jkinject.github.io/drivesync/ja/blog/onedrive-storage-full-delete-not-freeing/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DriveSync">
+<meta property="og:title" content="OneDriveの容量がいっぱい。ファイルを削除しても容量が減らない理由と、空ける順番 | DriveSync">
+<meta property="og:description" content="OneDriveでファイルを消したのに容量が減らない。原因はごみ箱、Outlookの添付ファイル、PC側の「空き領域を増やす」の勘違いなどです。Microsoftのヘルプにそって、確認と空け方を順番にまとめました。">
+<meta property="og:url" content="https://jkinject.github.io/drivesync/ja/blog/onedrive-storage-full-delete-not-freeing/">
+<meta property="og:image" content="https://jkinject.github.io/drivesync/img/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2257D6">
+<link rel="icon" href="../../../img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../img/icon-180.png">
+<link rel="stylesheet" href="../../../style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "OneDriveの容量がいっぱい。ファイルを削除しても容量が減らない理由と、空ける順番", "description": "OneDriveでファイルを消したのに容量が減らない。原因はごみ箱、Outlookの添付ファイル、PC側の「空き領域を増やす」の勘違いなどです。Microsoftのヘルプにそって、確認と空け方を順番にまとめました。", "datePublished": "2026-11-27", "inLanguage": "ja", "mainEntityOfPage": "https://jkinject.github.io/drivesync/ja/blog/onedrive-storage-full-delete-not-freeing/", "image": "https://jkinject.github.io/drivesync/img/og.png", "author": {"@type": "Organization", "name": "DriveSync", "url": "https://jkinject.github.io/drivesync/ja/"}, "publisher": {"@type": "Organization", "name": "DriveSync", "logo": {"@type": "ImageObject", "url": "https://jkinject.github.io/drivesync/img/icon-512.png"}}}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../../../ja/"><img src="../../../img/icon-64.png" width="32" height="32" alt="">DriveSync</a>
+    <div class="nav"><a class="navlink" href="../../../ja/blog/">ガイド</a></div>
+  </div>
+</header>
+<main>
+<article class="wrap post">
+  <p class="crumb"><a href="../">ガイド</a></p>
+  <h1>OneDriveの容量がいっぱい。ファイルを削除しても容量が減らない理由と、空ける順番</h1>
+  <p class="byline">DriveSync開発チーム · <time datetime="2026-11-27">2026-11-27</time></p>
+  <p>「OneDriveの容量がいっぱいです」という通知が来たので、要らないファイルを消した。なのに、使用量の数字がほとんど変わらない。この記事は、そんなときに確認することを順番にまとめたものです。</p>
+<p>書いているのは、OneDriveの写真をスマートフォンへ移すAndroidアプリ「DriveSync」の開発チームです。アプリの話は最後に少しだけで、それ以外はアプリを使わない方にもそのまま役立つ内容にしています。内容はMicrosoftの日本語のヘルプで確認しました（2026年11月27日）。</p>
+<p>先に結論です。</p>
+<ul><li>消したファイルは<strong>OneDriveのごみ箱</strong>に移るだけで、ごみ箱の中身も容量に数えられます。</li><li>Outlook.comの<strong>添付ファイル</strong>も、OneDriveと同じ容量を使っています。</li><li>パソコンの「<strong>空き領域を増やす</strong>」は、パソコンの空きを増やす機能です。OneDriveの容量は減りません。</li></ul>
+<h2>理由1：ごみ箱に入っているあいだは、容量は空かない</h2>
+<p>OneDriveで削除したファイルやフォルダーは、まずOneDriveのごみ箱に移動します（Microsoftのヘルプ：<a href="https://support.microsoft.com/ja-jp/office/21fe345a-e488-4fa7-932b-f053c1bebe8a" rel="noopener">OneDrive でファイルまたはフォルダーを削除する</a>）。間違えて消しても復元できる、ありがたい仕組みです。</p>
+<p>ただ、ヘルプ「<a href="https://support.microsoft.com/ja-jp/onedrive/my-onedrive-says-it-s-full" rel="noopener">OneDrive がいっぱいだと表示される</a>」は、個人用アカウントの容量に含まれるものとして「ごみ箱内のすべてのアイテム。」を挙げています。つまり、ごみ箱に入っているあいだは、消す前と同じだけ容量を使っています。</p>
+<p>個人用のMicrosoftアカウントでは、ごみ箱のアイテムは入ってから30日後に自動で削除されます（ヘルプ：<a href="https://support.microsoft.com/ja-jp/office/949ada80-0026-4db3-a953-c99083e6a84f" rel="noopener">OneDrive で削除したファイルまたはフォルダーを復元する</a>）。待てばいずれ空きますが、すぐに空けたいなら自分でごみ箱を空にします。</p>
+<aside class="callout">パソコンのごみ箱を空にしても、OneDriveのごみ箱は空になりません。ヘルプ「<a href="https://support.microsoft.com/ja-jp/onedrive/what-is-microsoft-cloud-storage" rel="noopener">Microsoft クラウド ストレージとは</a>」にも「同じではありません」とはっきり書かれています。OneDriveのごみ箱は、ブラウザーかOneDriveアプリから空にします。</aside>
+<h3>ごみ箱を空にする手順</h3>
+<p>ブラウザーの場合：</p>
+<ol><li>OneDriveをブラウザーで開き、サインインします。</li><li>左側の [ごみ箱] を選びます。</li><li>完全に消したいアイテムを選んで、上部の [削除] を選びます。</li></ol>
+<p>AndroidのOneDriveアプリでは、ごみ箱を開いて右上の [すべて削除] をタップすると、ごみ箱全体を一度に空にできます。</p>
+<p>ごみ箱から消したものは、もうOneDriveからは取り戻せません。空にする前に、本当に要らないものだけか、もう一度だけ見てください。</p>
+<h2>理由2：反映まで少し時間がかかる</h2>
+<p>ヘルプには、OneDriveとそのごみ箱からファイルを削除してから、使用量の表示に反映されるまで「少し時間がかかる場合があります」と書かれています。ごみ箱まで空にしたのに数字が変わらないときは、しばらく置いてからページを再読み込みしてみてください。</p>
+<h2>理由3：Outlook.comの添付ファイルも同じ容量を使う</h2>
+<p>意外と知られていないのがこれです。ヘルプ「Microsoft クラウド ストレージとは」によると、Microsoftのストレージには「OneDrive のファイルと写真、Outlook.com の写真と添付ファイル」などが含まれます。Outlook.comやHotmailのメールを長く使っていて、大きな添付ファイルのメールがたまっていると、OneDriveのファイルを消しても思ったほど空きません。</p>
+<p>添付ファイルだけを消すことはできず、ヘルプは「添付ファイルを削除するには、メールを削除する必要があります。」としています。削除したメールは「削除済みアイテム」フォルダーに移るので、そちらも空にするか、30日後の自動削除を待ちます。</p>
+<h2>理由4：パソコンの「空き領域を増やす」は、OneDriveの容量を減らさない</h2>
+<p>WindowsのOneDriveには、ファイルを右クリックして [空き領域を増やす] を選ぶと、そのファイルを「オンラインのみ」にする機能があります（ヘルプ：<a href="https://support.microsoft.com/ja-jp/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e" rel="noopener">Windows 用 OneDrive ファイル オンデマンドでディスク領域を節約する</a>）。</p>
+<p>名前から勘違いしやすいのですが、空くのはパソコンのディスクです。ヘルプにも「ファイルをオンラインのみに変更しても、OneDrive からは削除されません。」とあります。OneDriveの使用量はそのままです。</p>
+<p>逆の注意もあります。同じヘルプは、オンラインのみのファイルをデバイスから削除すると、すべてのデバイスのOneDriveから削除することになる、と書いています。「パソコンの容量を空けたいだけ」のときにエクスプローラーで消すと、OneDrive側のファイルも消えます。</p>
+<h2>理由5：スマートフォンが写真を足し続けている</h2>
+<p>容量に含まれるものとして、ヘルプは「モバイル カメラ ロールの写真」も挙げています。スマートフォンのOneDriveアプリでカメラのバックアップをオンにしていると、撮った写真が自動で追加されます。消すそばから増えている場合は、スマートフォン側の設定も見てください。</p>
+<p>Galaxyをお使いの方は、ギャラリーアプリとOneDriveの同期で写真がたまっていることがあります。この直接同期は2026年9月30日で終わりましたが、すでにOneDriveにある写真はそのまま残る、とMicrosoftは案内しています（ヘルプ：<a href="https://support.microsoft.com/ja-JP/onedrive/changes-to-samsung-gallery-sync-and-onedrive" rel="noopener">Samsung ギャラリー同期と OneDrive の変更</a>）。残った写真は、そのまま容量を使い続けます。</p>
+<p>なお、Microsoft 365 Familyなどでストレージを共有している場合は、ほかのメンバーの使用量で上限を超えることもあります（「OneDrive がいっぱいだと表示される」に記載）。</p>
+<h2>何が容量を使っているかを確かめる</h2>
+<p>まず「<a href="https://onedrive.live.com/?v=managestorage" rel="noopener">ストレージの管理</a>」のページを開きます。Microsoftのヘルプは、ここでごみ箱を空にし、何が容量を占めているかを確認するよう案内しています。ヘルプによると、Microsoftアカウントの無料のクラウドストレージは5GBです（<a href="https://support.microsoft.com/ja-jp/onedrive/microsoft-storage-faqs" rel="noopener">Microsoft ストレージに関する FAQ</a>）。</p>
+<p>スマートフォンの写真と動画を何年分もためていると、5GBはそれほど大きな容量ではありません。内訳を見て、写真と動画が大半なのか、メールなのかを先に確かめておくと、次に何をすればいいかが決まります。</p>
+<h2>いっぱいのまま放っておくとどうなるか</h2>
+<p>「OneDrive がいっぱいだと表示される」には、個人用アカウントで容量を超えたときのことが書かれています。</p>
+<div class="tablewrap"><table><thead><tr><th>時期</th><th>起きること</th></tr></thead><tbody><tr><td>超えている間</td><td>新しいファイルのアップロード、編集、同期ができません。既存のファイルは読み取り専用になります</td></tr><tr><td>超えている間</td><td>Outlook.comでメールの送受信ができなくなります。受信メールは送信者に返送されます</td></tr><tr><td>3か月後</td><td>OneDriveアカウントが凍結されます</td></tr><tr><td>6か月後</td><td>OneDriveとその中のすべてのファイルが削除される場合があります</td></tr></tbody></table></div>
+<p>最後の段階まで行くと、ファイルは復元できません。「そのうち片づけよう」と放っておくのがいちばん危ない、ということです。</p>
+<h2>写真が大半なら：消す前に、どこへ移すかを決める</h2>
+<p>容量の大半が写真なら、消すより「別の場所に移してからOneDriveを空ける」ほうが安心です。パソコンや外付けSSDに保存してもいいですし、手元にPixel 5以前のPixelがあれば、そのPixelからGoogle フォトにバックアップする方法もあります。</p>
+<p>Googleのヘルプ（<a href="https://support.google.com/photos/answer/6220791?hl=ja&amp;co=GENIE.Platform%3DAndroid" rel="noopener">写真と動画のバックアップの画質を選択する</a>）によると、Pixel 3a～5からは「保存容量の節約画質」でバックアップした写真と動画を無制限・無料で保存できます。ただし節約画質では、16MPを超える写真は16MPに縮小され、1080pを上回る動画は1080pに変換されます。元の画質のまま無料なのは第1世代のPixelだけです。条件はGoogleが変える可能性もあります。</p>
+<p>詳しくは、次の記事にまとめています。</p>
+<ul><li>この方法を初めて聞く方：<a href="../old-pixel-google-photos-free-backup/">古いPixelを使ってGoogle フォトを容量無制限にする方法【入門】</a></li><li>手元のPixelが対象か知りたい方：<a href="../pixel-google-photos-unlimited-models/">無料・無制限でバックアップできるPixelはどれ？</a></li><li>OneDriveの写真をPixelに移す具体的な手順：<a href="../onedrive-photos-to-pixel-google-photos/">OneDriveの写真を古いPixelに移して、Google フォトにバックアップする方法</a></li></ul>
+<aside class="callout">元の画質のファイルが大事な方は、OneDriveのごみ箱を空にする前に、元のファイルを別の場所にも保管してください。Pixel 2〜5で無料で残るのは圧縮された写真です。</aside>
+<h3>DriveSyncを使う場合</h3>
+<p><a href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=ja&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dja-onedrive-storage-full-delete-not-freeing" rel="noopener">DriveSync</a>は、OneDriveの写真と動画をスマートフォンの <code>DCIM/Camera</code> へ移すアプリです（Android 10以降。アプリ自体はAndroid 8以降で動きます）。ファイルをまずコピーし、サイズとハッシュで検証してから、確認できた場合にのみOneDrive側の元ファイルを削除します。</p>
+<figure><img src="../../../img/en/04-confirm.webp" width="360" height="640" loading="lazy" alt="移動を始める前の確認画面。ファイル数、必要な空き容量、OneDriveのごみ箱についての注意が表示されます（スクリーンショットは英語版です。アプリは日本語に対応しています）"><figcaption>移動を始める前の確認画面。ファイル数、必要な空き容量、OneDriveのごみ箱についての注意が表示されます（スクリーンショットは英語版です。アプリは日本語に対応しています）</figcaption></figure>
+<p>ここまで読んだ方はお分かりのとおり、DriveSyncが削除した元ファイルもOneDriveのごみ箱に入ります。容量を空けるには、最後にごみ箱を空にする必要があります。無料プランでは1ファイル最大100MBまでで、それより大きい動画はOneDriveに残ります。動作を確認しているのは個人用のMicrosoftアカウントです。DriveSyncは独立したアプリで、MicrosoftやGoogleとの提携や承認を受けたものではありません。</p>
+<h2>まとめ：消しても減らないときのチェックリスト</h2>
+<ol><li>OneDriveのごみ箱を空にしたか（パソコンのごみ箱ではなく）</li><li>少し時間を置いて、ページを再読み込みしたか</li><li>「ストレージの管理」で、Outlook.comの使用量を見たか</li><li>パソコンで [空き領域を増やす] をしただけになっていないか</li><li>スマートフォンのカメラのバックアップが、写真を足し続けていないか</li></ol>
+<p>この5つを見れば、たいていの「減らない」は原因が分かります。それでも写真で容量が足りないなら、消す前にどこへ移すかを決めてから片づけてください。</p>
+  <aside class="getapp"><img src="../../../img/icon-180.png" width="56" height="56" alt=""><div><strong>DriveSync: OneDriveからスマホへ</strong><p>OneDriveの写真をPixelに移してGoogle フォトでバックアップ。検証後に元ファイルを削除します。</p></div><a class="badge" href="https://play.google.com/store/apps/details?id=com.epcompany.drivesync&hl=ja&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dja-onedrive-storage-full-delete-not-freeing" rel="noopener"><img src="../../../img/badge-ja.png" alt="Google Play で手に入れよう" height="48"></a></aside>
+  <section class="more"><h2>ほかのガイド</h2><ul class="postlist"><li><a href="../pixel-google-photos-unlimited-models/"><span class="pt">Google フォトに無料・無制限でバックアップできるPixelはどれ？対象機種と画質、いつまで使えるか</span><span class="pd">Google フォトの無料・無制限バックアップが使えるのはPixel 5以前で、画質の条件は機種ごとに違います。Pixel 5aは対象か、画質はどうなるか、いつまで使えるかを、Googleのヘルプの記載にそってまとめました。</span><time datetime="2026-11-26">2026-11-26</time></a></li><li><a href="../old-pixel-google-photos-free-backup/"><span class="pt">【一生無料】Google フォトを容量無制限に。古いPixelを使う裏技、知らないと損です</span><span class="pd">Google Oneにお金を払う前に読んでください。Pixel 5以前のPixelが1台あれば、写真はずっと無料・容量無制限でGoogle フォトに保存できます。Googleのヘルプにも書かれている裏技を、ゼロから解説します。</span><time datetime="2026-11-26">2026-11-26</time></a></li><li><a href="../onedrive-photos-to-pixel-google-photos/"><span class="pt">OneDriveの写真を古いPixelに移して、Google フォトにバックアップする方法【機種別の条件と注意点】</span><span class="pd">Pixel 5以前のPixelは、Google フォトに無料・無制限でバックアップできます（条件は機種ごとに違います）。OneDriveの写真をPixelへ移す手順を、画質の注意点とOneDriveのごみ箱の空け方まで、アプリの開発者が正直にまとめました。</span><time datetime="2026-11-25">2026-11-25</time></a></li></ul></section>
+</article>
+</main>
+<footer class="wrap foot">
+  <p class="links"><a href="../../../ja/">DriveSync</a> · <a href="https://jkinject.github.io/drivesync-privacy/">プライバシーポリシー</a> · <a href="mailto:support@lalatap.kr">お問い合わせ</a></p>
+</footer>
+</body>
+</html>
