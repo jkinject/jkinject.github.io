@@ -5,7 +5,7 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-27T11:24:00+09:00"
+    "updated_at": "2026-11-28T08:10:00+09:00"
   },
   "days": [
     {
@@ -64,7 +64,8 @@
           "prize": "해피콘 5,000원(100명)+EVENT1·2 동시참여 5명 네이버페이 5만 원",
           "winners": "",
           "deadline": "2026-11-25",
-          "url": "https://form.naver.com/response/BfOCD9YMYht"
+          "url": "https://form.naver.com/response/BfOCD9YMYht",
+          "result_url": "https://blog.naver.com/pro_nps/224494522919"
         },
         {
           "id": "ev-d4dc90ffd8",
@@ -1144,7 +1145,7 @@
     },
     {
       "date": "2026-11-27",
-      "label": "오늘",
+      "label": "11월 27일",
       "headline": "오늘 추가된 경품",
       "sub": "4건 · 마감 빠른 순",
       "events": [
@@ -1184,6 +1185,77 @@
           "winners": "추첨",
           "deadline": "2026-12-16",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSc99EdUa6fRDl_CaspD-U_s2aanCI6pKRCewkIMXSikVtxFAQ/viewform"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "label": "오늘",
+      "headline": "11월 28일 추가된 경품",
+      "sub": "7건 · 마감 빠른 순",
+      "events": [
+        {
+          "id": "ev-66efbddd22",
+          "org": "한국건설기술연구원",
+          "title": "대표 홈페이지 이용자 만족도 조사",
+          "prize": "투썸플레이스 아메리카노",
+          "winners": "100명 추첨",
+          "deadline": "2026-11-30",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfPkJsLURUiVGBKSwQ43w6-yhtTsLZGnqZxOLOfI9rBANm2Pw/viewform"
+        },
+        {
+          "id": "ev-e78d9e3fc8",
+          "org": "옥천군",
+          "title": "옥천 관광브랜드 개발을 위한 의견 수렴",
+          "prize": "커피 기프티콘",
+          "winners": "200명 추첨",
+          "deadline": "2026-12-01",
+          "url": "https://form.naver.com/response/5rcc0UvbIhV"
+        },
+        {
+          "id": "ev-503cbb61ae",
+          "org": "장성군(필암서원)",
+          "title": "「세계유산 필암서원 프로그램」 만족도·선호도 조사",
+          "prize": "추첨 경품",
+          "winners": "",
+          "deadline": "2026-12-02",
+          "url": "https://form.naver.com/response/3dbwHAAQTjJ"
+        },
+        {
+          "id": "ev-998adff93d",
+          "org": "로봇랜드",
+          "title": "3백만번째 고객 감사 이벤트",
+          "prize": "자유이용권 2매",
+          "winners": "500명 추첨",
+          "deadline": "2026-12-03",
+          "url": "https://form.naver.com/response/JjrD6W0OeUR"
+        },
+        {
+          "id": "ev-c368c24109",
+          "org": "의정부시",
+          "title": "2026 의정부시 공식 SNS채널 만족도 조사",
+          "prize": "추첨 경품",
+          "winners": "",
+          "deadline": "2026-12-04",
+          "url": "https://form.naver.com/response/JgeRG3yWp0v"
+        },
+        {
+          "id": "ev-ca71d7965f",
+          "org": "대구교통공사",
+          "title": "2026년 경영성과 설명회 시민 설문조사",
+          "prize": "추첨 경품",
+          "winners": "",
+          "deadline": "2026-12-06",
+          "url": "https://form.naver.com/response/8KRJmKtk7Gs"
+        },
+        {
+          "id": "ev-068a4cfb03",
+          "org": "남양주시",
+          "title": "2026 남양주시 연말 정산 EVENT",
+          "prize": "추첨 경품",
+          "winners": "",
+          "deadline": "2026-12-07",
+          "url": "https://form.naver.com/response/LKPj13cdjyv"
         }
       ]
     }
