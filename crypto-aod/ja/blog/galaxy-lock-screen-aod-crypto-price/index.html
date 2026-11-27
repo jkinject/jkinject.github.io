@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galaxyのロック画面・AODにビットコインなど仮想通貨の価格を表示する方法（One UI 7以降） | Crypto AOD</title>
+<meta name="description" content="画面を点けずにビットコインの価格を見たいGalaxyユーザー向け。ロック画面ウィジェットとAODを使う手順、方法ごとの違い、更新が止まるときの確認点をまとめました。">
+<link rel="canonical" href="https://jkinject.github.io/crypto-aod/ja/blog/galaxy-lock-screen-aod-crypto-price/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Galaxyのロック画面・AODにビットコインなど仮想通貨の価格を表示する方法（One UI 7以降）", "description": "画面を点けずにビットコインの価格を見たいGalaxyユーザー向け。ロック画面ウィジェットとAODを使う手順、方法ごとの違い、更新が止まるときの確認点をまとめました。", "datePublished": "2026-11-27", "inLanguage": "ja", "mainEntityOfPage": "https://jkinject.github.io/crypto-aod/ja/blog/galaxy-lock-screen-aod-crypto-price/", "image": "https://jkinject.github.io/crypto-aod/img/og-ja.png", "author": {"@type": "Organization", "name": "Crypto AOD", "url": "https://jkinject.github.io/crypto-aod/ja/"}, "publisher": {"@type": "Organization", "name": "Crypto AOD", "logo": {"@type": "ImageObject", "url": "https://jkinject.github.io/crypto-aod/img/icon-512.png"}}}</script>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto AOD">
+<meta property="og:title" content="Galaxyのロック画面・AODにビットコインなど仮想通貨の価格を表示する方法（One UI 7以降） | Crypto AOD">
+<meta property="og:description" content="画面を点けずにビットコインの価格を見たいGalaxyユーザー向け。ロック画面ウィジェットとAODを使う手順、方法ごとの違い、更新が止まるときの確認点をまとめました。">
+<meta property="og:url" content="https://jkinject.github.io/crypto-aod/ja/blog/galaxy-lock-screen-aod-crypto-price/">
+<meta property="og:image" content="https://jkinject.github.io/crypto-aod/img/og-ja.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0F2A24">
+<link rel="icon" href="../../../img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../img/icon-180.png">
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../../../ja/"><img src="../../../img/icon-64.png" width="32" height="32" alt="">Crypto AOD</a>
+    <div class="nav"><a class="navlink" href="../../../ja/blog/">ガイド</a></div>
+  </div>
+</header>
+<main>
+<article class="wrap post">
+  <p class="crumb"><a href="../">ガイド</a></p>
+  <h1>Galaxyのロック画面・AODにビットコインなど仮想通貨の価格を表示する方法（One UI 7以降）</h1>
+  <p class="byline">Crypto AOD 開発者 · <time datetime="2026-11-27">2026-11-27</time></p>
+  <p>この記事は、Galaxy向けの価格ウィジェットアプリ「Crypto AOD」の開発者が書いています。自分のアプリも紹介しますが、Galaxy側の設定やアプリを使わない方法も含めてまとめました。アプリを入れない人にも役立つように書いたつもりです。</p>
+<h2>結論：One UI 7以降なら「ロック画面ウィジェット＋AOD」で、画面オフのまま見られる</h2>
+<p>GalaxyでAOD（Always On Display）をオンにしていると、ロック画面に置いたウィジェットがAODにもそのまま表示されます。ロック画面のウィジェット枠に価格を出せるアプリを置けば、画面が消えている状態でもビットコインやイーサリアムの価格を確認できます。スマホを持ち上げてロックを解除し、アプリを開く、という手順がいらなくなります。</p>
+<p>用意するものは次の3つです。</p>
+<ul><li>One UI 7以降のGalaxy（バージョンは「設定」→「端末情報」→「ソフトウェア情報」で確認できます。機種により異なる場合があります）</li><li>ロック画面ウィジェットに対応した価格表示アプリ</li><li>AODをオンにしておくこと（省電力モード中はAODが使えません）</li></ul>
+<h2>先に知っておきたい、ロック画面ウィジェットの仕様</h2>
+<p>ロック画面ウィジェットは、ホーム画面のウィジェットとはルールがかなり違います。あとで「思っていたのと違う」とならないよう、先に押さえておきます。</p>
+<ul><li><strong>置けるのは合計4マス分まで。</strong> Samsungの公式サポートに「ウィジェットは最大4マス分」と書かれています。</li><li><strong>サイズは1×1と2×1。</strong> 筆者がアプリを作る過程で確かめた限り、一般のアプリがロック画面の枠で使えるサイズはこの2種類です。4マスなので、2×1を2つ、1×1を4つ、2×1を1つと1×1を2つ、といった組み合わせになります。</li><li><strong>一覧に出るのはロック画面向けのウィジェットだけ。</strong> ホーム画面に置いているウィジェットが全部並ぶわけではありません。</li><li><strong>ウィジェットの後ろの半透明の背景はシステムが描いています。</strong> アプリ側では消せず、色はロック画面のテーマに合わせて変わります。</li></ul>
+<p>参考：<a href="https://www.samsung.com/jp/support/mobile-devices/how-to-change-the-lock-screen-image/" rel="noopener">ロック画面のカスタマイズ方法（Samsung公式サポート）</a></p>
+<h2>方法は大きく3つ</h2>
+<div class="tablewrap"><table><thead><tr><th>方法</th><th>画面オフ（AOD）で見えるか</th><th>必要なもの</th><th>ひとこと</th></tr></thead><tbody><tr><td>取引所や価格アプリのホーム画面ウィジェット</td><td>見えない（ロック解除が必要）</td><td>各アプリ</td><td>いちばん手軽。ロック画面にも対応しているかはアプリ次第</td></tr><tr><td>Good LockのLockStar</td><td>本記事では検証していません</td><td>Good Lock（Galaxy Store）</td><td>Samsung公式サポートでもロック画面のカスタマイズ方法として案内されています</td></tr><tr><td>ロック画面ウィジェット対応アプリ</td><td>見える（AODがオンのとき）</td><td>対応アプリ</td><td>この記事の手順。Crypto AODはこの方法です</td></tr></tbody></table></div>
+<p>Good Lockを使う方法はネットでもよく紹介されています。Samsungの公式サポートでも、LockStarで時計・通知・ショートカットなどを好きな位置に置けると案内されています。ただ、できることは機種やOne UIのバージョンで変わるので、使う場合は公式の案内を確認してください。この記事では、追加のツールを入れずにGalaxy標準のロック画面ウィジェット枠を使う方法を説明します。</p>
+<h2>手順1：AODをオンにする</h2>
+<p>Samsung公式サポートの手順です。</p>
+<ol><li>「設定」アプリを開く</li><li>「ロック画面とAOD」をタップ</li><li>「Always On Display」をタップ</li><li>スイッチをオンにする</li></ol>
+<p>表示タイミングは「自動」「タップして10秒間表示」「常に表示」「特定の時間のみ表示」「新着通知受信時に表示」から選べます（「自動」はOne UI 6.1以降）。机の上でいつでも価格を見たいなら「常に表示」、夜間は消したいなら「特定の時間のみ表示」が向いています。</p>
+<aside class="callout">省電力モードがオンのあいだは、AODは使えません。急にAODが表示されなくなったときは、まず省電力モードを確認してください。</aside>
+<p>参考：<a href="https://www.samsung.com/jp/support/mobile-devices/how-to-use-always-on-display/" rel="noopener">Always On Displayを使用する方法（Samsung公式サポート）</a></p>
+<h2>手順2：ロック画面にウィジェットを追加する</h2>
+<p>入り口はいくつかあり、機種やバージョンで画面の名前が少しずつ違います。どれから入っても同じ編集画面にたどり着きます。</p>
+<ul><li><strong>Samsung公式の手順：</strong> ホーム画面の何もない場所を長押し →「壁紙とスタイル」→ 左側のロック画面の画像をタップ →「ウィジェットを追加」→ ウィジェットとサイズを選んで「完了」</li><li><strong>設定アプリから：</strong> 「設定」→「ロック画面とAOD」→「ロック画面を編集」→「ウィジェット」（機種により異なる場合があります）</li><li><strong>ロック画面から：</strong> ロック画面を長押しして編集画面を開き、ウィジェットの枠をタップ（機種により異なる場合があります）</li></ul>
+<p>外したいときは、編集画面でウィジェットのマイナス（－）アイコンをタップします。</p>
+<h2>手順3：Crypto AODで価格を出す場合</h2>
+<p>ここからは自分のアプリの例です。ほかのアプリでも、大まかな流れは似ていると思います。</p>
+<ol><li>アプリで銘柄を追加します。Upbit・Bithumb・Binance・Coinbase・OKX・Bybit・Krakenの7つの取引所から、名前・シンボル・通貨ペアで検索できます。取引所を混ぜて登録してもかまいません。</li><li>手順2の編集画面で「Crypto AOD · ロック画面 1×1」か「Crypto AOD · ロック画面 2×1」を選びます。</li><li>そのウィジェットに表示する銘柄を選びます。ウィジェット1つにつき1銘柄です。</li><li>アプリの「ロック画面 · AOD をカスタマイズ」で、ティッカー・価格・前日比の文字サイズをそれぞれ変えたり、非表示にしたりできます。上がったか下がったかは▲▼で表示されます。</li><li>更新間隔を1分・5分・15分から選びます。ウィジェットをタップすれば、その場で価格を取り直します。</li></ol>
+<figure><img src="../../../img/ja/01-aod.webp" width="360" height="640" loading="lazy" alt="ロック画面とAODに表示した価格ウィジェット"><figcaption>ロック画面とAODに表示した価格ウィジェット</figcaption></figure>
+<p>アプリ内のボタンで開けるのは「ロック画面とAOD」の設定画面までです。Samsungのロック画面編集画面は一般のアプリから直接開けない仕組みになっているので、そこから先は手順2のとおりにタップしてください。</p>
+<h3>1×1と2×1、どちらにする？</h3>
+<p>1×1は小さく、桁の多い価格だと窮屈になりがちです。価格だけを大きく出したいなら、ティッカーや前日比を隠すと見やすくなります。2×1は横に余裕があるので、ティッカー・価格・前日比を並べても読みやすいです。たとえば2×1を2つ並べて、ビットコインとイーサリアムを1つずつ表示する使い方ができます。</p>
+<h2>円建ての価格について</h2>
+<p>Crypto AODが対応している7つの取引所に、国内の取引所は入っていません。円建て（JPY）で見られるのは、KrakenのBTC/JPYやETH/JPYのように、対応取引所が円の通貨ペアを扱っている銘柄だけです。銘柄を探すときに建値をJPYで絞り込むと、選べるペアが分かります。国内取引所の価格そのものをロック画面で見たい場合は、その取引所の公式アプリがロック画面ウィジェットに対応しているかを確認してみてください。</p>
+<h2>画面オフで更新が止まるときは</h2>
+<p>AODに出しっぱなしにする使い方では、バックグラウンドでの更新がいちばんの壁になります。Crypto AODで確認してほしい点は次のとおりです。</p>
+<ul><li><strong>1分・5分間隔にする場合：</strong> 「バッテリー最適化の除外」と「アラームとリマインダー」の許可が必要です。15分間隔なら追加の権限はいりません。</li><li><strong>3日以上アプリを開いていない場合：</strong> Galaxyのスリープ機能でアプリが止められ、更新が止まることがあります。「設定」→「バッテリーとデバイスケア」→「バッテリー」の中にある、バックグラウンドの使用を制限する項目で、スリープさせないアプリに登録してください（項目名は機種やバージョンにより異なる場合があります。アプリの設定タブにも案内があります）。</li><li><strong>通信できないとき：</strong> 更新に失敗したり、オフラインになったりしても、ウィジェットには最後に取得した価格と時刻が残ります。時刻が古いままなら、更新が止まっているサインです。</li></ul>
+<p>参考：<a href="https://www.samsung.com/jp/support/mobile-devices/how-to-getthe-most-out-of-your-battery/" rel="noopener">バッテリーを最大限に活用する方法（Samsung公式サポート）</a></p>
+<h2>無料版とプレミアム</h2>
+<p>無料版では1銘柄を、ロック画面・AOD・ホーム画面のすべてのウィジェットで表示できます。プレミアムは最大5銘柄までで、サブスクリプションではなく買い切りです。インストール後7日間は無料で試せます。料金はGoogle Playのページで確認してください。アカウント登録やログインはなく、広告も入っていません。</p>
+<h2>Galaxy以外のスマホの場合</h2>
+<p>ロック画面・AODウィジェットはOne UI 7以降のGalaxy専用です。ほかのAndroidスマホでは、ホーム画面ウィジェット（最大5銘柄のリスト表示）だけが使えます。</p>
+<h2>まとめ</h2>
+<ul><li>One UI 7以降のGalaxyなら、ロック画面に置いたウィジェットがAODにも表示される</li><li>ロック画面の枠は合計4マス、サイズは1×1と2×1</li><li>AODは「設定」→「ロック画面とAOD」→「Always On Display」でオン。省電力モード中は消える</li><li>画面オフで更新を続けるには、バッテリー最適化とスリープの設定がポイント</li></ul>
+<p>アプリの詳しい紹介は<a href="../../../ja/">Crypto AODの紹介ページ</a>に、ダウンロードは<a href="https://play.google.com/store/apps/details?id=com.tim.aodticker&hl=ja&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dja-galaxy-lock-screen-aod-crypto-price" rel="noopener">Google Play</a>にあります。</p>
+<aside class="callout">表示される価格は、各取引所の公開APIにもとづく参考情報です。Crypto AODには売買・注文・送金の機能はありません。Samsung、Galaxy、One UI、各取引所とは提携関係のない独立したアプリです。</aside>
+  <aside class="getapp"><img src="../../../img/icon-180.png" width="56" height="56" alt=""><div><strong>Crypto AOD: ロック画面で仮想通貨価格</strong><p>画面オフでも見える仮想通貨の価格。ロック画面・AOD・ホーム画面ウィジェット。</p></div><a class="badge" href="https://play.google.com/store/apps/details?id=com.tim.aodticker&hl=ja&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dja-galaxy-lock-screen-aod-crypto-price" rel="noopener"><img src="../../../img/badge-ja.png" alt="Google Play で手に入れよう" height="48"></a></aside>
+  
+</article>
+</main>
+<footer class="wrap foot">
+  <p>価格は各取引所の公開APIにもとづく参考情報です。このサイトの内容は投資助言ではありません。</p>
+  <p class="links"><a href="../../../ja/">Crypto AOD</a> · <a href="https://jkinject.github.io/aod-ticker-privacy/">プライバシーポリシー</a> · <a href="mailto:support@lalatap.kr">お問い合わせ</a></p>
+</footer>
+</body>
+</html>

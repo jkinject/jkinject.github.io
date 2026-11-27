@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>갤럭시 잠금화면·AOD에 코인 시세 띄우는 방법 (One UI 7 이상) | Crypto AOD</title>
+<meta name="description" content="화면이 꺼진 갤럭시 AOD에 비트코인 시세를 띄우는 법. 삼성 기본 잠금화면 위젯으로 넣는 순서, 1×1·2×1 차이, AOD에 안 보이거나 시세가 멈출 때 볼 설정을 정리했습니다.">
+<link rel="canonical" href="https://jkinject.github.io/crypto-aod/ko/blog/galaxy-lockscreen-aod-crypto-price/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "갤럭시 잠금화면·AOD에 코인 시세 띄우는 방법 (One UI 7 이상)", "description": "화면이 꺼진 갤럭시 AOD에 비트코인 시세를 띄우는 법. 삼성 기본 잠금화면 위젯으로 넣는 순서, 1×1·2×1 차이, AOD에 안 보이거나 시세가 멈출 때 볼 설정을 정리했습니다.", "datePublished": "2026-11-27", "inLanguage": "ko", "mainEntityOfPage": "https://jkinject.github.io/crypto-aod/ko/blog/galaxy-lockscreen-aod-crypto-price/", "image": "https://jkinject.github.io/crypto-aod/img/og-ko.png", "author": {"@type": "Organization", "name": "Crypto AOD", "url": "https://jkinject.github.io/crypto-aod/ko/"}, "publisher": {"@type": "Organization", "name": "Crypto AOD", "logo": {"@type": "ImageObject", "url": "https://jkinject.github.io/crypto-aod/img/icon-512.png"}}}</script>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Crypto AOD">
+<meta property="og:title" content="갤럭시 잠금화면·AOD에 코인 시세 띄우는 방법 (One UI 7 이상) | Crypto AOD">
+<meta property="og:description" content="화면이 꺼진 갤럭시 AOD에 비트코인 시세를 띄우는 법. 삼성 기본 잠금화면 위젯으로 넣는 순서, 1×1·2×1 차이, AOD에 안 보이거나 시세가 멈출 때 볼 설정을 정리했습니다.">
+<meta property="og:url" content="https://jkinject.github.io/crypto-aod/ko/blog/galaxy-lockscreen-aod-crypto-price/">
+<meta property="og:image" content="https://jkinject.github.io/crypto-aod/img/og-ko.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0F2A24">
+<link rel="icon" href="../../../img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../../img/icon-180.png">
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../../../ko/"><img src="../../../img/icon-64.png" width="32" height="32" alt="">Crypto AOD</a>
+    <div class="nav"><a class="navlink" href="../../../ko/blog/">가이드</a></div>
+  </div>
+</header>
+<main>
+<article class="wrap post">
+  <p class="crumb"><a href="../">가이드</a></p>
+  <h1>갤럭시 잠금화면·AOD에 코인 시세 띄우는 방법 (One UI 7 이상)</h1>
+  <p class="byline">Crypto AOD 개발자 작성 · <time datetime="2026-11-27">2026-11-27</time></p>
+  <p>코인 시세를 확인하려고 폰을 집어 들고, 잠금을 풀고, 거래소 앱을 여는 일을 하루에 몇 번이나 하시나요. 갤럭시는 One UI 7부터 잠금화면에 위젯을 기본 기능으로 넣을 수 있고, 잠금화면과 AOD(Always On Display)가 합쳐진 기기에서는 잠금화면에 넣은 위젯이 화면이 꺼진 AOD에도 그대로 보입니다. 이 기능을 쓰면 책상 위에 놓인 폰을 내려다보는 것만으로 비트코인 시세를 볼 수 있습니다.</p>
+<p>이 글은 그 과정을 처음부터 끝까지 정리한 것입니다. 저는 잠금화면 코인 시세 위젯 앱 Crypto AOD를 만든 개발자라서 예시는 제 앱으로 들지만, 시작 전 점검과 AOD 설정, 시세가 멈출 때 확인할 내용은 다른 앱을 쓰셔도 똑같이 적용됩니다.</p>
+<h2>시작하기 전에 확인할 세 가지</h2>
+<h3>1. One UI 버전이 7 이상인지</h3>
+<p>삼성 잠금화면 위젯 설정은 One UI 7에서 크게 바뀌었습니다(<a href="https://www.samsungsvc.co.kr/solution/3187649" rel="noopener">삼성전자서비스: One UI 7, 잠금화면 위젯 설정이 달라졌어요</a>). 버전은 <strong>설정 → 휴대전화 정보 → 소프트웨어 정보</strong>에서 확인합니다(<a href="https://www.samsungsvc.co.kr/solution/39917" rel="noopener">삼성전자서비스: 소프트웨어 버전 확인 방법</a>). One UI 6 이하라면 아래 순서가 그대로 맞지 않습니다.</p>
+<h3>2. AOD가 켜져 있고, 어떤 방식으로 켜지는지</h3>
+<p>잠금화면 위젯이 AOD에 보이려면 당연히 AOD가 켜져 있어야 합니다. 갤럭시 S24 시리즈(One UI 6.1)부터 AOD와 잠금화면이 통합되어 AOD에서도 잠금화면과 같은 시계 스타일과 위젯을 쓴다고 삼성이 안내합니다(<a href="https://www.samsungsvc.co.kr/solution/1928366" rel="noopener">삼성전자서비스: 새로워진 AOD</a>). 설정 경로는 <strong>설정 → 잠금화면 및 AOD → Always On Display</strong>입니다. 예전 기기는 <strong>설정 → 잠금화면 → Always On Display</strong>입니다(<a href="https://www.samsungsvc.co.kr/solution/38700" rel="noopener">삼성전자서비스: AOD 사용 방법</a>).</p>
+<p>여기서 많이 헷갈리는 것이 표시 방식입니다. <strong>터치로 잠깐 켜기</strong>로 되어 있으면 화면을 건드릴 때만 AOD가 잠깐 나타나므로, 시세를 수시로 보려면 <strong>항상 켜기</strong>나 <strong>특정 시간에만 켜기</strong>가 맞습니다. 최신 기기에는 어두운 곳(가방, 주머니 등)에서만 끄는 <strong>자동</strong> 옵션도 있습니다. 옵션 이름은 기기마다 조금씩 다를 수 있습니다.</p>
+<h3>3. 쓰려는 앱이 잠금화면 위젯을 제공하는지</h3>
+<p>홈 화면 위젯이 있는 앱이라고 해서 모두 잠금화면 위젯 목록에 나오지는 않습니다. 삼성 잠금화면 슬롯 규격에 맞춰 만든 위젯만 목록에 나타납니다. 앱을 만들면서 확인해 보니 잠금화면 슬롯이 받는 크기는 <strong>1×1과 2×1 두 가지뿐</strong>이었고, 그보다 큰 위젯은 등록해도 목록에 보이지 않았습니다.</p>
+<h2>잠금화면에 코인 시세 위젯 넣는 순서</h2>
+<p>Crypto AOD 기준으로 설명합니다. 다른 앱도 앱 안에서 종목을 정하는 부분만 다르고 삼성 쪽 순서는 같습니다.</p>
+<ol><li>앱을 설치하고 <strong>종목</strong> 탭에서 볼 코인을 추가합니다. 거래소(업비트, 빗썸, 바이낸스 등)를 고르고 이름이나 심볼로 검색합니다. 예: 업비트 BTC/KRW.</li><li>잠금화면을 길게 눌러 편집 화면을 엽니다. 설정에서 들어가려면 <strong>설정 → 배경화면 및 스타일 → 현재 잠금 화면 → 위젯 추가</strong> 순서입니다(삼성전자서비스 안내 기준). 기기에 따라 <strong>설정 → 잠금화면 및 AOD → 잠금화면 편집 → 위젯</strong>으로 보이기도 합니다(기기마다 다를 수 있음).</li><li>위젯 목록에서 <strong>Crypto AOD · 잠금화면 1×1</strong> 또는 <strong>Crypto AOD · 잠금화면 2×1</strong>을 고릅니다.</li><li><strong>위젯에 표시할 종목</strong> 화면이 뜨면 1번에서 추가한 코인을 고릅니다.</li><li><strong>완료</strong>를 누르고 화면을 끕니다. AOD에 위젯이 보이면 끝입니다.</li></ol>
+<p>앱 안의 <strong>잠금화면·AOD에 위젯 추가</strong> 버튼은 삼성 설정 화면까지만 열어 줍니다. 삼성 잠금화면 편집기는 일반 앱이 직접 열 수 없게 되어 있어서, 그다음 <strong>잠금화면 편집 → 위젯</strong>은 직접 눌러야 합니다.</p>
+<figure><img src="../../../img/ko/01-aod.webp" width="360" height="640" loading="lazy" alt="갤럭시 AOD에 표시된 코인 시세 위젯"><figcaption>갤럭시 AOD에 표시된 코인 시세 위젯</figcaption></figure>
+<h2>1×1과 2×1, 어느 쪽을 고를까</h2>
+<p>위젯 하나에는 종목 하나가 들어갑니다. 여러 코인을 보려면 위젯을 여러 개 넣습니다.</p>
+<div class="tablewrap"><table><thead><tr><th></th><th>1×1</th><th>2×1</th></tr></thead><tbody><tr><td>차지하는 자리</td><td>슬롯 한 칸</td><td>가로로 두 칸</td></tr><tr><td>글자</td><td>작음</td><td>1×1보다 큼</td></tr><tr><td>원화 가격</td><td>자리가 모자라면 ₩1.05억처럼 줄여 표시</td><td>숫자를 더 길게 표시</td></tr><tr><td>어울리는 경우</td><td>코인 여러 개를 나란히 볼 때</td><td>한두 종목을 멀리서도 읽고 싶을 때</td></tr></tbody></table></div>
+<p>티커, 가격, 등락률은 앱의 <strong>위젯</strong> 탭에서 글자 크기를 따로 정하거나 하나씩 숨길 수 있습니다. 예를 들어 가격만 크게 남기고 티커를 숨기면 1×1에서도 숫자가 덜 줄어듭니다.</p>
+<h2>AOD에서 보이는 모습, 미리 알아 둘 점</h2>
+<ul><li><strong>색이 나오지 않습니다.</strong> 삼성 잠금화면·AOD는 위젯을 단색으로 그립니다. 앱에서 빨강·파랑을 넣어도 화면에는 반영되지 않아서, Crypto AOD는 상승·하락을 ▲▼ 기호로 표시합니다.</li><li><strong>위젯 뒤의 반투명 알약 모양 배경은 끌 수 없습니다.</strong> 앱이 아니라 시스템이 그리는 배경이고, 색은 잠금화면 테마를 따릅니다. 앱 설정으로 바꿀 수 있는 부분이 아닙니다.</li><li><strong>AOD가 아예 안 보일 때</strong>는 절전 모드나 초절전 모드인지 먼저 보세요. 삼성 안내에 따르면 절전 모드·초절전 모드에서는 AOD가 동작하지 않고, 배터리가 5% 미만일 때나 주머니·가방·커버 등으로 근접 센서가 가려졌을 때도 멈춥니다(<a href="https://www.samsungsvc.co.kr/solution/23662" rel="noopener">삼성전자서비스: AOD 기능 동작이 안돼요</a>).</li></ul>
+<h2>시세가 바뀌지 않을 때 확인할 것</h2>
+<p>화면이 꺼진 동안 위젯을 새로 고치는 일은 안드로이드가 배터리를 아끼려고 늦추거나 막기 쉽습니다. 시세가 멈춘 것 같으면 아래를 차례로 보세요.</p>
+<ol><li><strong>갱신 주기</strong>: Crypto AOD는 1분·5분·15분 중에서 고릅니다. 1분 주기라도 거래소 화면처럼 틱마다 바뀌는 것은 아닙니다.</li><li><strong>배터리 최적화 제외와 정확한 알람 허용</strong>: 1분·5분 주기는 화면이 꺼진 상태에서도 제시간에 시세를 받아 와야 해서 두 권한이 모두 필요합니다. 15분 주기는 추가 권한 없이 동작합니다.</li><li><strong>삼성 앱 절전</strong>: 앱을 3일 이상 열지 않으면 삼성 앱 절전 기능 때문에 갱신이 멈출 수 있습니다. 앱 <strong>설정</strong> 탭에서 절전 예외 등록을 안내합니다.</li><li><strong>지금 바로 보고 싶을 때</strong>: 위젯을 한 번 탭하면 "갱신 중…"이 뜨고 바로 새 시세를 받아 옵니다.</li></ol>
+<p>네트워크가 끊겼거나 갱신에 실패하면 위젯은 빈칸이 되지 않고 마지막으로 받은 시세를 유지합니다. 기기 상태에 따라 갱신이 몇 분 늦어질 수 있다는 점도 감안해 주세요.</p>
+<h2>다른 방법도 있습니다</h2>
+<ul><li><strong>Good Lock의 LockStar</strong>: 일반 앱 위젯을 잠금화면에 올리는 방법으로 많이 소개됩니다. Good Lock 설치가 필요하고, 위젯 크기나 앱에 따라 목록에 보이지 않는 경우도 있다고 합니다. 이 글의 방법은 LockStar 없이 삼성 기본 잠금화면 위젯 슬롯을 씁니다.</li><li><strong>거래소 앱이나 다른 시세 앱의 홈 화면 위젯</strong>: 잠금을 풀어야 보이지만 한 번에 여러 종목을 넓게 볼 수 있습니다. 잠금화면 위젯까지 지원하는지는 앱마다 다르니 위젯 목록에서 직접 확인해 보세요.</li><li><strong>홈 화면과 잠금화면 함께 쓰기</strong>: Crypto AOD는 홈 화면에도 최대 5종목 목록 위젯을 둘 수 있어서, 잠금화면에는 대표 코인 하나, 홈 화면에는 관심 종목 목록을 두는 식으로 나눠 쓸 수 있습니다.</li></ul>
+<h2>Crypto AOD를 쓴다면 알아 둘 것</h2>
+<ul><li>거래소 7곳(업비트, 빗썸, 바이낸스, 코인베이스, OKX, Bybit, Kraken)의 공개 시세를 쓰고, 거래소를 섞어 등록할 수 있습니다. 예: 업비트 BTC/KRW와 바이낸스 BTC/USDT.</li><li>무료로는 종목 1개를 모든 위젯에서 볼 수 있습니다. 프리미엄은 최대 5종목이고 ₩2,500 한 번 결제(구독 아님)이며, 설치 후 7일 동안 무료로 체험할 수 있습니다.</li><li>잠금화면·AOD 위젯은 One UI 7 이상 갤럭시 전용입니다. 다른 안드로이드 폰에서는 홈 화면 위젯만 쓸 수 있습니다.</li><li>계정, 로그인, 광고, 분석 추적이 없습니다. 관심 종목과 위젯 설정은 기기 안에만 저장됩니다.</li><li>Samsung, Galaxy, One UI 및 각 거래소와 제휴 관계가 없는 독립 앱입니다.</li></ul>
+<aside class="callout">위젯에 보이는 시세는 각 거래소 공개 API 기준의 참고용 정보입니다. 앱에는 거래·주문·송금 기능이 없습니다.</aside>
+<p>앱 소개와 화면은 <a href="../../../ko/">Crypto AOD 소개 페이지</a>에서 볼 수 있습니다. 써 보시고 잘 안 되는 기종이나 메뉴 이름이 다른 경우를 알려 주시면 이 글에 반영하겠습니다(support@lalatap.kr).</p>
+  <aside class="getapp"><img src="../../../img/icon-180.png" width="56" height="56" alt=""><div><strong>Crypto AOD: 잠금화면·AOD 코인 시세</strong><p>화면을 꺼도 보이는 코인 시세. 잠금화면·AOD·홈 화면 위젯으로 바로 확인하세요.</p></div><a class="badge" href="https://play.google.com/store/apps/details?id=com.tim.aodticker&hl=ko&referrer=utm_source%3Dsite%26utm_medium%3Dblog%26utm_campaign%3Dko-galaxy-lockscreen-aod-crypto-price" rel="noopener"><img src="../../../img/badge-ko.png" alt="Google Play에서 다운로드" height="48"></a></aside>
+  
+</article>
+</main>
+<footer class="wrap foot">
+  <p>시세는 각 거래소 공개 API 기준의 참고용 정보입니다. 이 사이트의 어떤 내용도 투자 권유가 아닙니다.</p>
+  <p class="links"><a href="../../../ko/">Crypto AOD</a> · <a href="https://jkinject.github.io/aod-ticker-privacy/">개인정보처리방침</a> · <a href="mailto:support@lalatap.kr">문의</a></p>
+</footer>
+</body>
+</html>
