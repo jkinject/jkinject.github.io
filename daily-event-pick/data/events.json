@@ -5,7 +5,7 @@
     "tagline": "오늘 마감 임박 경품 이벤트",
     "instagram": "https://www.instagram.com/daily.event.pick/",
     "disclaimer": "경품·마감은 기관 공지 기준이며 변동될 수 있습니다.",
-    "updated_at": "2026-11-27T07:20:00+09:00"
+    "updated_at": "2026-11-27T11:24:00+09:00"
   },
   "days": [
     {
@@ -73,7 +73,8 @@
           "prize": "키즈 테마파크 이용권(10명)·CJ 기프트카드 5만 원(30명)·메가커피 1만 원(200명)+전원 베베쿡 배도라지 1BOX",
           "winners": "",
           "deadline": "2026-11-30",
-          "url": "https://form.naver.com/response/99ENspGmUzu"
+          "url": "https://form.naver.com/response/99ENspGmUzu",
+          "featured_date": "2026-11-27"
         }
       ]
     },
@@ -331,7 +332,8 @@
           "winners": "",
           "deadline": "2026-11-30",
           "url": "https://modu.go.kr/fron/jdgmn/jdgmnView.do?menu_id=393&qustnr_id=ca79b2f1456340ec9894847c50747a0d",
-          "tip": "모두의 광장 로그인 필요"
+          "tip": "모두의 광장 로그인 필요",
+          "featured_date": "2026-11-27"
         },
         {
           "id": "ev-740d839baf",
@@ -625,7 +627,8 @@
           "prize": "배달의민족 상품권 1만원",
           "winners": "200명 추첨",
           "deadline": "2026-12-01",
-          "url": "https://form.naver.com/response/9P7CNgQ1QWl"
+          "url": "https://form.naver.com/response/9P7CNgQ1QWl",
+          "featured_date": "2026-11-27"
         },
         {
           "id": "ev-dcff15312d",
@@ -1152,7 +1155,8 @@
           "prize": "상주쌀 4kg",
           "winners": "250명 추첨",
           "deadline": "2026-12-02",
-          "url": "https://form.naver.com/response/IzvcZwhQzUl"
+          "url": "https://form.naver.com/response/IzvcZwhQzUl",
+          "featured_date": "2026-11-27"
         },
         {
           "id": "ev-c70553ebb1",
